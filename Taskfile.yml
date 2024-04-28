@@ -1,6 +1,6 @@
 version: "3"
 
-vars:
+env:
   PRIMARY_USER:
     sh: echo "$USER"
   PRIMARY_GROUP:
@@ -9,12 +9,6 @@ vars:
     sh: echo "$PWD"
   SOPS_AGE_KEY:
     sh: secret-tool lookup sops-age-project dotfiles
-
-env:
-  PRIMARY_USER: "{{.PRIMARY_USER}}"
-  PRIMARY_GROUP: "{{.PRIMARY_GROUP}}"
-  REPO_DIR: "{{.REPO_DIR}}"
-  SOPS_AGE_KEY: "{{.SOPS_AGE_KEY}}"
 
 tasks:
   apply:
