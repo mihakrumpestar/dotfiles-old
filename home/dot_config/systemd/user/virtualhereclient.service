@@ -1,0 +1,10 @@
+[Unit]
+Description=VirtualHere GUI Client
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=sudo /usr/sbin/vhuit64
+
+[Install]
+WantedBy=default.target

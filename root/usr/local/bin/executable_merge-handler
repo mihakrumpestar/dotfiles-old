@@ -1,0 +1,37 @@
+#!/bin/bash
+# merge-handler.sh
+
+sops_config_file_name=.sops.yaml
+
+# Paths to the destination and source files
+destination=$1
+source=$2
+
+# Function to handle sops encrypted files
+handle_sops_file() {
+    # Open in VSCodium with diff
+    codium --wait --diff "$destination" "$source"
+
+    # Re-encrypt the file and overwrite the original
+    sops -e "$source" > "$sops_file"
+}
+
+# Function to handle normal files
+handle_normal_file() {
+    # Open in VSCodium with diff
+    codium --wait --diff "$destination" "$source"
+}
+
+# Directory and base filename extraction
+source_dir=$(dirname "$source")
+source_base=$(basename "$source")
+
+# Find a file with '.sops' anywhere in the filename
+sops_file=$(find "$source_dir" -maxdepth 1 -type f -name "*$source_base*.sops*" | head -n 1)
+
+# Check if a sops version of the file was found
+if [[ -n "$sops_file" && -f "$sops_file" ]]; then
+    handle_sops_file
+else
+    handle_normal_file
+fi

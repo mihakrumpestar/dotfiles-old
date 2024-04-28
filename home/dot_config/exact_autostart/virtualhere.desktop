@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=VirtualHere GUI Client
+GenericName=USB sharing
+Exec=sudo vhuit64
+# Icon=icon-name
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Utility;Network
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=2
+X-KDE-autostart-after=panel
+X-LXQt-Need-Tray=true

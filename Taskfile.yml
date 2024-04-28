@@ -1,0 +1,34 @@
+version: "3"
+
+vars:
+  PRIMARY_USER:
+    sh: echo "$USER"
+  PRIMARY_GROUP:
+    sh: echo "$(id -gn)"
+  REPO_DIR:
+    sh: echo "$PWD"
+  SOPS_AGE_KEY:
+    sh: secret-tool lookup sops-age-project dotfiles
+
+env:
+  PRIMARY_USER: "{{.PRIMARY_USER}}"
+  PRIMARY_GROUP: "{{.PRIMARY_GROUP}}"
+  REPO_DIR: "{{.REPO_DIR}}"
+  SOPS_AGE_KEY: "{{.SOPS_AGE_KEY}}"
+
+tasks:
+  apply:
+    cmds:
+      - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
+
+      - sopstool entrypoint -- /bin/sh -c '
+        sudo -E chezmoi apply --source ./root --destination / &&
+        chezmoi apply --source ./home --destination "$HOME"' # Scripts should be run after /root directory is applied
+
+      # - chezmoi state delete-bucket --bucket=scriptState
+
+  merge:
+    cmds:
+      - sopstool entrypoint -- /bin/sh -c '
+        chezmoi merge-all --source ./root --destination / &&
+        chezmoi merge-all --source "./home"'

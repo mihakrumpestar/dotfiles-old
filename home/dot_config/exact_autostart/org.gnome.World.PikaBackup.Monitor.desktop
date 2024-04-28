@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name[en_GB]=Pika Backup Monitor
+Name=Pika Backup Monitor
+Exec=pika-backup-monitor
+# Translators: Do not translate or transliterate this text (this is an icon file name)!
+Icon=org.gnome.World.PikaBackup
+DBusActivatable=true
+
+NoDisplay=true
+
+X-GNOME-Autostart-Delay=90
+X-GNOME-UsesNotifications=true

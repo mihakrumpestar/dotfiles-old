@@ -1,0 +1,59 @@
+[
+  {
+    "config_version": 2,
+    "id": "c0031881-6338-4691-b065-b4e55f6e43f4",
+    "archive_prefix": "701f5c-",
+    "repo_id": "6012afdd967df49078ac3a328a23075cf950cc132d2a75a46811aab540c4e52d",
+    "repo": {
+      "type": "Local",
+      "path": "private/backups/personal-backup",
+      "mount_path": "/home/krumpy-miha/mnt/nextcloud-personal",
+      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/personal-backup",
+      "drive_name": null,
+      "mount_name": "nextcloud-personal",
+      "volume_uuid": null,
+      "volume_uuid_identifier": null,
+      "removable": false,
+      "icon": ". GThemedIcon drive-removable-media drive-removable drive drive-removable-media-symbolic drive-removable-symbolic drive-symbolic",
+      "icon_symbolic": ". GThemedIcon drive-removable-media-symbolic drive-removable-symbolic drive-symbolic drive-removable-media drive-removable drive",
+      "settings": {
+        "command_line_args": []
+      }
+    },
+    "encrypted": true,
+    "encryption_mode": "repokey",
+    "include": [
+      ".librewolf/main",
+      ".thunderbird/main"
+    ],
+    "exclude": [
+      "Caches",
+      "Trash",
+      "FlatpakApps",
+      "VmsContainers"
+    ],
+    "schedule": {
+      "enabled": true,
+      "settings": {
+        "run_on_battery": false
+      },
+      "frequency": {
+        "Weekly": {
+          "preferred_weekday": "Sun"
+        }
+      }
+    },
+    "prune": {
+      "enabled": true,
+      "keep": {
+        "hourly": 24,
+        "daily": 7,
+        "weekly": 2,
+        "monthly": 6,
+        "yearly": 0
+      }
+    },
+    "title": "personal-backup",
+    "user_scripts": {}
+  }
+]

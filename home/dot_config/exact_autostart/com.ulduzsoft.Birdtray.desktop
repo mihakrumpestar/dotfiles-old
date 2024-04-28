@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Birdtray
+Keywords=Email;E-mail;Newsgroup;Feed;RSS
+Exec=birdtray
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=com.ulduzsoft.Birdtray
+Categories=Network;Email;
+StartupNotify=true

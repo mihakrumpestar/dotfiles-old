@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=nw
+Comment=nwstartup script
+Exec=/opt/OnlyKey/nw # --hidden 
+StartupNotify=false
+Terminal=false
