@@ -10,12 +10,8 @@ TODO:
 ```sh
 https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html
 https://wiki.mozilla.org/Security/Sandbox/SELinux
-
 https://github.com/linrunner/TLP
-https://gitlab.com/leinardi/gwe
-
 https://github.com/probonopd/go-appimage
-https://github.com/shalva97/kde-configuration-files
 ```
 
 On new system:
@@ -24,24 +20,30 @@ On new system:
 # Disable KWallet (KDE settings)
 # Reboot
 
-yay -Sy go-task-bin keepassxc onlykey vscodium-bin chezmoi
+# Install deps
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
+yay -Sy --noconfirm --needed onlykey keepassxc vscodium-bin chezmoi sops go
+env GOBIN=/bin sudo go install github.com/go-task/task/v3/cmd/task@latest github.com/Ibotta/sopstool@latest
 
-# Unlock keepassxc
-
-mkdir -p repos/personal
-vscodium repos/personal
-# clone repo using VSCodium git@github.com:mihakrumpestar/dotfiles
-
+read -p "Input Github PAT token (and make sure KeepassXC secret-service works) > " -r && git clone https://${REPLY}@github.com/mihakrumpestar/dotfiles.git
+cd dotfiles
 cat home/dot_config/chezmoi/chezmoi.yaml > ~/.config/chezmoi/chezmoi.yaml
-go-task apply
+task apply
+git remote set-url origin git@github.com:mihakrumpestar/dotfiles.git
 ```
 
 DO NOT USE `chezmoi apply` directly, since it will just copy folders to home dir.
 
+Usage:
+
+```sh
+task apply
+task merge
+```
+
 Cheat sheet:
 
 ```bash
-chezmoi init
 chezmoi add -r --config chezmoi.toml
 
 chezmoi add --source ./home [source_file]
