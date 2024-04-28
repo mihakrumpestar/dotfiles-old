@@ -46,12 +46,15 @@ Cheat sheet:
 ```bash
 chezmoi add -r --config chezmoi.toml
 
-chezmoi add --source ./home [source_file]
-chezmoi add --source ./root  --destination / [source_file]
-chezmoi add --template --source ./home [source_file]
-chezmoi add --template --source ./root --destination / [source_file]
 
-chezmoi target-path --source ./home [source_file]
+chezmoi add --source ./home [target_file]
+chezmoi add --source ./root  --destination / [target_file]
+chezmoi add --template --source ./home [target_file]
+chezmoi add --template --source ./root --destination / [target_file]
+
+chezmoi target-path --source ./home [target_file]
+
+sopstool add [source_file]
 ```
 
 [Other dotfile managers](https://dotfiles.github.io/utilities/):
