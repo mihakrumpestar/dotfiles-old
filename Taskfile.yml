@@ -29,6 +29,7 @@ tasks:
 
   merge:
     cmds:
+      # Regarding root merge-all, we are doing 2 way merge, so it does not update the target file, for that we have to issue "task apply"
       - sopstool entrypoint -- /bin/sh -c '
         chezmoi merge-all --source ./root --destination / &&
         chezmoi merge-all --source "./home"'
