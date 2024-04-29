@@ -143,6 +143,7 @@ systemctl --user enable --now ssh-agent
 # Mount remote storage
 loginctl enable-linger $USER
 systemctl --user enable --now rclone@nextcloud-personal
+# rclone listremotes
 
 # Symbolic links
 sudo ln -sf /usr/lib/ssh/gnome-ssh-askpass4 /usr/lib/ssh/x11-ssh-askpass
