@@ -27,3 +27,9 @@ tasks:
       - sopstool entrypoint -- /bin/sh -c '
         chezmoi merge-all --source ./root --destination / &&
         chezmoi merge-all --source "./home"'
+
+  sops:
+    desc: task sops -- [file]
+    cmds:
+      - sops {{.CLI_ARGS}}
+    interactive: true
