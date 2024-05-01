@@ -409,9 +409,10 @@ alias personal='cp -Rf /personal/* ~'
 #sfetch
 #ufetch
 #ufetch-arco
-pfetch
+#pfetch
 #sysinfo
 #sysinfo-retro
 #cpufetch
 #colorscript random
 #hyfetch
+fastfetch

@@ -8,8 +8,7 @@ PACKAGES=(
   # Terminal
   clinfo            # OpenGL GPU validator
   onefetch          # neofetch for Git
-  neofetch          # System info
-  pfetch            # Minimal neofetch, AUR
+  fastfetch         # System info, the new neofetch
   ipfetch-git       # Neofetch for IPs, AUR
   btop              # better htop
   starship          # terminal UI
