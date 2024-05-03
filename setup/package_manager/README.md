@@ -1,5 +1,7 @@
 # Package manager
 
+Find packages [here](https://pkgs.org/).
+
 Mirror fix:
 
 ```bash

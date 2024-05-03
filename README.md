@@ -32,7 +32,7 @@ task apply
 git remote set-url origin git@github.com:mihakrumpestar/dotfiles.git
 ```
 
-DO NOT USE `chezmoi apply` directly, since it will just copy folders to home dir.
+DO NOT USE `chezmoi apply` directly!
 
 Usage:
 
@@ -45,7 +45,6 @@ Cheat sheet:
 
 ```bash
 chezmoi add -r --config chezmoi.toml
-
 
 chezmoi add --source ./home [target_file]
 chezmoi add --source ./root  --destination / [target_file]
