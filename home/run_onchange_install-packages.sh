@@ -68,7 +68,6 @@ PACKAGES=(
   vscodium-bin          # AUR, main code editor
   bruno-bin             # AUR
   chezmoi
-  beekeeper-studio-bin  # AUR, SQLite
   git-crypt             # AUR
   gitleaks              # Check for leaks in git repos, scans all branches with all commit history 
   terraform
@@ -86,7 +85,7 @@ PACKAGES=(
   ventoy-bin          # AUR
   popsicle-bin        # AUR
   android-tools
-  universal-android-debloater # AUT: uad-ng
+  universal-android-debloater-bin # AUR: uad-ng
   distrobox           # Run any distribution on any Linux
   xorg-xhost          # xhost, dependency for prev
   audacity            # Sound
