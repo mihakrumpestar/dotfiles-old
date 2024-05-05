@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=KeePassXC
 GenericName=Password Manager
-Exec=bash -c "sleep 13 && keepassxc"
+Exec=bash -c "sleep 20 && keepassxc"
 TryExec=keepassxc
 Icon=keepassxc
 StartupWMClass=keepassxc
