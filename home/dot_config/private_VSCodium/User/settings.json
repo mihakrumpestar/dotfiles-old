@@ -81,8 +81,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "cSpell.userWords": [
+    "agentless",
     "alitto",
     "automations",
+    "barebones",
     "Bolha",
     "buildx",
     "caarlos",
@@ -91,6 +93,7 @@
     "cmds",
     "corestone",
     "excelize",
+    "fabtools",
     "findbar",
     "godoc",
     "gofakeit",
