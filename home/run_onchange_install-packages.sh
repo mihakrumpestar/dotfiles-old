@@ -101,6 +101,7 @@ PACKAGES=(
   droidcam            # Webcam emulator from Android
   lazydocker-bin      # AUR, docker container management, Portainer alternative
   gomplate-bin        # AUR, templating cli
+  python-pssh         # AUR, parallel ssh
 
   # Desktop environment
   copyq # clipboard manager
