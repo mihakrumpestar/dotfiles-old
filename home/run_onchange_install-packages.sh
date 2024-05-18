@@ -13,6 +13,13 @@ PACKAGES=(
   btop              # better htop
   starship          # terminal UI
   ttf-meslo-nerd-font-powerlevel10k # font for starship
+  zoxide            # Better cd
+  bash
+  bash-completion
+  bat               # Better cat
+  tree
+  multitail         # File viewer
+  fzf               # Command-line fuzzy finder
 
   # Video/Audio and photo
   vlc           # Media Player
@@ -68,7 +75,6 @@ PACKAGES=(
   vscodium-bin          # AUR, main code editor
   bruno-bin             # AUR
   chezmoi
-  git-crypt             # AUR
   gitleaks              # Check for leaks in git repos, scans all branches with all commit history 
   terraform
 
@@ -102,6 +108,9 @@ PACKAGES=(
   lazydocker-bin      # AUR, docker container management, Portainer alternative
   gomplate-bin        # AUR, templating cli
   python-pssh         # AUR, parallel ssh
+  tar
+  trash-cli           # Command line trashcan (recycle bin) interface
+  meld                # Compare files
 
   # Desktop environment
   copyq # clipboard manager
@@ -127,7 +136,9 @@ yay -S --noconfirm --needed --quiet "${PACKAGES[@]}"
 go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile replacement
 
 # Python
-pipx install pyinfra
+#pipx install pyinfra
+pipx install git+https://github.com/pyinfra-dev/pyinfra # Currently beta
+#pipx uninstall pyinfra
 
 sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 

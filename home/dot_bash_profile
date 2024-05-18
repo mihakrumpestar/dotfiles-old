@@ -7,11 +7,6 @@
 # Env
 # export LC_ALL="en_US.UTF-8"
 
-export EDITOR='codium --wait' # nano
-export VISUAL='codium'
-export HISTCONTROL=ignoreboth:erasedups
-export PAGER='most'
-
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
 #delete the hashtags of the next lines and restart
@@ -23,9 +18,6 @@ export PAGER='most'
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_ASKPASS="/usr/lib/ssh/gnome-ssh-askpass4" # this is buggy and might not work, therefore we create syslink (already in _install_packages.sh)
 export SSH_ASKPASS_REQUIRE=prefer
-
-# Diff
-export DIFFTOOL="codium --wait --diff $LOCAL $REMOTE"
 
 # PATH
 if [ -d "$HOME/.bin" ]; then
