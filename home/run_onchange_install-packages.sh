@@ -20,7 +20,8 @@ PACKAGES=(
   tree
   multitail         # File viewer
   fzf               # Command-line fuzzy finder
-
+  kitty             # Terminal emulator
+  
   # Video/Audio and photo
   vlc           # Media Player
   handbrake
