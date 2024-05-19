@@ -111,6 +111,7 @@ PACKAGES=(
   tar
   trash-cli           # Command line trashcan (recycle bin) interface
   meld                # Compare files
+  chafa               # ASCII art
 
   # Desktop environment
   copyq # clipboard manager
@@ -137,7 +138,7 @@ go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile re
 
 # Python
 #pipx install pyinfra
-pipx install git+https://github.com/pyinfra-dev/pyinfra # Currently beta
+pipx install pyinfra==3.0b1 # Currently beta
 #pipx uninstall pyinfra
 
 sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
