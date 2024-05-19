@@ -71,6 +71,11 @@
       "key": "│ ├",
       "keyColor": "yellow"
     },
+    //{ // Currently not working, segmentation fault
+    //  "type": "bootmgr",
+    //  "key": "│ ├",
+    //  "keyColor": "yellow"
+    //},
     {
       "type": "packages",
       "key": "│ ├󰏖",
