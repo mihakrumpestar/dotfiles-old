@@ -1,15 +1,5 @@
 # Setup
 
-Shortcuts:
-
-```text
-# Clipboard manager
-Ctrl+Shift+X # Open copy history under cursor
-
-# KDE
-Alt+Tab # Walk through windows
-```
-
 Localization:
 
 ```bash

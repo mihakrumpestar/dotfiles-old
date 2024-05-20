@@ -113,6 +113,7 @@ PACKAGES=(
   trash-cli           # Command line trashcan (recycle bin) interface
   meld                # Compare files
   chafa               # ASCII art
+  speedtest++         # Internet speedtest in CLI
 
   # Desktop environment
   copyq # clipboard manager
@@ -132,17 +133,18 @@ PACKAGES=(
 )
 
 # the quotes are needed to preserve params with spaces
-yay -S --noconfirm --needed --quiet "${PACKAGES[@]}"
+yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}"
 
 # Golang
 go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile replacement
 
 # Python
 #pipx install pyinfra
-pipx install pyinfra==3.0b1 # Currently beta
+#pipx install pyinfra==3.0b1 # Currently beta
+#pipx inject pyinfra python-doten
 #pipx uninstall pyinfra
 
-sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
+# sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
 # Docker
 sudo groupadd -f docker
