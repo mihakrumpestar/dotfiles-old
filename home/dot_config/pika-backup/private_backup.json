@@ -1,14 +1,14 @@
 [
   {
     "config_version": 2,
-    "id": "c0031881-6338-4691-b065-b4e55f6e43f4",
-    "archive_prefix": "701f5c-",
-    "repo_id": "6012afdd967df49078ac3a328a23075cf950cc132d2a75a46811aab540c4e52d",
+    "id": "7b83f6d2-2308-4c15-a26d-22a8419f748a",
+    "archive_prefix": "7a88cc-",
+    "repo_id": "15d7ae23e6ea1ef9e9da3c6f1dde42ac546bd0132e805f59bc4c17986860b502",
     "repo": {
       "type": "Local",
-      "path": "private/backups/personal-backup",
+      "path": "private/backups/apps",
       "mount_path": "/home/krumpy-miha/mnt/nextcloud-personal",
-      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/personal-backup",
+      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/apps",
       "drive_name": null,
       "mount_name": "nextcloud-personal",
       "volume_uuid": null,
@@ -22,38 +22,79 @@
     },
     "encrypted": true,
     "encryption_mode": "repokey",
-    "include": [
-      ".librewolf/main",
-      ".thunderbird/main"
-    ],
-    "exclude": [
-      "Caches",
-      "Trash",
-      "FlatpakApps",
-      "VmsContainers"
-    ],
+    "include": [".librewolf", ".thunderbird"],
+    "exclude": ["Caches"],
     "schedule": {
       "enabled": true,
       "settings": {
         "run_on_battery": false
       },
       "frequency": {
-        "Weekly": {
-          "preferred_weekday": "Sun"
+        "Daily": {
+          "preferred_time": "21:00:00"
         }
       }
     },
     "prune": {
       "enabled": true,
       "keep": {
-        "hourly": 24,
-        "daily": 7,
-        "weekly": 2,
-        "monthly": 6,
-        "yearly": 0
+        "hourly": 48,
+        "daily": 14,
+        "weekly": 4,
+        "monthly": 12,
+        "yearly": 10
       }
     },
-    "title": "personal-backup",
+    "title": "",
+    "user_scripts": {}
+  },
+  {
+    "config_version": 2,
+    "id": "b77c97ec-ae75-4ce7-a5e7-ae5e3934b279",
+    "archive_prefix": "84469a-",
+    "repo_id": "4d957cf97b5086ca10fc962fc03eb1055a774828134132dca221199db292f2ac",
+    "repo": {
+      "type": "Local",
+      "path": "private/backups/digital-identity",
+      "mount_path": "/home/krumpy-miha/mnt/nextcloud-personal",
+      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/digital-identity",
+      "drive_name": null,
+      "mount_name": "nextcloud-personal",
+      "volume_uuid": null,
+      "volume_uuid_identifier": null,
+      "removable": false,
+      "icon": ". GThemedIcon drive-removable-media drive-removable drive drive-removable-media-symbolic drive-removable-symbolic drive-symbolic",
+      "icon_symbolic": ". GThemedIcon drive-removable-media-symbolic drive-removable-symbolic drive-symbolic drive-removable-media drive-removable drive",
+      "settings": {
+        "command_line_args": []
+      }
+    },
+    "encrypted": false,
+    "encryption_mode": "repokey",
+    "include": ["Documents/digital-identity"],
+    "exclude": ["Caches"],
+    "schedule": {
+      "enabled": true,
+      "settings": {
+        "run_on_battery": false
+      },
+      "frequency": {
+        "Daily": {
+          "preferred_time": "21:00:00"
+        }
+      }
+    },
+    "prune": {
+      "enabled": true,
+      "keep": {
+        "hourly": 48,
+        "daily": 14,
+        "weekly": 4,
+        "monthly": 12,
+        "yearly": 10
+      }
+    },
+    "title": "",
     "user_scripts": {}
   }
 ]
