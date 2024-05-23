@@ -4,6 +4,7 @@
 
 Not suitable backup options:
 
+- kopia: desktop and server UI, multiple folders per repo, but UI can accommodate only one repo at a time meaning you have to switch between them or have multiple instances running
 - deja-dup: only one target, has restore, too simplistic
 - duplicati: discouraged
 - TimeShift: only full disk on btrfs
