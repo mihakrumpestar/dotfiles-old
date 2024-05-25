@@ -2,9 +2,14 @@
 update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
 
 [Annotations]
-annotationToolType=3
-rectangleFillColor=255,0,0
-rectangleStrokeColor=170,0,0
+annotationToolType=5
+rectangleFillColor=255,255,255
+rectangleShadow=false
+rectangleStrokeColor=255,255,255,0
+
+[FileDialogSize]
+2 screens: Height=720
+2 screens: Width=1280
 
 [General]
 clipboardGroup=PostScreenshotCopyImage
