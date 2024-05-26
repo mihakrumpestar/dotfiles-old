@@ -41,6 +41,10 @@ Ctrl+F[x]   # Switch to Desktop x
 Ctrl+Alt+L      # Lock Screen
 Ctrl+Alt+Del    # Leave
 
+# # Terminal
+Ctrl+W # Delete a word backward
+Ctrl+U # K ills the whole line
+
 # # #
 # # # Extra
 # # #

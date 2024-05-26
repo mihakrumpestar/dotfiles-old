@@ -13,7 +13,7 @@
 
 /* Completely (almost) hide in fullscreen */
 #main-window[inFullscreen] #appcontent {
-  margin-left: 1px
+  margin-left: 1px;
 }
 #main-window[inFullscreen] #sidebar-box,
 #main-window[inFullscreen] #sidebar {
@@ -21,6 +21,11 @@
 }
 
 #sidebar {
-  min-width:10px !important;
-  max-width:none !important;
+  min-width: 10px !important;
+  max-width: none !important;
+}
+
+/* Disable "Bookmark this page" button in the location bar */
+#star-button-box {
+  display: none !important;
 }
