@@ -131,6 +131,10 @@ PACKAGES=(
   docker
   docker-compose
 
+  # QEMU
+  qemu-full
+  libvirtd
+
   # Printer and scanner
   simple-scan   # Scanning (Gnome)
 )
@@ -154,7 +158,10 @@ sudo groupadd -f docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 
-# Agent
+# QEMU
+sudo systemctl enable --now libvirtd
+
+# SSH agent
 systemctl --user enable --now ssh-agent
 
 # Mount remote storage
