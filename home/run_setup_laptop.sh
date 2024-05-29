@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable safe execution flags
+set -euo pipefail
+
 if [[ "$HOSTNAME" == *"laptop"* ]]; then
 
   echo -e "\n\e[1m Laptop config \e[0m\n"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable safe execution flags
+set -euo pipefail
+
 echo -e "\n\e[1m Firewall config \e[0m\n"
 
 sudo ufw allow 22/tcp # SSH

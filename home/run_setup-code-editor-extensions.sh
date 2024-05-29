@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable safe execution flags
+set -euo pipefail
+
 BANNER='echo -e \n\e[1m Code editor extensions config \e[0m\n'
 
 # Aliases don't work here so we have to issue commend "codium" instead of "code"

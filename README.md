@@ -76,8 +76,9 @@ On new system:
 
 # Install deps
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
-yay -Sy --noconfirm --needed onlykey keepassxc vscodium-bin chezmoi sops go
-env GOBIN=/bin sudo go install github.com/go-task/task/v3/cmd/task@latest github.com/Ibotta/sopstool@latest
+yay -Sy --noconfirm --needed onlykey keepassxc chezmoi sops go
+sudo GOBIN=/bin go install github.com/go-task/task/v3/cmd/task@latest
+sudo GOBIN=/bin go install github.com/Ibotta/sopstool@latest
 
 read -p "Input Github PAT token (and make sure KeepassXC secret-service works) > " -r && git clone https://${REPLY}@github.com/mihakrumpestar/dotfiles.git
 cd dotfiles

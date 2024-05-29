@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable safe execution flags
+set -euo pipefail
+
 echo -e "\n\e[1m Install user packages \e[0m\n"
 
 yay -Syyu --noconfirm --quiet

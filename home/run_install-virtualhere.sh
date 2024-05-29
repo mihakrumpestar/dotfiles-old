@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable safe execution flags
+set -euo pipefail
+
 # Check if "company" is not present in the hostname and "/usr/bin/vhuit64" does not exist
 if [[ "$HOSTNAME" != *"company"* ]] && [ ! -f "/usr/bin/vhuit64" ]; then
 
