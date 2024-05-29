@@ -11,4 +11,4 @@ home/private_dot_ssh/identities/vms.pub
 root/etc/ssh/sshd_config
 root/etc/ufw/user.rules
 root/etc/sudoers.d/20-virtualhereclient.tmpl
-home/run_onchange_install-private-packages.sh
+home/run_install-private-packages.sh

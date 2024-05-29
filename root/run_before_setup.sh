@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # Chaotic-AUR: https://aur.chaotic.cx/
-if ! which chaotic-mirrorlist &>/dev/null; then
+if [ ! -f /etc/pacman.d/chaotic-mirrorlist ]; then
     echo "Configuring Chaotic-AUR"
     sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
     sudo pacman-key --lsign-key 3056513887B78AEB
