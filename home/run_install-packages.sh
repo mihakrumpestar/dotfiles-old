@@ -44,19 +44,19 @@ PACKAGES=(
   extra/texlive-latex       # For xournalpp Latex
   extra/texlive-latexextra  # For xournalpp Latex
 
-  zoom      # AUR
-  nomachine # AUR
-  freetube-bin # AUR, Youtube client
-  pika-backup # AUR, backup tool (automatic)
+  zoom          # AUR
+  nomachine     # AUR
+  freetube-bin  # AUR, Youtube client
+  pika-backup   # AUR, backup tool (automatic)
 
   # Office Suite
   libreoffice-fresh
   onlyoffice-bin    # AUR
 
   # Browsers
-  brave-bin     # AUR
-  librewolf-bin # AUR
-  # thorium-browser-bin # AUR
+  brave-bin             # AUR
+  librewolf-bin         # AUR
+  #thorium-browser-bin  # AUR
 
   # File Management
   okular            # PDF viewer
@@ -93,11 +93,11 @@ PACKAGES=(
   gsmartcontrol
   gnome-disk-utility
   ventoy-bin          # AUR
-  popsicle-bin        # AUR
+  #popsicle-bin       # AUR
   android-tools
   universal-android-debloater-bin # AUR: uad-ng
-  distrobox           # Run any distribution on any Linux
-  xorg-xhost          # xhost, dependency for prev
+  #distrobox          # Run any distribution on any Linux
+  #xorg-xhost         # xhost, dependency for prev
   audacity            # Sound
   corectrl            # GPU and CPU guvernor
   activitywatch-bin   # time monitoring, AUR
