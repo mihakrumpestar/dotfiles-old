@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Birdtray
 Keywords=Email;E-mail;Newsgroup;Feed;RSS
-Exec=birdtray
+Exec=env -u WAYLAND_DISPLAY birdtray
 Terminal=false
 X-MultipleArgs=false
 Type=Application
