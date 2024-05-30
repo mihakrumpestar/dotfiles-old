@@ -5,6 +5,8 @@ set -euo pipefail
 
 echo -e "\n\e[1m Install system packages \e[0m\n"
 
+yay -Syu --noconfirm --quiet
+
 PACKAGES=(
   # General configuration
   pciutils         # Computer utility info
@@ -18,7 +20,7 @@ PACKAGES=(
   wget
   btop  # Better htop
   ntp   # time
-  ufw   # firewall
+  nftables   # firewall
 
   # Printer and scanner
   cups
@@ -29,12 +31,16 @@ PACKAGES=(
 )
 
 # the quotes are needed to preserve params with spaces
-yay -S --noconfirm --needed --quiet "${PACKAGES[@]}"
+yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | grep -v "skipping"
 
 sudo systemctl enable --now cups
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now avahi-daemon
 sudo systemctl enable --now ntpd # time sync
 sudo systemctl enable --now sshd
+sudo systemctl enable --now nftables
+# sudo nft list tables
+# sudo nft list ruleset
+
 sudo timedatectl set-ntp on
 # timedatectl

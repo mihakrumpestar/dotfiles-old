@@ -1,12 +1,5 @@
 # Setup
 
-Localization:
-
-```bash
-sudo locale-gen
-locale
-```
-
 Shell prompt font:
 
 ```sh

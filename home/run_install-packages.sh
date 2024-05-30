@@ -5,8 +5,6 @@ set -euo pipefail
 
 echo -e "\n\e[1m Install user packages \e[0m\n"
 
-yay -Syyu --noconfirm --quiet
-
 PACKAGES=(
   # Terminal
   clinfo            # OpenGL GPU validator
@@ -133,14 +131,14 @@ PACKAGES=(
 
   # QEMU
   qemu-full
-  libvirtd
+  virt-manager
 
   # Printer and scanner
   simple-scan   # Scanning (Gnome)
 )
 
 # the quotes are needed to preserve params with spaces
-yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}"
+yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | grep -v "skipping"
 
 # Golang
 go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile replacement
