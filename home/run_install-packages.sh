@@ -22,7 +22,8 @@ PACKAGES=(
   multitail         # File viewer
   fzf               # Command-line fuzzy finder
   kitty             # Terminal emulator
-  
+  yakuake           # Drop down terminal emulator
+
   # Video/Audio and photo
   vlc           # Media Player
   handbrake

@@ -18,9 +18,8 @@ PACKAGES=(
   nano
   curl
   wget
-  btop  # Better htop
-  ntp   # time
-  nftables   # firewall
+  ntp       # time
+  nftables  # firewall
 
   # Printer and scanner
   cups
