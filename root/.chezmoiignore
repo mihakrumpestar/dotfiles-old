@@ -1,1 +1,6 @@
 **/*.sops*
+
+
+{{- if not (contains "laptop" .chezmoi.hostname) }}
+.laptop
+{{- end }}
