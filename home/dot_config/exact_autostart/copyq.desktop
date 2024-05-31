@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=CopyQ
-# Added "env QT_QPA_PLATFORM=xcb" for Wayland compatibility (global shortcuts still won't work out of the box)
-Exec=env QT_QPA_PLATFORM=xcb copyq --start-server hide
+Exec=copyq --start-server hide
 Icon=copyq
 GenericName=Clipboard Manager
 # Workaround / fix for issue #1526 that prevents a proper autostart of the tray icon in GNOME
