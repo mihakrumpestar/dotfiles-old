@@ -22,8 +22,13 @@
     },
     "encrypted": true,
     "encryption_mode": "repokey",
-    "include": [".librewolf", ".thunderbird"],
-    "exclude": ["Caches"],
+    "include": [
+      ".librewolf",
+      ".thunderbird"
+    ],
+    "exclude": [
+      "Caches"
+    ],
     "schedule": {
       "enabled": true,
       "settings": {
@@ -71,8 +76,12 @@
     },
     "encrypted": false,
     "encryption_mode": "repokey",
-    "include": ["Documents/digital-identity"],
-    "exclude": ["Caches"],
+    "include": [
+      "Documents/digital-identity"
+    ],
+    "exclude": [
+      "Caches"
+    ],
     "schedule": {
       "enabled": true,
       "settings": {
@@ -80,7 +89,7 @@
       },
       "frequency": {
         "Daily": {
-          "preferred_time": "21:00:00"
+          "preferred_time": "06:00:00"
         }
       }
     },

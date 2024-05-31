@@ -139,7 +139,7 @@ PACKAGES=(
 )
 
 # the quotes are needed to preserve params with spaces
-yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | grep -v "skipping"
+yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | awk '!/Sync Dependency/ && !/Sync Explicit/ && !/-- skipping/'
 
 # Golang
 go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile replacement

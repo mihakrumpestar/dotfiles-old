@@ -20,6 +20,7 @@ PACKAGES=(
   wget
   ntp       # time
   nftables  # firewall
+  iptables-nft # iptables to nftables layer, required for Docker
 
   # Printer and scanner
   cups
@@ -30,7 +31,7 @@ PACKAGES=(
 )
 
 # the quotes are needed to preserve params with spaces
-yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | grep -v "skipping"
+yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | awk '!/Sync Dependency/ && !/Sync Explicit/ && !/-- skipping/'
 
 sudo systemctl enable --now cups
 sudo systemctl enable --now bluetooth
