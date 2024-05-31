@@ -123,7 +123,7 @@ PACKAGES=(
 
   # Security
   keepassxc
-  onlykey             # Includes udev rules, AUR
+  onlykey             # AUR, Includes udev rules
   openssh             # ssh-agent
   gnome-ssh-askpass4-git # AUR, ssh-askpass-fullscreen is actually fullscreen
 

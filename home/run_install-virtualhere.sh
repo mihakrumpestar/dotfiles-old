@@ -12,8 +12,6 @@ if [[ "$HOSTNAME" != *"company"* ]] && [ ! -f "/usr/bin/vhuit64" ]; then
 
     chmod +x vhuit64
     chmod 755 vhuit64
-    sudo mv vhuit64 /usr/bin/.
-
-    systemctl --user enable --now virtualhereclient
+    sudo mv vhuit64 /usr/bin/vhuit64
 
 fi

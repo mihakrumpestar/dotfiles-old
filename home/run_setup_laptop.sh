@@ -10,14 +10,14 @@ if [[ "$HOSTNAME" == *"laptop"* ]]; then
   PACKAGES=(
     auto-cpufreq
     onboard
-    kcm-wacomtablet
     xf86-input-wacom
     wacom-settings-git
     kded-rotation-git
   )
 
-  yay -S --noconfirm --needed "${PACKAGES[@]}"
+  yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | awk '!/Sync Dependency/ && !/Sync Explicit/ && !/-- skipping/'
 
   sudo systemctl enable --now auto-cpufreq
-
+  #auto-cpufreq --stats
+  # Or in GUI app
 fi
