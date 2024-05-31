@@ -119,6 +119,8 @@ PACKAGES=(
 
   # Desktop environment
   copyq # clipboard manager
+  aritim-dark-kde-git # KDE theme
+  aritim-dark-gtk-git # GTK theme
 
   # Security
   keepassxc
