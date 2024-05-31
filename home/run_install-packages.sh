@@ -69,6 +69,7 @@ PACKAGES=(
 
   # Programming
   git
+  lazygit               # Git terminal UI
   make                  # gnumake
   python
   python-pip

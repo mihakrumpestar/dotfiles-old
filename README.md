@@ -84,7 +84,6 @@ read -p "Input Github PAT token (and make sure KeepassXC secret-service works) >
 cd dotfiles
 cat home/dot_config/chezmoi/chezmoi.yaml > ~/.config/chezmoi/chezmoi.yaml
 task apply
-git remote set-url origin git@github.com:mihakrumpestar/dotfiles.git
 ```
 
 DO NOT USE `chezmoi apply` directly!
