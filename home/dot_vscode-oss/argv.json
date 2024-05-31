@@ -19,6 +19,5 @@
   "crash-reporter-id": "",
 
   // User defined
-
-  "password-store": "KeepassXC"
+  "password-store": "gnome-libsecret"
 }

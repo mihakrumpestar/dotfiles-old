@@ -67,7 +67,7 @@ _k_friendly_name=Custom Shortcuts Service
 {fdaa9310-506c-409e-82de-bf2c559177b1}=Meta+F8,none,dolphin
 
 [kmix]
-_k_friendly_name=Audio Volume
+_k_friendly_name=KMix
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
 decrease_volume=Volume Down,Volume Down,Decrease Volume
 decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
@@ -287,12 +287,12 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 105=,none,Activate Application Launcher Widget
+activate widget 105=none,none,Activate Application Launcher Widget
 activate widget 28=none,none,Activate Application Launcher Widget
 activate widget 38=Alt+F1,none,Activate Application Menu Widget
 activate widget 44=none,none,Activate Icons-only Task Manager Widget
 activate widget 48=none,none,Activate Application Launcher Widget
-activate widget 79=,none,Activate Unknown Widget
+activate widget 79=none,none,Activate Unknown Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
