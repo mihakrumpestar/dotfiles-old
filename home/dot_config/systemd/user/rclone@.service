@@ -18,11 +18,15 @@ Wants=network-online.target
 [Service]
 Type=notify
 ExecStartPre=-/usr/bin/mkdir -p %h/mnt/%i
+ExecStartPre=/bin/bash -c "if mountpoint -q %h/mnt/%i; then /bin/fusermount -uz %h/mnt/%i; fi" # Force unmount any leftover mount
 ExecStart= \
   /usr/bin/rclone mount \
     --config=%h/.config/rclone/rclone.conf \
+    --dir-cache-time 1m0s \
+    --poll-interval 5s \
     --vfs-cache-mode full \
     --vfs-cache-max-size 2G \
+    --vfs-cache-poll-interval 5s \
     --log-level INFO \
     --log-file /tmp/rclone-%i.log \
     --umask 022 \
