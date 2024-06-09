@@ -117,6 +117,7 @@ PACKAGES=(
   meld                # Compare files
   chafa               # ASCII art
   speedtest++         # Internet speedtest in CLI
+  drawio-desktop-bin  # AUR, drawing tool
 
   # Desktop environment
   copyq # clipboard manager
