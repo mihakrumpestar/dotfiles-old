@@ -1,7 +1,7 @@
 {
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "vscode-icons",
-  "editor.fontFamily": "'Droid Sans Mono', monospace, 'MesloLGS NF'",
+  "editor.fontFamily": "'Droid Sans Mono', monospace, Helvetica, 'MesloLGS NF'",
   "vsicons.dontShowNewVersionMessage": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -102,6 +102,7 @@
     "fastboot",
     "findbar",
     "Flagfox",
+    "fusermount",
     "Gitea",
     "godoc",
     "gofakeit",
@@ -128,6 +129,7 @@
     "makepkg",
     "maurer",
     "Mgmt",
+    "mountpoint",
     "mpga",
     "Msgf",
     "mtask",
@@ -200,5 +202,12 @@
   "cSpell.enableFiletypes": ["!yaml"],
   "[go]": {
     "editor.defaultFormatter": "golang.go"
-  }
+  },
+  "notebook.lineNumbers": "on",
+  "markdown-preview-enhanced.liveUpdate": false,
+  "markdown-preview-enhanced.enableHTML5Embed": true,
+  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "hediet.vscode-drawio.plugins": []
 }

@@ -24,6 +24,9 @@ PACKAGES=(
   kitty             # Terminal emulator
   yakuake           # Drop down terminal emulator
 
+  # Fonts
+  adobe-base-14-fonts # AUR, has Halvetica
+
   # Video/Audio and photo
   vlc           # Media Player
   handbrake

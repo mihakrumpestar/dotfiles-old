@@ -19,6 +19,7 @@ golang.go
 gruntfuggly.todo-tree
 hashicorp.hcl
 hashicorp.terraform
+hediet.vscode-drawio
 jeanp413.open-remote-ssh
 jinliming2.vscode-go-template
 jock.svg
@@ -43,5 +44,4 @@ tombonnike.vscode-status-bar-format-toggle
 tomoki1207.pdf
 tumido.cron-explained
 vscode-icons-team.vscode-icons
-yzane.markdown-pdf
 yzhang.markdown-all-in-one
