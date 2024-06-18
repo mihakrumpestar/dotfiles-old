@@ -9,5 +9,5 @@ DBusActivatable=true
 
 NoDisplay=true
 
-X-GNOME-Autostart-Delay=90
+X-GNOME-Autostart-Delay=5
 X-GNOME-UsesNotifications=true

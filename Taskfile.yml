@@ -15,6 +15,8 @@ tasks:
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
 
+      - yay -Syu --noconfirm --quiet
+
       - sopstool entrypoint -- /bin/sh -c '
         sudo -E chezmoi apply --source ./root --destination / &&
         chezmoi apply --source ./home --destination "$HOME"' # Scripts should be run after /root directory is applied

@@ -5,8 +5,6 @@ set -euo pipefail
 
 echo -e "\n\e[1m Install system packages \e[0m\n"
 
-yay -Syu --noconfirm --quiet
-
 PACKAGES=(
   # General configuration
   pciutils         # Computer utility info
