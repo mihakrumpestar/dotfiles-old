@@ -23,6 +23,7 @@ PACKAGES=(
   fzf               # Command-line fuzzy finder
   kitty             # Terminal emulator
   yakuake           # Drop down terminal emulator
+  zellij            # Modern Tmux (terminal multiplexer)
 
   # Fonts
   adobe-base-14-fonts # AUR, has Halvetica
@@ -121,6 +122,7 @@ PACKAGES=(
   chafa               # ASCII art
   speedtest++         # Internet speedtest in CLI
   drawio-desktop-bin  # AUR, drawing tool
+  kcalc               # Calculator
 
   # Desktop environment
   copyq # clipboard manager
