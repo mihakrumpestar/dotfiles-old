@@ -33,7 +33,7 @@ PACKAGES=(
   handbrake
   obs-studio
   gcolor3
-  gimp
+  gimp          # Alternative is: https://github.com/PintaProject/Pinta
   inkscape
   upscayl-bin   # AUR, image upscaler
   vulkan-radeon # Required for above, CPU vendor specific
@@ -43,6 +43,7 @@ PACKAGES=(
   kate                  # General GUI text editor
   evince                # Document viewer (PDF)
   masterpdfeditor-free  # AUR, PDF editor
+  # https://typora.io/  # Markdown editor
 
   extra/texlive-latex       # For xournalpp Latex
   extra/texlive-latexextra  # For xournalpp Latex
@@ -123,6 +124,7 @@ PACKAGES=(
   speedtest++         # Internet speedtest in CLI
   drawio-desktop-bin  # AUR, drawing tool
   kcalc               # Calculator
+  flameshot           # Screenshot tool
 
   # Desktop environment
   copyq # clipboard manager
