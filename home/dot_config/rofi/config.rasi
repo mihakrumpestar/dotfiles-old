@@ -1,0 +1,30 @@
+// rofi -dump-config
+
+@theme "/usr/share/rofi/themes/material.rasi"
+
+configuration {
+    modes: "combi,window,drun,run,filebrowser,ssh";
+    show-icons: true;
+    combi-modes: "window,drun,filebrowser";
+
+    filebrowser {
+      /** Directory the file browser starts in. */
+      directory: "/home/${USER}";
+      /**
+        * Sorting method. Can be set to:
+        *   - "name"
+        *   - "mtime" (modification time)
+        *   - "atime" (access time)
+        *   - "ctime" (change time)
+        */
+      sorting-method: "name";
+      /** Group directories before files. */
+      directories-first: true;
+      /** Show hidden files. */
+      show-hidden: false;
+      /** return 1 on cancel. */
+      cancel-returns-1: true;
+      /** command */
+      command: "xdg-open";
+   }
+}
