@@ -9,7 +9,7 @@ configuration {
 
     filebrowser {
       /** Directory the file browser starts in. */
-      directory: "/home/${USER}";
+      directory: "${HOME}";
       /**
         * Sorting method. Can be set to:
         *   - "name"
