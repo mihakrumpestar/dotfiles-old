@@ -158,7 +158,6 @@ go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile re
 #pipx install pyinfra
 #pipx install pyinfra==3.0b1 # Currently beta
 #pipx inject pyinfra python-doten
-#pipx uninstall pyinfra
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
