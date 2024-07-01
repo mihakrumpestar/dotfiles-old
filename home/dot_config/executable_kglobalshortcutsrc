@@ -318,6 +318,12 @@ _launch=Ctrl+Shift+X
 [services][org.flameshot.Flameshot.desktop]
 Capture=Print
 
+[services][org.kde.krunner.desktop]
+_launch=Alt+F2\tSearch
+
+[services][org.kde.plasma-systemmonitor.desktop]
+_launch=none
+
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=Ctrl+Print
 FullScreenScreenShot=Print

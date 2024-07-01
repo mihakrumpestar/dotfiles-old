@@ -125,7 +125,7 @@ PACKAGES=(
   drawio-desktop-bin  # AUR, drawing tool
   kcalc               # Calculator
   flameshot           # Screenshot tool
-  rofi-wayland        # 
+  rofi-wayland        # Rofi with Wayland support
 
   # Desktop environment
   copyq # clipboard manager
