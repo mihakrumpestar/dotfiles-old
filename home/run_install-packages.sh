@@ -87,6 +87,7 @@ PACKAGES=(
   chezmoi
   gitleaks              # Check for leaks in git repos, scans all branches with all commit history 
   terraform
+  pyinfra               # AUR, the new Ansible
 
   # Formatters
   prettier
@@ -154,11 +155,6 @@ yay -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | awk 
 
 # Golang
 go install github.com/go-task/task/v3/cmd/task@latest # Task runner, Makefile replacement
-
-# Python
-#pipx install pyinfra
-#pipx install pyinfra==3.0b1 # Currently beta
-#pipx inject pyinfra python-doten
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
