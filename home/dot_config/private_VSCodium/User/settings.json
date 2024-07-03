@@ -167,6 +167,7 @@
     "pyinfra",
     "rclone",
     "referenčna",
+    "restapi",
     "resty",
     "rootdir",
     "Rucky",
@@ -218,5 +219,9 @@
   },
   "hediet.vscode-drawio.defaultEdgeStyle": {
     "fontSize": 16
+  },
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {
+    "*": false
   }
 }
