@@ -75,6 +75,7 @@ PACKAGES=(
   # Programming
   git
   lazygit               # Git terminal UI
+  pre-commit            # Pre-commit hooks for Git
   make                  # gnumake
   python
   python-pip
