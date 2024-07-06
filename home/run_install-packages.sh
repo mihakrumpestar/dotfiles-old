@@ -169,10 +169,15 @@ sudo systemctl enable --now libvirtd
 # SSH agent
 systemctl --user enable --now ssh-agent
 
-# Mount remote storage
+# Make sure user services are started on boot
 loginctl enable-linger $USER
+
+# Mount remote storage
 systemctl --user enable --now rclone@nextcloud-personal
 # rclone listremotes
 
 # Symbolic links
 sudo ln -sf /usr/lib/ssh/gnome-ssh-askpass4 /usr/lib/ssh/x11-ssh-askpass
+
+# Dead mens switch
+systemctl --user enable --now dead-mens-switch.timer

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run dead-mens-switch.service every week
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+OnBootSec=15min
+
+[Install]
+WantedBy=timers.target
