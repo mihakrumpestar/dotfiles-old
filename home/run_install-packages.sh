@@ -181,3 +181,4 @@ sudo ln -sf /usr/lib/ssh/gnome-ssh-askpass4 /usr/lib/ssh/x11-ssh-askpass
 
 # Dead mens switch
 systemctl --user enable --now dead-mens-switch.timer
+# systemctl --user list-timers --all
