@@ -4,7 +4,7 @@ Description=Run dead-mens-switch.service every week
 [Timer]
 OnCalendar=weekly
 Persistent=true
-OnActiveSec=1m30s
+OnBootSec=1m30s
 
 [Install]
 WantedBy=timers.target
