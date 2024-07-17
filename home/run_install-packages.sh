@@ -13,7 +13,6 @@ PACKAGES=(
   ipfetch-git       # Neofetch for IPs, AUR
   btop              # better htop
   starship          # terminal UI
-  ttf-meslo-nerd-font-powerlevel10k # font for starship
   zoxide            # Better cd
   bash
   bash-completion
@@ -26,7 +25,30 @@ PACKAGES=(
   zellij            # Modern Tmux (terminal multiplexer)
 
   # Fonts
-  adobe-base-14-fonts # AUR, has Halvetica
+  ttf-meslo-nerd-font-powerlevel10k # font for starship
+  ttf-ms-fonts
+  sdl2_ttf
+  ttf-carlito
+  ttf-dejavu
+  ttf-droid
+  ttf-font-awesome
+  ttf-hack
+  ttf-liberation
+  ttf-roboto
+  ttf-roboto-mono
+  ttf-ubuntu-font-family
+
+  noto-fonts
+  noto-fonts-emoji
+  adobe-source-code-pro-fonts
+  adobe-source-han-sans-kr-fonts
+  adobe-source-han-sans-cn-fonts
+  adobe-source-han-sans-jp-fonts
+  adobe-source-sans-fonts
+  awesome-terminal-fonts
+  xorg-fonts-encodings
+  cantarell-fonts
+
 
   # Video/Audio and photo
   vlc           # Media Player
