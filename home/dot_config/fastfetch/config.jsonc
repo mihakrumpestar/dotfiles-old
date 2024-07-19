@@ -4,14 +4,13 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "$HOME/wallpapers/nebula-8k-wallpaper.jpg",
-    "type": "chafa",
+    "source": "arch",
+    // "type": "chafa",
     "width": 50,
-    //"height": 25,
     "preserveAspectRatio": true,
     "padding": {
       "left": 4,
-      "top": 5, // 2
+      "top": 2, // 5
       "right": 4
     }
   },
