@@ -146,10 +146,11 @@ PACKAGES=(
   meld                # Compare files
   chafa               # ASCII art
   speedtest++         # Internet speedtest in CLI
-  drawio-desktop-bin  # AUR, drawing tool
+  #drawio-desktop-bin  # AUR, drawing tool
   kcalc               # Calculator
   flameshot           # Screenshot tool
   rofi-wayland        # Rofi with Wayland support
+  python-proton-client # AUR, VPN
 
   # Desktop environment
   copyq # clipboard manager

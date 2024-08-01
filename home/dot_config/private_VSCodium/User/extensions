@@ -2,11 +2,11 @@ a-h.templ
 activitywatch.aw-watcher-vscode
 bradlc.vscode-tailwindcss
 bungcip.better-toml
-codeium.codeium
 davidanson.vscode-markdownlint
 davidlday.languagetool-linter
 dbaeumer.vscode-eslint
 donjayamanne.githistory
+dzylikecode.vscode-drawio-plugin-markdown
 eamodio.gitlens
 ecmel.vscode-html-css
 edwinhuish.better-comments-next
@@ -34,8 +34,10 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
+nopeslide.vscode-drawio-plugin-mermaid
 pomdtr.excalidraw-editor
 redhat.vscode-yaml
+ritwickdey.liveserver
 samuelcolvin.jinjahtml
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
