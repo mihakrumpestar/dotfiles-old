@@ -72,7 +72,7 @@ PACKAGES=(
 
   zoom          # AUR
   nomachine     # AUR
-  freetube-bin  # AUR, Youtube client
+  freetube      # Chaotic AUR, Youtube client
   pika-backup   # AUR, backup tool (automatic)
 
   # Office Suite
@@ -81,7 +81,7 @@ PACKAGES=(
 
   # Browsers
   brave-bin             # AUR
-  librewolf-bin         # AUR
+  librewolf             # Chaotic AUR
   #thorium-browser-bin  # AUR
 
   # File Management
@@ -104,7 +104,7 @@ PACKAGES=(
   go
   nodejs
   npm
-  vscodium-bin          # AUR, main code editor
+  vscodium              # Chaotic AUR, main code editor
   bruno-bin             # AUR
   chezmoi
   gitleaks              # Check for leaks in git repos, scans all branches with all commit history 
@@ -129,7 +129,7 @@ PACKAGES=(
   #xorg-xhost         # xhost, dependency for prev
   audacity            # Sound
   corectrl            # GPU and CPU guvernor
-  activitywatch-bin   # time monitoring, AUR
+  activitywatch-bin   # AUR, time monitoring
   apache              # for htpasswd
   superpaper          # AUR, wallpaper
   stacer-bin          # AUR, system monitoring GUI
@@ -138,7 +138,7 @@ PACKAGES=(
   whois               # Contains mkpasswd
   filezilla
   droidcam            # Webcam emulator from Android
-  lazydocker-bin      # AUR, docker container management, Portainer alternative
+  lazydocker          # Chaotic AUR, docker container management, Portainer alternative
   gomplate-bin        # AUR, templating cli
   python-pssh         # AUR, parallel ssh
   tar
@@ -146,11 +146,10 @@ PACKAGES=(
   meld                # Compare files
   chafa               # ASCII art
   speedtest++         # Internet speedtest in CLI
-  #drawio-desktop-bin  # AUR, drawing tool
+  drawio-desktop  # Chaoric AUR, drawing tool
   kcalc               # Calculator
   flameshot           # Screenshot tool
   rofi-wayland        # Rofi with Wayland support
-  python-proton-client # AUR, VPN
 
   # Desktop environment
   copyq # clipboard manager
