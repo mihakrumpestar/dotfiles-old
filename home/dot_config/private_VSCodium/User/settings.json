@@ -84,6 +84,7 @@
     "bootloader",
     "buildx",
     "caarlos",
+    "Callout",
     "CDROM",
     "cena",
     "ceph",
@@ -231,9 +232,6 @@
     "zerolog",
     "zvocni"
   ],
-  "markdown-preview-enhanced.enableExtendedTableSyntax": true,
-  "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "cSpell.enableFiletypes": ["!yaml"],
   "[go]": {
     "editor.defaultFormatter": "golang.go"
@@ -246,8 +244,33 @@
   "hediet.vscode-drawio.defaultEdgeStyle": {
     "fontSize": 16
   },
-  "codeium.enableCodeLens": false,
-  "codeium.enableConfig": {
-    "*": false
+  "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+  "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.markdownFileExtensions": [
+    ".md",
+    ".markdown",
+    ".mdown",
+    ".mkdn",
+    ".mkd",
+    ".rmd",
+    ".qmd"
+  ],
+  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+  "markdown-preview-github-styles.colorTheme": "light",
+  "svg.preview.mode": "svg",
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.{md,qmd}",
+    "!**/.quarto",
+    "!**/.temp",
+    "!**/.tmp",
+    "!**/assets"
+  ],
+  "markdownlint.run": "onSave",
+  // Language specific settings
+  "[quarto]": {
+    "editor.defaultFormatter": "quarto.quarto",
+    "editor.tabSize": 3,
+    "editor.insertSpaces": true
   }
 }

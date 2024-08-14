@@ -13,7 +13,6 @@ edwinhuish.better-comments-next
 eliostruyf.screendown
 esbenp.prettier-vscode
 exiasr.hadolint
-formulahendry.code-runner
 github.github-vscode-theme
 golang.go
 gruntfuggly.todo-tree
@@ -34,16 +33,15 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
-nopeslide.vscode-drawio-plugin-mermaid
 pomdtr.excalidraw-editor
+quarto.quarto
 redhat.vscode-yaml
 ritwickdey.liveserver
 samuelcolvin.jinjahtml
-shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
+sumneko.lua
 tamasfe.even-better-toml
 tombonnike.vscode-status-bar-format-toggle
 tomoki1207.pdf
 tumido.cron-explained
 vscode-icons-team.vscode-icons
-yzhang.markdown-all-in-one
