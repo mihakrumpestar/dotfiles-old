@@ -1,5 +1,14 @@
 # Package manager
 
+Distro-agnostic package managers (stats of 16.8.2024):
+
+- [Guix](https://packages.guix.gnu.org/): ~28k packages, based on nix package manager
+- [Flatpak](https://ahayzen.com/direct/flathub.html#appcount): ~2.6k packages
+- [AppImageHub](https://appimage.github.io/apps/): ~1.4k packages
+- [Distrobox](https://distrobox.it/): too much manual work, packages from all distros, uses podman containers
+- [apx](https://github.com/Vanilla-OS/apx): more straightforward Distrobox implementation, packages from all distros
+- [Nix package manager](https://search.nixos.org/packages): over 100k packages
+
 Find packages [here](https://pkgs.org/).
 
 Mirror fix:
