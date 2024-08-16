@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=nw
 Comment=nwstartup script
-Exec=/opt/OnlyKey/nw # --hidden 
+Exec=/nix/store/dmsmij1xpzakx2z2xhy6a7slfbbjrsnq-nwjs-0.90.0/share/nwjs/nw --hidden
 StartupNotify=false
 Terminal=false

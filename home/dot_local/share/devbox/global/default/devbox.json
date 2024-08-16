@@ -5,44 +5,44 @@
   "packages": [
     // Terminal
     "nano@latest",
-    "curl",
-    "wget",
-    "onefetch", // neofetch for Git
-    "fastfetch", // System info, the new neofetch
-    "ipfetch", // Neofetch for IPs, AUR
-    "btop", // better htop
-    "starship", // terminal UI
-    "zoxide", // Better cd
-    "bash",
-    "bash-completion",
-    "nix-bash-completions",
-    "bat", // Better cat
-    "tree",
-    "multitail", // File viewer
-    "fzf", // Command-line fuzzy finder
-    "kitty", // Terminal emulator
-    "yakuake", // Drop down terminal emulator
-    "zellij", // Modern Tmux (terminal multiplexer)
-    "pciutils", // Computer utility info
-    "usbutils", // USB utility info
-    "udisks2", // AUR, command is udisksctl
-    "udiskie", // AUR, a user-level daemon for auto-mounting
-    //"sparklines",
-    "lolcat",
+    "curl@latest",
+    "wget@latest",
+    "onefetch@latest", // neofetch for Git
+    "fastfetch@latest", // System info, the new neofetch
+    "ipfetch@latest", // Neofetch for IPs, AUR
+    "btop@latest", // better htop
+    "starship@latest", // terminal UI
+    "zoxide@latest", // Better cd
+    "bash@latest",
+    "bash-completion@latest",
+    "nix-bash-completions@latest",
+    "bat@latest", // Better cat
+    "tree@latest",
+    "multitail@latest", // File viewer
+    "fzf@latest", // Command-line fuzzy finder
+    "kitty@latest", // Terminal emulator
+    "yakuake@latest", // Drop down terminal emulator
+    "zellij@latest", // Modern Tmux (terminal multiplexer)
+    "pciutils@latest", // Computer utility info
+    "usbutils@latest", // USB utility info
+    "udisks2@latest", // AUR, command is udisksctl
+    "udiskie@latest", // AUR, a user-level daemon for auto-mounting
+    "python312Packages.sparklines@latest",
+    "lolcat@latest",
 
     //// Fonts
-    "meslo-lgs-nf", // font for starship
+    "meslo-lgs-nf@latest", // font for starship
     //ttf-ms-fonts
-    "SDL2_ttf",
-    "carlito",
-    "dejavu_fonts",
+    "SDL2_ttf@latest",
+    "carlito@latest",
+    "dejavu_fonts@latest",
     //ttf-droid
-    "font-awesome",
-    "hack-font",
-    "liberation_ttf",
-    "roboto",
-    "roboto-mono",
-    "ubuntu_font_family",
+    "font-awesome@latest",
+    "hack-font@latest",
+    "liberation_ttf@latest",
+    "roboto@latest",
+    "roboto-mono@latest",
+    "ubuntu_font_family@latest",
 
     //noto-fonts
     //noto-fonts-emoji
@@ -56,132 +56,141 @@
     //cantarell-fonts
 
     //// Video/Audio and photo
-    "vlc", // Media Player
-    "handbrake",
-    "obs-studio",
-    "gcolor3",
-    "gimp", // Alternative is: https://github.com/PintaProject/Pinta
-    "inkscape",
-    "upscayl", // Image upscaler
+    "vlc@latest", // Media Player
+    "handbrake@latest",
+    "obs-studio@latest",
+    "gcolor3@latest",
+    "gimp@latest", // Alternative is: https://github.com/PintaProject/Pinta
+    "inkscape@latest",
+    "upscayl@latest", // Image upscaler
     //vulkan-radeon // Required for above, CPU vendor specific
 
     //// Apps
-    "xournalpp", // Draving software
-    "kate", // General GUI text editor
-    "evince", // Document viewer (PDF)
+    "xournalpp@latest", // Draving software
+    "kate@latest", // General GUI text editor
+    "evince@latest", // Document viewer (PDF)
     //masterpdfeditor4      // PDF editor (non-free license)
     //texlivePackages.latex  //texlive-latex       // For xournalpp Latex
     //texlivePackages.collection-latexextra //texlive-latexextra  // For xournalpp Latex
 
-    "zoom",
+    "zoom@latest",
     //nomachine
-    "freetube", // Youtube client
-    "pika-backup", // Backup tool (automatic)
+    //"freetube@latest", // Youtube client (insecure electron version)
+    "pika-backup@latest", // Backup tool (automatic)
 
     //// Office Suite
-    "libreoffice-fresh",
-    "onlyoffice-bin",
+    "libreoffice-fresh@latest",
+    "onlyoffice-bin@latest",
 
     //// Browsers
-    "brave",
-    "librewolf",
+    "brave@latest",
+    "librewolf@latest",
     //thorium-browser-bin
 
     //// File Management
-    "okular", // PDF viewer
-    "zip", // Zip files
-    "ark", // GUI to compress or uncompress data
-    "nextcloud-client",
+    "okular@latest", // PDF viewer
+    "zip@latest", // Zip files
+    "ark@latest", // GUI to compress or uncompress data
+    "nextcloud-client@latest",
 
     //// Email
-    "betterbird",
-    "birdtray",
+    "betterbird@latest",
+    "birdtray@latest",
 
     //// Programming
-    "git",
-    "lazygit", // Git terminal UI
-    "pre-commit", // Pre-commit hooks for Git
-    "gnumake", // make
-    "python3",
+    "git@latest",
+    "lazygit@latest", // Git terminal UI
+    "pre-commit@latest", // Pre-commit hooks for Git
+    "gnumake@latest", // make
+    "python3@latest",
     //python-pip
-    "go",
-    "nodejs",
+    "go@latest",
+    "nodejs@latest",
     // npm
-    "vscodium", // Main code editor
-    "bruno",
-    "chezmoi",
-    "gitleaks", // Check for leaks in git repos, scans all branches with all commit history
+    "vscodium@latest", // Main code editor
+    "bruno@latest",
+    "chezmoi@latest",
+    "gitleaks@latest", // Check for leaks in git repos, scans all branches with all commit history
     //terraform            // (non-free license)
-    "pyinfra", // The new Ansible
+    "pyinfra@latest", // The new Ansible
 
     //// Formatters
     //prettier
 
     //// Linters
-    "hadolint", // Used in VSCodium
+    "hadolint@latest", // Used in VSCodium
     //python-pylint   // Used in VSCodium
 
     //// Tools
-    "gsmartcontrol",
-    "gnome-disk-utility",
-    "ventoy",
+    "gsmartcontrol@latest",
+    //"gnome-disk-utility@latest", // (dep errors)
+    "ventoy@latest",
     //popsicle-bin
-    "android-tools",
-    "universal-android-debloater", // CLI: uad-ng
+    "android-tools@latest",
+    "universal-android-debloater@latest", // CLI: uad-ng
     //distrobox          // Run any distribution on any Linux
     ////xorg-xhost         // xhost, dependency for prev
-    "audacity", // Sound
-    "corectrl", // GPU and CPU guvernor
-    "activitywatch", // Time monitoring
-    "apacheHttpd", // for htpasswd
+    "audacity@latest", // Sound
+    "corectrl@latest", // GPU and CPU guvernor
+
+    //"activitywatch@latest", // Time monitoring (fails to build)
+
+    "apacheHttpd@latest", // for htpasswd
     //superpaper         // Wallpaper
-    "stacer", // System monitoring GUI
+    "stacer@latest", // System monitoring GUI
     //appimagelauncher    // AUR, integrate appimages as apps, works after reboot
-    "rclone",
-    "whois", // Contains mkpasswd
-    "filezilla",
-    "droidcam", // Webcam emulator from Android
-    "lazydocker", // Docker container management, Portainer alternative
-    "gomplate", // Templating cli
-    "gnutar", // tar
-    "trash-cli", // Command line trashcan (recycle bin) interface
-    "meld", // Compare files
-    "chafa", // ASCII art
-    "speedtest-go", // Internet speedtest in CLI
-    "drawio", // Drawing tool
-    "kcalc", // Calculator
-    "flameshot", // alt: satty       // Screenshot tool
-    "rofi-wayland", // Rofi with Wayland support
+    "rclone@latest",
+    "whois@latest", // Contains mkpasswd
+    "filezilla@latest",
+    "droidcam@latest", // Webcam emulator from Android
+    "lazydocker@latest", // Docker container management, Portainer alternative
+    "gomplate@latest", // Templating cli
+    "gnutar@latest", // tar
+    "trash-cli@latest", // Command line trashcan (recycle bin) interface
+    "meld@latest", // Compare files
+    "chafa@latest", // ASCII art
+    "speedtest-go@latest", // Internet speedtest in CLI
+    "drawio@latest", // Drawing tool
+    "kcalc@latest", // Calculator
+    "flameshot@latest", // alt: satty       // Screenshot tool
+    "rofi-wayland@latest", // Rofi with Wayland support
 
     //// Desktop environment
-    "copyq", // clipboard manager
+    "copyq@latest", // clipboard manager
 
     //// Security
-    "keepassxc",
-    "onlykey", // Includes udev rules
-    "openssh", // ssh-agent
+    "keepassxc@latest",
+    "onlykey@latest", // Includes udev rules
+    "openssh@latest", // ssh-agent
     //gnome-ssh-askpass4-git // AUR, ssh-askpass-fullscreen is actually fullscreen
 
     //// Containers
-    "docker",
-    "docker-compose",
+    "docker@latest",
+    "docker-compose@latest",
 
     //// QEMU
     //   qemu_full // TODO: won't build
-    "virt-manager",
+    "virt-manager@latest",
 
     //// Printer and scanner
-    "simple-scan", // Scanning (Gnome)
-    "cups",
-    "hplip",
-    "sane-airscan",
-    "avahi", // Network scanning (printer and scanner)
+    "simple-scan@latest", // Scanning (Gnome)
+    "cups@latest",
+    "hplip@latest",
+    "sane-airscan@latest",
+    "avahi@latest", // Network scanning (printer and scanner)
 
     //// System
-    "ntp", // time
-    "nftables", // firewall
-    "iptables-nftables-compat" // iptables to nftables layer, required for Docker
+    "ntp@latest", // time
+    "nftables@latest", // firewall
+    "iptables-nftables-compat@latest", // iptables to nftables layer, required for Docker
+    "cowsay@latest",
+    "glxinfo@latest",
+    "mesa@latest",
+    "stdenv.cc.cc.lib"
   ],
+  "env": {
+    //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected
+  },
   "shell": {
     "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
     "scripts": {

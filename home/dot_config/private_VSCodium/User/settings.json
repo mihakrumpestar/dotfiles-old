@@ -9,7 +9,9 @@
   "files.associations": {
     "*.enc*": "ini",
     "*.env*": "ini",
-    "*.arg": "ini"
+    "*.arg": "ini",
+    "devbox.json": "jsonc",
+    "*.desktop*": "ini"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -232,7 +234,7 @@
     "zerolog",
     "zvocni"
   ],
-  "cSpell.enableFiletypes": ["!yaml"],
+  "cSpell.enableFiletypes": ["!jsonc", "!yaml"],
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },

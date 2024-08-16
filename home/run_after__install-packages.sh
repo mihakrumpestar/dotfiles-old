@@ -5,10 +5,10 @@ set -euo pipefail
 
 echo -e "\n\e[1m Install user packages \e[0m\n"
 
-nix-env -if ./packages.nix --quiet
-# nix-env -q
-# nix-env --list-generations
-# nix-collect-garbage
+devbox global install
+
+# sudo mkdir -p /run/opengl-driver/lib/
+# sudo ln -s /usr/lib/ /run/opengl-driver/
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
