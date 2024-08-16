@@ -49,3 +49,12 @@ git filter-branch -f --commit-filter 'git commit-tree -S "$@"' HEAD
 git remote add origin git@github.com:<username>/<repo>.git
 git push --set-upstream origin main --force
 ```
+
+Edit groups and users:
+
+```sh
+id # Currently loaded
+
+sudo nano /etc/group
+sudo nano /etc/passwd
+```

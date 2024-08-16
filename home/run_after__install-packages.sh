@@ -12,12 +12,13 @@ nix-env -if ./packages.nix --quiet
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
-# System
+## System
 sudo systemctl enable --now cups
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now avahi-daemon
 sudo systemctl enable --now ntpd # time sync
 sudo systemctl enable --now sshd
+sudo systemctl enable --now libvirtd # QEMU
 sudo systemctl enable --now nftables
 # sudo nft list tables
 # sudo nft list ruleset
@@ -30,11 +31,8 @@ sudo groupadd -f docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 
-# QEMU
-sudo systemctl enable --now libvirtd
-
-# SSH agent
-systemctl --user enable --now ssh-agent
+## User
+systemctl --user enable --now ssh-agent # SSH agent
 
 # Make sure user services are started on boot
 loginctl enable-linger $USER

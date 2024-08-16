@@ -22,10 +22,12 @@
     kitty             # Terminal emulator
     yakuake           # Drop down terminal emulator
     zellij            # Modern Tmux (terminal multiplexer)
-    pciutils         # Computer utility info
-    usbutils         # USB utility info
-    udisks2          # AUR, command is udisksctl
-    udiskie          # AUR, a user-level daemon for auto-mounting
+    pciutils          # Computer utility info
+    usbutils          # USB utility info
+    udisks2           # AUR, command is udisksctl
+    udiskie           # AUR, a user-level daemon for auto-mounting
+    sparklines
+    lolcat
   
     ## Fonts
     meslo-lgs-nf # font for starship
