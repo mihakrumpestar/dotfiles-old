@@ -22,3 +22,6 @@ if [ -n "$missing" ]; then
 else
     echo "All required locales are already generated."
 fi
+
+# TODO: automate udev rules
+sudo udevadm control --reload-rules && sudo udevadm trigger

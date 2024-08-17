@@ -7,48 +7,32 @@
     "nano":     "latest",
     "curl":     "latest",
     "wget":     "latest",
-    "onefetch": "latest",
-    // neofetch for Git
-    "fastfetch": "latest",
-    // System info, the new neofetch
-    "ipfetch": "latest",
-    // Neofetch for IPs, AUR
-    "btop": "latest",
-    // better htop
-    "starship": "latest",
-    // terminal UI
-    "zoxide": "latest",
-    // Better cd
+    "onefetch": "latest", // neofetch for Git
+    "fastfetch": "latest", // System info, the new neofetch
+    "ipfetch": "latest", // Neofetch for IPs
+    "btop": "latest", // better htop
+    "starship": "latest", // terminal UI
+    "zoxide": "latest", // Better cd
     "bash":                 "latest",
     "bash-completion":      "latest",
     "nix-bash-completions": "latest",
-    "bat":                  "latest",
-    // Better cat
+    "bat":                  "latest", // Better cat
     "sops":      "latest",
     "tree":      "latest",
-    "multitail": "latest",
-    // File viewer
-    "fzf": "latest",
-    // Command-line fuzzy finder
-    "kitty": "latest",
-    // Terminal emulator
-    "yakuake": "latest",
-    // Drop down terminal emulator
-    "zellij": "latest",
-    // Modern Tmux (terminal multiplexer)
-    "pciutils": "latest",
-    // Computer utility info
-    "usbutils": "latest",
-    // USB utility info
-    "udisks2": "latest",
-    // AUR, command is udisksctl
-    "udiskie": "latest",
-    // AUR, a user-level daemon for auto-mounting
+    "multitail": "latest", // File viewer
+    "fzf": "latest", // Command-line fuzzy finder
+    "kitty": "latest", // Terminal emulator
+    "yakuake": "latest", // Drop down terminal emulator
+    "zellij": "latest", // Modern Tmux (terminal multiplexer)
+    "pciutils": "latest", // Computer utility info
+    "usbutils": "latest", // USB utility info
+    "udisks2": "latest", // Command is udisksctl
+    "udiskie": "latest", // A user-level daemon for auto-mounting
     "python312Packages.sparklines": "latest",
     "lolcat":                       "latest",
-    //// Fonts
-    "meslo-lgs-nf": "latest",
-    // font for starship
+    
+    // Fonts
+    "meslo-lgs-nf": "latest", // font for starship
     //ttf-ms-fonts
     "SDL2_ttf":     "latest",
     "carlito":      "latest",
@@ -71,172 +55,135 @@
     //xorg-fonts-encodings
     //cantarell-fonts
 
-    //// Video/Audio and photo
-    "vlc": "latest",
-    // Media Player
+    // Video/Audio and photo
+    "vlc": "latest", // Media Player
     "handbrake":  "latest",
     "obs-studio": "latest",
     "gcolor3":    "latest",
     "gimp":       "latest",
     // Alternative is: https://github.com/PintaProject/Pinta
     "inkscape": "latest",
-    "upscayl":  "latest",
-    // Image upscaler
-    //vulkan-radeon // Required for above, CPU vendor specific
+    "upscayl":  "latest", // Image upscaler
 
-    //// Apps
-    "xournalpp": "latest",
-    // Draving software
-    "kate": "latest",
-    // General GUI text editor
-    "evince": "latest",
-    // Document viewer (PDF)
+    // Apps
+    "xournalpp": "latest", // Draving software
+    "kate": "latest", // General GUI text editor
+    "evince": "latest", // Document viewer (PDF)
     //masterpdfeditor4      // PDF editor (non-free license)
     //texlivePackages.latex  //texlive-latex       // For xournalpp Latex
     //texlivePackages.collection-latexextra //texlive-latexextra  // For xournalpp Latex
     "zoom": "latest",
     //nomachine
     //"freetube@latest", // Youtube client (insecure electron version)
-    "pika-backup": "latest",
-    // Backup tool (automatic)
+    "pika-backup": "latest", // Backup tool (automatic) TODO: replace
 
-    //// Office Suite
+    // Office Suite
     "libreoffice-fresh": "latest",
     "onlyoffice-bin":    "latest",
-    //// Browsers
+    
+    // Browsers
     "brave":     "latest",
     "librewolf": "latest",
     //thorium-browser-bin
 
-    //// File Management
-    "okular": "latest",
-    // PDF viewer
-    "zip": "latest",
-    // Zip files
-    "ark": "latest",
-    // GUI to compress or uncompress data
+    // File Management
+    "okular": "latest", // PDF viewer
+    "zip": "latest", // Zip files
+    "ark": "latest", // GUI to compress or uncompress data
     "nextcloud-client": "latest",
-    //// Email
+    
+    // Email
     "betterbird": "latest",
     "birdtray":   "latest",
-    //// Programming
+    
+    // Programming
     "git":     "latest",
-    "lazygit": "latest",
-    // Git terminal UI
-    "pre-commit": "latest",
-    // Pre-commit hooks for Git
-    "gnumake": "latest",
-    // make
-    "python3": "latest",
-    //python-pip
+    "lazygit": "latest", // Git terminal UI
+    "pre-commit": "latest", // Pre-commit hooks for Git
+    "gnumake": "latest", // make
+    "python3": "latest", //python-pip
     "go":     "latest",
-    "nodejs": "latest",
-    // npm
-    "vscodium": "latest",
-    // Main code editor
+    "nodejs": "latest", // npm
+    "vscodium": "latest", // Main code editor
     "bruno":    "latest",
     "chezmoi":  "latest",
-    "gitleaks": "latest",
-    // Check for leaks in git repos, scans all branches with all commit history
+    "gitleaks": "latest", // Check for leaks in git repos, scans all branches with all commit history
     //terraform            // (non-free license)
-    "pyinfra": "latest",
-    // The new Ansible
+    "pyinfra": "latest", // The new Ansible
 
-    //// Formatters
+    // Formatters
     //prettier
 
-    //// Linters
+    // Linters
     "hadolint": "latest",
     // Used in VSCodium
     //python-pylint   // Used in VSCodium
 
-    //// Tools
+    // Tools
     "gsmartcontrol": "latest",
     //"gnome-disk-utility@latest", // (dep errors)
     "ventoy": "latest",
     //popsicle-bin
     "android-tools":               "latest",
-    "universal-android-debloater": "latest",
-    // CLI: uad-ng
+    "universal-android-debloater": "latest", // CLI: uad-ng
     //distrobox          // Run any distribution on any Linux
     ////xorg-xhost         // xhost, dependency for prev
-    "audacity": "latest",
-    // Sound
-    "corectrl": "latest",
-    // GPU and CPU guvernor
+    "audacity": "latest", // Sound
+    "corectrl": "latest",  // GPU and CPU guvernor
 
     //"activitywatch@latest", // Time monitoring (fails to build)
-    "apacheHttpd": "latest",
-    // for htpasswd
+    "apacheHttpd": "latest", // for htpasswd
     //superpaper         // Wallpaper
-    "stacer": "latest",
-    // System monitoring GUI
+    "stacer": "latest", // System monitoring GUI
     //appimagelauncher    // AUR, integrate appimages as apps, works after reboot
     "rclone": "latest",
-    "whois":  "latest",
-    // Contains mkpasswd
+    "whois":  "latest", // Contains mkpasswd
     "filezilla": "latest",
-    "droidcam":  "latest",
-    // Webcam emulator from Android
-    "lazydocker": "latest",
-    // Docker container management, Portainer alternative
-    "gomplate": "latest",
-    // Templating cli
-    "gnutar": "latest",
-    // tar
-    "trash-cli": "latest",
-    // Command line trashcan (recycle bin) interface
-    "meld": "latest",
-    // Compare files
-    "chafa": "latest",
-    // ASCII art
-    "speedtest-go": "latest",
-    // Internet speedtest in CLI
-    "drawio": "latest",
-    // Drawing tool
-    "kcalc": "latest",
-    // Calculator
-    "flameshot": "latest",
-    // alt: satty       // Screenshot tool
-    "rofi-wayland": "latest",
-    // Rofi with Wayland support
+    "droidcam":  "latest", // Webcam emulator from Android
+    "lazydocker": "latest", // Docker container management, Portainer alternative
+    "gomplate": "latest", // Templating cli
+    "gnutar": "latest", // tar
+    "trash-cli": "latest", // Command line trashcan (recycle bin) interface
+    "meld": "latest", // Compare files
+    "chafa": "latest", // ASCII art
+    "speedtest-go": "latest", // Internet speedtest in CLI
+    "drawio": "latest", // Drawing tool
+    "kcalc": "latest", // Calculator
+    "flameshot": "latest", // alt: satty       // Screenshot tool
+    "rofi-wayland": "latest", // Rofi with Wayland support
 
-    //// Desktop environment
+    // Desktop environment
     "copyq": "latest",
     // clipboard manager
 
-    //// Security
+    // Security
     "keepassxc":   "latest",
-    "onlykey":     "5.3.4",
+    "onlykey":                  "latest",
     "onlykey-cli": "latest",
-    // Includes udev rules
-    "openssh": "latest",
-    // ssh-agent
+    "openssh": "latest", // ssh-agent
     "ksshaskpass": "latest", // Before gnome-ssh-askpass4-git
 
-    //// Containers
+    // Containers
     "podman":         "latest",
     "docker":         "latest",
     "docker-compose": "latest",
-    //// QEMU
+    
+    // QEMU
     //   qemu_full // TODO: won't build
     "virt-manager": "latest",
-    //// Printer and scanner
+    
+    // Printer and scanner
     "simple-scan": "latest",
     // Scanning (Gnome)
     "cups":         "latest",
     "hplip":        "latest",
     "sane-airscan": "latest",
-    "avahi":        "latest",
-    // Network scanning (printer and scanner)
+    "avahi":        "latest", // Network scanning (printer and scanner)
 
-    //// System
-    "ntp": "latest",
-    // time
-    "nftables": "latest",
-    // firewall
-    "iptables-nftables-compat": "latest",
-    // iptables to nftables layer, required for Docker
+    // System
+    "ntp": "latest", // time
+    "nftables": "latest", // firewall
+    "iptables-nftables-compat": "latest", // iptables to nftables layer, required for Docker
     "glxinfo":          "latest",
     "stdenv.cc.cc.lib": "",
     "libglvnd":         "latest",
@@ -244,8 +191,11 @@
       "version": "24.1.4", // latest is too old
       "outputs": ["drivers"],
     },
-    "gnome-tweaks": "latest",
-    "Vorta":        "latest",
+    "gnome-tweaks":             "latest",
+    "Vorta":                    "latest",
+    "gnome.adwaita-icon-theme": "latest",
+    "hicolor-icon-theme":       "latest",
+    "vanilla-dmz":              "latest",
   },
   "env": {
     //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected, does not override the default one (hardcoded by NixOS)

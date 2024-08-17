@@ -7,11 +7,6 @@ echo -e "\n\e[1m Install user packages \e[0m\n"
 
 devbox global install
 
-# Mesa (GPU drivers)
-sudo rm -rf /run/opengl-driver/lib/*
-sudo mkdir -p /run/opengl-driver/lib/
-sudo ln -sf $DEVBOX_PACKAGES_DIR/lib/* /run/opengl-driver/lib
-
 sudo systemctl enable --now gpu-driver-setup.service
 
 # glxinfo -B | grep "OpenGL version"
