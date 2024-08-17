@@ -71,7 +71,6 @@ https://github.com/probonopd/go-appimage
 On new system:
 
 ```bash
-# Disable KWallet (KDE settings)
 # Reboot
 
 # Install deps
@@ -89,6 +88,9 @@ sudo usermod -aG nix-users $USER
 sudo GOBIN=/usr/local/bin/ go install github.com/Ibotta/sopstool@latest
 
 task apply-without-secrets
+
+balooctl6 purge
+
 task apply
 ```
 
