@@ -54,10 +54,10 @@ Ctrl+Shift+X    # Open copy history under cursor
 
 ```
 
-Alternatives:
+Packages:
 
-- [BlendOS](https://blendos.co/): immutable, atomic and declarative Arch Linux system, with all mayor package managers and Android
-- [VanillaOS](https://vanillaos.org/): immutable distro with support for all existing package managers from all distributions
+- https://search.nixos.org/packages
+- https://www.nixhub.io/
 
 TODO:
 
