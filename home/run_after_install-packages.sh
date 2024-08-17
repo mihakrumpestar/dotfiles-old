@@ -12,6 +12,8 @@ sudo rm -rf /run/opengl-driver/lib/*
 sudo mkdir -p /run/opengl-driver/lib/
 sudo ln -sf $DEVBOX_PACKAGES_DIR/lib/* /run/opengl-driver/lib
 
+sudo systemctl enable --now gpu-driver-setup.service
+
 # glxinfo -B | grep "OpenGL version"
 
 # Aplications
@@ -50,7 +52,7 @@ sudo timedatectl set-ntp on
 # Docker
 sudo groupadd -f docker
 sudo usermod -aG docker $USER
-sudo systemctl enable --now docker
+#sudo systemctl enable --now docker # TODO: not working
 
 ## User
 systemctl --user enable --now ssh-agent # SSH agent
@@ -59,7 +61,7 @@ systemctl --user enable --now ssh-agent # SSH agent
 loginctl enable-linger $USER
 
 # Mount remote storage
-#systemctl --user enable --now rclone@nextcloud-personal
+systemctl --user enable --now rclone@nextcloud-personal
 # rclone listremotes
 
 # Symbolic links

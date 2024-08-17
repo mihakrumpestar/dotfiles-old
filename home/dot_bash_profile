@@ -14,12 +14,15 @@
 #export XMODIFIERS=@im=dbus
 #export QT_IM_MODULE=ibus
 
+[ -f "$HOME/.config/locale.conf" ] && . "$HOME/.config/locale.conf"
+
 # Devbox
-export XDG_DATA_DIRS="$DEVBOX_PACKAGES_DIR/share:$XDG_DATA_DIRS"
+# $DEVBOX_PACKAGES_DIR is not available at this time
+export XDG_DATA_DIRS="/home/$USER/.local/share/devbox/global/default/.devbox/nix/profile/default/share:$XDG_DATA_DIRS"
 
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass" # TODO: fix # this is buggy and might not work, therefore we create syslink (already in _install_packages.sh)
+export SSH_ASKPASS="ksshaskpass" # TODO: make it work properly
 export SSH_ASKPASS_REQUIRE=prefer
 
 # PATH

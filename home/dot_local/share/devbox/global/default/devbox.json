@@ -24,6 +24,7 @@
     "nix-bash-completions": "latest",
     "bat":                  "latest",
     // Better cat
+    "sops":      "latest",
     "tree":      "latest",
     "multitail": "latest",
     // File viewer
@@ -211,9 +212,10 @@
     // Includes udev rules
     "openssh": "latest",
     // ssh-agent
-    //gnome-ssh-askpass4-git // AUR, ssh-askpass-fullscreen is actually fullscreen
+    "ksshaskpass": "latest", // Before gnome-ssh-askpass4-git
 
     //// Containers
+    "podman":         "latest",
     "docker":         "latest",
     "docker-compose": "latest",
     //// QEMU
@@ -243,6 +245,7 @@
       "outputs": ["drivers"],
     },
     "gnome-tweaks": "latest",
+    "Vorta":        "latest",
   },
   "env": {
     //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected, does not override the default one (hardcoded by NixOS)

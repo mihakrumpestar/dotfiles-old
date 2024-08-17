@@ -11,7 +11,7 @@
   "advanced/tbcmdline": [
     "/usr/bin/env",
     "GDK_BACKEND=x11",
-    "/usr/bin/betterbird"
+    "betterbird"
   ],
   "advanced/tbprocessname": "thunderbird",
   "advanced/tbwindowmatch": "Betterbird",
