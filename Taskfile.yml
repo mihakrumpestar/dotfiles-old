@@ -7,11 +7,12 @@ env:
     sh: echo "$(id -gn)"
   REPO_DIR:
     sh: echo "$PWD"
-  SOPS_AGE_KEY:
-    sh: secret-tool lookup sops-age-project dotfiles
 
 tasks:
   apply:
+    env:
+      SOPS_AGE_KEY:
+        sh: secret-tool lookup sops-age-project dotfiles
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
 
@@ -31,6 +32,9 @@ tasks:
       - chezmoi apply --source ./home --destination "$HOME"
 
   merge:
+    env:
+      SOPS_AGE_KEY:
+        sh: secret-tool lookup sops-age-project dotfiles
     cmds:
       # Regarding root merge-all, we are doing 2 way merge, so it does not update the target file, for that we have to issue "task apply"
       - sopstool entrypoint -- /bin/sh -c '
@@ -38,6 +42,9 @@ tasks:
         chezmoi merge-all --source "./home"'
 
   sops:
+    env:
+      SOPS_AGE_KEY:
+        sh: secret-tool lookup sops-age-project dotfiles
     desc: task sops -- [file]
     cmds:
       - sops {{.CLI_ARGS}}

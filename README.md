@@ -76,13 +76,19 @@ On new system:
 
 # Install deps
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
-yay -Sy --noconfirm --needed onlykey keepassxc chezmoi sops go
-sudo GOBIN=/bin go install github.com/go-task/task/v3/cmd/task@latest
-sudo GOBIN=/bin go install github.com/Ibotta/sopstool@latest
 
-read -p "Input Github PAT token (and make sure KeepassXC secret-service works) > " -r && git clone https://${REPLY}@github.com/mihakrumpestar/dotfiles.git
-cd dotfiles
-cat home/dot_config/chezmoi/chezmoi.yaml > ~/.config/chezmoi/chezmoi.yaml
+curl -fsSL https://get.jetify.com/devbox | bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+# Nix package manager
+sudo systemctl enable --now nix-daemon.service
+
+sudo groupadd -f nix-users
+sudo usermod -aG nix-users $USER
+
+sudo GOBIN=/usr/local/bin/ go install github.com/Ibotta/sopstool@latest
+
+task apply-without-secrets
 task apply
 ```
 
