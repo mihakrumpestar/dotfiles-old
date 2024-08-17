@@ -17,10 +17,10 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStartPre=-/usr/bin/mkdir -p %h/mnt/%i
-ExecStartPre=/bin/bash -c "if findmnt -rno TARGET %h/mnt/%i; then /bin/fusermount -uz %h/mnt/%i; fi" # Force unmount any leftover mount
+ExecStartPre=-mkdir -p %h/mnt/%i
+ExecStartPre=bash -c "if findmnt -rno TARGET %h/mnt/%i; then fusermount -uz %h/mnt/%i; fi" # Force unmount any leftover mount
 ExecStart= \
-  /usr/bin/rclone mount \
+  rclone mount \
     --config=%h/.config/rclone/rclone.conf \
     --dir-cache-time 1m0s \
     --poll-interval 30s \
@@ -32,7 +32,7 @@ ExecStart= \
     --umask 022 \
     --allow-other \
     %i: %h/mnt/%i
-ExecStop=/bin/fusermount -u %h/mnt/%i
+ExecStop=fusermount -u %h/mnt/%i
 
 [Install]
 WantedBy=default.target

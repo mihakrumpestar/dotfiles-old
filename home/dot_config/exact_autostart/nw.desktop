@@ -1,8 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=nw
-Comment=nwstartup script
-Exec=/nix/store/dmsmij1xpzakx2z2xhy6a7slfbbjrsnq-nwjs-0.90.0/share/nwjs/nw --hidden
+Name=Onlykey
+Exec=onlykey
 StartupNotify=false
 Terminal=false

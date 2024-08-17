@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-1cdf96ab-7eb6-4daf-acc4-e0938ca3b466=none,none,Switch to activity "Default"
 switch-to-activity-1fe86127-d67b-4797-816f-87c2194fc798=none,none,Switch to activity "Default"
 switch-to-activity-702edd4c-953e-4343-b9b7-37b80f029431=none,none,Switch to activity "Default"
 switch-to-activity-799fea17-cff7-46d0-9aac-8d71c6bf41fc=none,none,Switch to activity "Default"
@@ -67,7 +68,7 @@ _k_friendly_name=Custom Shortcuts Service
 {fdaa9310-506c-409e-82de-bf2c559177b1}=Meta+F8,none,dolphin
 
 [kmix]
-_k_friendly_name=KMix
+_k_friendly_name=Audio Volume
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
 decrease_volume=Volume Down,Volume Down,Decrease Volume
 decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
@@ -294,18 +295,18 @@ activate widget 38=Alt+F1,none,Activate Application Menu Widget
 activate widget 44=none,none,Activate Icons-only Task Manager Widget
 activate widget 48=none,none,Activate Application Launcher Widget
 activate widget 79=none,none,Activate Unknown Widget
-clear-history=none,none,Clear Clipboard History
+clear-history=none,,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
-cycleNextAction=none,none,Next History Item
-cyclePrevAction=none,none,Previous History Item
+cycleNextAction=none,,Next History Item
+cyclePrevAction=none,,Previous History Item
 edit_clipboard=none,none,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
 next activity=Meta+A,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
 repeat_action=none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
-show-barcode=none,none,Show Barcode…
+show-barcode=none,,Show Barcode…
 show-on-mouse-pos=none,Meta+V,Show Clipboard Items at Mouse Position
 stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
