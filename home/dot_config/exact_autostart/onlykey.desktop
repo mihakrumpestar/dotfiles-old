@@ -2,6 +2,6 @@
 Type=Application
 Version=1.0
 Name=Onlykey
-Exec=onlykey
+Exec=/opt/OnlyKey/nw
 StartupNotify=false
 Terminal=false

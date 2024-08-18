@@ -4,33 +4,33 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
   "packages": {
     // Terminal
-    "nano":     "latest",
-    "curl":     "latest",
-    "wget":     "latest",
-    "onefetch": "latest", // neofetch for Git
-    "fastfetch": "latest", // System info, the new neofetch
-    "ipfetch": "latest", // Neofetch for IPs
-    "btop": "latest", // better htop
-    "starship": "latest", // terminal UI
-    "zoxide": "latest", // Better cd
-    "bash":                 "latest",
-    "bash-completion":      "latest",
-    "nix-bash-completions": "latest",
-    "bat":                  "latest", // Better cat
-    "sops":      "latest",
-    "tree":      "latest",
-    "multitail": "latest", // File viewer
-    "fzf": "latest", // Command-line fuzzy finder
-    "kitty": "latest", // Terminal emulator
-    "yakuake": "latest", // Drop down terminal emulator
-    "zellij": "latest", // Modern Tmux (terminal multiplexer)
-    "pciutils": "latest", // Computer utility info
-    "usbutils": "latest", // USB utility info
-    "udisks2": "latest", // Command is udisksctl
-    "udiskie": "latest", // A user-level daemon for auto-mounting
+    "nano":                         "latest",
+    "curl":                         "latest",
+    "wget":                         "latest",
+    "onefetch":                     "latest", // neofetch for Git
+    "fastfetch":                    "latest", // System info, the new neofetch
+    "ipfetch":                      "latest", // Neofetch for IPs
+    "btop":                         "latest", // better htop
+    "starship":                     "latest", // terminal UI
+    "zoxide":                       "latest", // Better cd
+    "bash":                         "latest",
+    "bash-completion":              "latest",
+    "nix-bash-completions":         "latest",
+    "bat":                          "latest", // Better cat
+    "sops":                         "latest",
+    "tree":                         "latest",
+    "multitail":                    "latest", // File viewer
+    "fzf":                          "latest", // Command-line fuzzy finder
+    "kitty":                        "latest", // Terminal emulator
+    "yakuake":                      "latest", // Drop down terminal emulator
+    "zellij":                       "latest", // Modern Tmux (terminal multiplexer)
+    "pciutils":                     "latest", // Computer utility info
+    "usbutils":                     "latest", // USB utility info
+    "udisks2":                      "latest", // Command is udisksctl
+    "udiskie":                      "latest", // A user-level daemon for auto-mounting
     "python312Packages.sparklines": "latest",
     "lolcat":                       "latest",
-    
+
     // Fonts
     "meslo-lgs-nf": "latest", // font for starship
     //ttf-ms-fonts
@@ -56,7 +56,7 @@
     //cantarell-fonts
 
     // Video/Audio and photo
-    "vlc": "latest", // Media Player
+    "vlc":        "latest", // Media Player
     "handbrake":  "latest",
     "obs-studio": "latest",
     "gcolor3":    "latest",
@@ -67,8 +67,8 @@
 
     // Apps
     "xournalpp": "latest", // Draving software
-    "kate": "latest", // General GUI text editor
-    "evince": "latest", // Document viewer (PDF)
+    "kate":      "latest", // General GUI text editor
+    "evince":    "latest", // Document viewer (PDF)
     //masterpdfeditor4      // PDF editor (non-free license)
     //texlivePackages.latex  //texlive-latex       // For xournalpp Latex
     //texlivePackages.collection-latexextra //texlive-latexextra  // For xournalpp Latex
@@ -80,34 +80,34 @@
     // Office Suite
     "libreoffice-fresh": "latest",
     "onlyoffice-bin":    "latest",
-    
+
     // Browsers
     "brave":     "latest",
     "librewolf": "latest",
     //thorium-browser-bin
 
     // File Management
-    "okular": "latest", // PDF viewer
-    "zip": "latest", // Zip files
-    "ark": "latest", // GUI to compress or uncompress data
+    "okular":           "latest", // PDF viewer
+    "zip":              "latest", // Zip files
+    "ark":              "latest", // GUI to compress or uncompress data
     "nextcloud-client": "latest",
-    
+
     // Email
     "betterbird": "latest",
     "birdtray":   "latest",
-    
+
     // Programming
-    "git":     "latest",
-    "lazygit": "latest", // Git terminal UI
+    "git":        "latest",
+    "lazygit":    "latest", // Git terminal UI
     "pre-commit": "latest", // Pre-commit hooks for Git
-    "gnumake": "latest", // make
-    "python3": "latest", //python-pip
-    "go":     "latest",
-    "nodejs": "latest", // npm
-    "vscodium": "latest", // Main code editor
-    "bruno":    "latest",
-    "chezmoi":  "latest",
-    "gitleaks": "latest", // Check for leaks in git repos, scans all branches with all commit history
+    "gnumake":    "latest", // make
+    "python3":    "latest", //python-pip
+    "go":         "latest",
+    "nodejs":     "latest", // npm
+    "vscodium":   "latest", // Main code editor
+    "bruno":      "latest",
+    "chezmoi":    "latest",
+    "gitleaks":   "latest", // Check for leaks in git repos, scans all branches with all commit history
     //terraform            // (non-free license)
     "pyinfra": "latest", // The new Ansible
 
@@ -129,27 +129,28 @@
     //distrobox          // Run any distribution on any Linux
     ////xorg-xhost         // xhost, dependency for prev
     "audacity": "latest", // Sound
-    "corectrl": "latest",  // GPU and CPU guvernor
+    "corectrl": "latest", // GPU and CPU guvernor6270
+    
 
     //"activitywatch@latest", // Time monitoring (fails to build)
     "apacheHttpd": "latest", // for htpasswd
     //superpaper         // Wallpaper
     "stacer": "latest", // System monitoring GUI
     //appimagelauncher    // AUR, integrate appimages as apps, works after reboot
-    "rclone": "latest",
-    "whois":  "latest", // Contains mkpasswd
-    "filezilla": "latest",
-    "droidcam":  "latest", // Webcam emulator from Android
-    "lazydocker": "latest", // Docker container management, Portainer alternative
-    "gomplate": "latest", // Templating cli
-    "gnutar": "latest", // tar
-    "trash-cli": "latest", // Command line trashcan (recycle bin) interface
-    "meld": "latest", // Compare files
-    "chafa": "latest", // ASCII art
+    "rclone":       "latest",
+    "whois":        "latest", // Contains mkpasswd
+    "filezilla":    "latest",
+    "droidcam":     "latest", // Webcam emulator from Android
+    "lazydocker":   "latest", // Docker container management, Portainer alternative
+    "gomplate":     "latest", // Templating cli
+    "gnutar":       "latest", // tar
+    "trash-cli":    "latest", // Command line trashcan (recycle bin) interface
+    "meld":         "latest", // Compare files
+    "chafa":        "latest", // ASCII art
     "speedtest-go": "latest", // Internet speedtest in CLI
-    "drawio": "latest", // Drawing tool
-    "kcalc": "latest", // Calculator
-    "flameshot": "latest", // alt: satty       // Screenshot tool
+    "drawio":       "latest", // Drawing tool
+    "kcalc":        "latest", // Calculator
+    "flameshot":    "latest", // alt: satty       // Screenshot tool
     "rofi-wayland": "latest", // Rofi with Wayland support
 
     // Desktop environment
@@ -158,20 +159,22 @@
 
     // Security
     "keepassxc":   "latest",
-    "onlykey":                  "latest",
+    "onlykey":     "latest",
     "onlykey-cli": "latest",
-    "openssh": "latest", // ssh-agent
+    "openssh":     "latest", // ssh-agent
     "ksshaskpass": "latest", // Before gnome-ssh-askpass4-git
 
     // Containers
     "podman":         "latest",
+    "podman-compose": "latest",
+    "podman-desktop": "latest",
     "docker":         "latest",
     "docker-compose": "latest",
-    
+
     // QEMU
     //   qemu_full // TODO: won't build
     "virt-manager": "latest",
-    
+
     // Printer and scanner
     "simple-scan": "latest",
     // Scanning (Gnome)
@@ -181,12 +184,12 @@
     "avahi":        "latest", // Network scanning (printer and scanner)
 
     // System
-    "ntp": "latest", // time
-    "nftables": "latest", // firewall
+    "ntp":                      "latest", // time
+    "nftables":                 "latest", // firewall
     "iptables-nftables-compat": "latest", // iptables to nftables layer, required for Docker
-    "glxinfo":          "latest",
-    "stdenv.cc.cc.lib": "",
-    "libglvnd":         "latest",
+    "glxinfo":                  "latest",
+    "stdenv.cc.cc.lib":         "",
+    "libglvnd":                 "latest",
     "mesa": {
       "version": "24.1.4", // latest is too old
       "outputs": ["drivers"],

@@ -16,6 +16,8 @@
 
 [ -f "$HOME/.config/locale.conf" ] && . "$HOME/.config/locale.conf"
 
+eval "$(devbox global shellenv --init-hook)"
+
 # Devbox
 # $DEVBOX_PACKAGES_DIR is not available at this time
 export XDG_DATA_DIRS="/home/$USER/.local/share/devbox/global/default/.devbox/nix/profile/default/share:$XDG_DATA_DIRS"

@@ -28,6 +28,10 @@ ln -sf $DEVBOX_PACKAGES_DIR/share/icons/* /home/$USER/.local/share/icons
 sudo ln -sf $DEVBOX_PACKAGES_DIR/etc/systemd/system/docker.* /etc/systemd/system # Each of required ones, we don't want to override system ones (like dbus)
 sudo systemctl daemon-reload
 
+# D-Bus
+mkdir -p ~/.local/share/dbus-1
+ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
+
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
 ## System

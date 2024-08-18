@@ -3,6 +3,7 @@ _k_friendly_name=Activity Manager
 switch-to-activity-1cdf96ab-7eb6-4daf-acc4-e0938ca3b466=none,none,Switch to activity "Default"
 switch-to-activity-1fe86127-d67b-4797-816f-87c2194fc798=none,none,Switch to activity "Default"
 switch-to-activity-702edd4c-953e-4343-b9b7-37b80f029431=none,none,Switch to activity "Default"
+switch-to-activity-72f762a1-db4e-4940-843f-7af3b5356b50=none,none,Switch to activity "Default"
 switch-to-activity-799fea17-cff7-46d0-9aac-8d71c6bf41fc=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -273,7 +274,7 @@ PowerOff=Power Off,Power Off,Power Off
 Sleep=Sleep,Sleep,Suspend
 Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
 Turn Off Screen=none,none,Turn Off Screen
-_k_friendly_name=KDE Power Management System
+_k_friendly_name=Power Management
 powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
