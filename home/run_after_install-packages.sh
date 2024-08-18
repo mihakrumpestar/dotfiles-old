@@ -29,8 +29,11 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/etc/systemd/system/docker.* /etc/systemd/system
 sudo systemctl daemon-reload
 
 # D-Bus
-mkdir -p ~/.local/share/dbus-1
-ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system.d/org.corectrl.* /usr/share/dbus-1/system.d
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system-services/org.corectrl.* /usr/share/dbus-1/system-services
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/services/* /usr/share/dbus-1/services
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/service/* /usr/share/dbus-1/service
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/interfaces/org.flameshot.* /usr/share/dbus-1/interfaces
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
