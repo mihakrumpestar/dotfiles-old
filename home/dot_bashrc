@@ -85,8 +85,6 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
 alias grep='grep --color=auto'
 alias df='df -h'
 alias free="free -mt"
@@ -143,7 +141,7 @@ eval "$(devbox global shellenv --init-hook)"
 
 # Personal
 alias code=codium
-alias cat='bat'
+alias cat=bat
 
 #######################################################
 # SPECIAL FUNCTIONS
@@ -152,9 +150,6 @@ alias cat='bat'
 #keyboard
 alias keyboard-si="sudo localectl set-x11-keymap si"
 alias keyboard-us="sudo localectl set-x11-keymap us"
-
-#clear
-alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
@@ -225,6 +220,6 @@ ftext() {
 	grep -iIHrn --color=always "$1" . | less -r
 }
 
-if [ -f /usr/bin/fastfetch ]; then
-	fastfetch
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
 fi

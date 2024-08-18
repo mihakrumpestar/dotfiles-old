@@ -274,5 +274,6 @@
     "editor.defaultFormatter": "quarto.quarto",
     "editor.tabSize": 3,
     "editor.insertSpaces": true
-  }
+  },
+  "terminal.external.linuxExec": "kitty"
 }

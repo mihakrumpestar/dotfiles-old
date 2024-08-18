@@ -1,7 +1,8 @@
 [Desktop Entry]
-Type=Application
 Version=1.0
-Name=Onlykey
-Exec=/opt/OnlyKey/nw
-StartupNotify=false
-Terminal=false
+Type=Application
+Name=OnlyKey
+Exec=npm run --prefix "$HOME/Applications/OnlyKey" start
+Icon=$HOME/Applications/OnlyKey/resources/onlykey_logo_128.png
+Terminal=true
+Categories=Utility;

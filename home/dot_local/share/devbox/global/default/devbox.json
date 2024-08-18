@@ -4,77 +4,73 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
   "packages": {
     // Terminal
-    "nano":                         "latest",
-    "curl":                         "latest",
-    "wget":                         "latest",
-    "onefetch":                     "latest", // neofetch for Git
-    "fastfetch":                    "latest", // System info, the new neofetch
-    "ipfetch":                      "latest", // Neofetch for IPs
-    "btop":                         "latest", // better htop
-    "starship":                     "latest", // terminal UI
-    "zoxide":                       "latest", // Better cd
-    "bash":                         "latest",
-    "bash-completion":              "latest",
-    "nix-bash-completions":         "latest",
-    "bat":                          "latest", // Better cat
-    "sops":                         "latest",
-    "tree":                         "latest",
-    "multitail":                    "latest", // File viewer
-    "fzf":                          "latest", // Command-line fuzzy finder
-    "kitty":                        "latest", // Terminal emulator
-    "yakuake":                      "latest", // Drop down terminal emulator
-    "zellij":                       "latest", // Modern Tmux (terminal multiplexer)
-    "pciutils":                     "latest", // Computer utility info
-    "usbutils":                     "latest", // USB utility info
-    "udisks2":                      "latest", // Command is udisksctl
-    "udiskie":                      "latest", // A user-level daemon for auto-mounting
-    "python312Packages.sparklines": "latest",
-    "lolcat":                       "latest",
+    "nano":                 "latest",
+    "curl":                 "latest",
+    "wget":                 "latest",
+    "onefetch":             "latest", // neofetch for Git
+    "fastfetch":            "latest", // System info, the new neofetch
+    "ipfetch":              "latest", // Neofetch for IPs
+    "btop":                 "latest", // better htop
+    "starship":             "latest", // terminal UI
+    "zoxide":               "latest", // Better cd
+    "bash":                 "latest",
+    "bash-completion":      "latest",
+    "nix-bash-completions": "latest",
+    "bat":                  "latest", // Better cat
+    "sops":                 "latest",
+    "tree":                 "latest",
+    "fzf":                  "latest", // Command-line fuzzy finder
+    "kitty":                "latest", // Terminal emulator
+    "yakuake":              "latest", // Drop down terminal emulator # TODO: not working
+    "zellij":               "latest", // Modern Tmux (terminal multiplexer)
+    "pciutils":             "latest", // Computer utility info
+    "usbutils":             "latest", // USB utility info
+    "udisks2":              "latest", // CMD: udisksctl
+    "udiskie":              "latest", // A user-level daemon for auto-mounting
+    "glxinfo":              "latest", // Check GPU drivers
+    "jq":                   "latest",
 
     // Fonts
-    "meslo-lgs-nf": "latest", // font for starship
-    //ttf-ms-fonts
-    "SDL2_ttf":     "latest",
-    "carlito":      "latest",
-    "dejavu_fonts": "latest",
-    //ttf-droid
-    "font-awesome":       "latest",
-    "hack-font":          "latest",
-    "liberation_ttf":     "latest",
-    "roboto":             "latest",
-    "roboto-mono":        "latest",
-    "ubuntu_font_family": "latest",
-    //noto-fonts
-    //noto-fonts-emoji
-    //adobe-source-code-pro-fonts
-    //adobe-source-han-sans-kr-fonts
-    //adobe-source-han-sans-cn-fonts
-    //adobe-source-han-sans-jp-fonts
-    //adobe-source-sans-fonts
-    //awesome-terminal-fonts
-    //xorg-fonts-encodings
-    //cantarell-fonts
+    "meslo-lgs-nf":                      "latest", // font for starship
+    "corefonts":                         "latest", // ttf-ms-fonts
+    "vistafonts":                        "latest", // ttf-ms-fonts
+    "SDL2_ttf":                          "latest",
+    "carlito":                           "latest",
+    "dejavu_fonts":                      "latest",
+    "noto-fonts":                        "latest",
+    "noto-fonts-cjk":                    "latest",
+    "noto-fonts-emoji":                  "latest",
+    "font-awesome":                      "latest",
+    "hack-font":                         "latest",
+    "liberation_ttf":                    "latest",
+    "roboto":                            "latest",
+    "roboto-mono":                       "latest",
+    "ubuntu_font_family":                "latest",
+    "fira-code":                         "latest",
+    "fira-code-symbols":                 "latest",
+    "mplus-outline-fonts.githubRelease": "latest",
+    "dina-font":                         "latest",
+    "proggyfonts":                       "latest",
+    "xorg.fontadobe75dpi":               "latest",
+    "xorg.fontadobe100dpi":              "latest",
 
     // Video/Audio and photo
     "vlc":        "latest", // Media Player
     "handbrake":  "latest",
-    "obs-studio": "latest",
+    "obs-studio": "latest", // TODO: not working
     "gcolor3":    "latest",
-    "gimp":       "latest",
-    // Alternative is: https://github.com/PintaProject/Pinta
-    "inkscape": "latest",
-    "upscayl":  "latest", // Image upscaler
+    "gimp":       "latest", // Alternative is: https://github.com/PintaProject/Pinta
+    "inkscape":   "latest",
+    "upscayl":    "latest", // Image upscaler
 
     // Apps
-    "xournalpp": "latest", // Draving software
-    "kate":      "latest", // General GUI text editor
-    "evince":    "latest", // Document viewer (PDF)
-    //masterpdfeditor4      // PDF editor (non-free license)
-    //texlivePackages.latex  //texlive-latex       // For xournalpp Latex
-    //texlivePackages.collection-latexextra //texlive-latexextra  // For xournalpp Latex
-    "zoom": "latest",
-    //nomachine
-    //"freetube@latest", // Youtube client (insecure electron version)
+    "xournalpp":        "latest", // Draving software
+    "kate":             "latest", // General GUI text editor
+    "evince":           "latest", // Document viewer (PDF)
+    "masterpdfeditor4": "latest", // PDF editor
+    "zoom":             "latest", // TODO: not working
+    // "nomachine-client": "latest", // TODO: nomachine server // TODO: wrong SHA
+    "freetube":    "latest", // Youtube client
     "pika-backup": "latest", // Backup tool (automatic) TODO: replace
 
     // Office Suite
@@ -112,31 +108,25 @@
     "pyinfra": "latest", // The new Ansible
 
     // Formatters
-    //prettier
+    "nodePackages.prettier": "latest",
 
     // Linters
-    "hadolint": "latest",
-    // Used in VSCodium
+    "hadolint": "latest", // Used in VSCodium
     //python-pylint   // Used in VSCodium
 
     // Tools
     "gsmartcontrol": "latest",
     //"gnome-disk-utility@latest", // (dep errors)
-    "ventoy": "latest",
-    //popsicle-bin
+    "ventoy-full":                 "latest", // use "sudo ventoy-web" for GUI, alternative is popsicle
     "android-tools":               "latest",
     "universal-android-debloater": "latest", // CLI: uad-ng
     //distrobox          // Run any distribution on any Linux
-    ////xorg-xhost         // xhost, dependency for prev
     "audacity": "latest", // Sound
-    "corectrl": "latest", // GPU and CPU guvernor6270
-    
-
-    //"activitywatch@latest", // Time monitoring (fails to build)
+    //"activitywatch@latest", // Time monitoring (TODO: fails to build)
     "apacheHttpd": "latest", // for htpasswd
     //superpaper         // Wallpaper
     "stacer": "latest", // System monitoring GUI
-    //appimagelauncher    // AUR, integrate appimages as apps, works after reboot
+    //appimagelauncher    // Integrate appimages as apps, works after reboot
     "rclone":       "latest",
     "whois":        "latest", // Contains mkpasswd
     "filezilla":    "latest",
@@ -151,23 +141,22 @@
     "drawio":       "latest", // Drawing tool
     "kcalc":        "latest", // Calculator
     "flameshot":    "latest", // alt: satty       // Screenshot tool
-    "rofi-wayland": "latest", // Rofi with Wayland support
+    "rofi-wayland": "latest", // Rofi with Wayland support (TODO: fails to start)
 
     // Desktop environment
-    "copyq": "latest",
-    // clipboard manager
+    "copyq": "latest", // clipboard manager
+    "kdeconnect-kde": "latest",
 
     // Security
     "keepassxc":   "latest",
-    "onlykey":     "latest",
-    "onlykey-cli": "latest",
+    "onlykey-cli": "latest", // Onlykey app installed from source
     "openssh":     "latest", // ssh-agent
-    "ksshaskpass": "latest", // Before gnome-ssh-askpass4-git
+    "ksshaskpass": "latest", // Before: gnome-ssh-askpass4-git TODO: not working
 
     // Containers
     "podman":         "latest",
     "podman-compose": "latest",
-    "podman-desktop": "latest",
+    "podman-desktop": "latest", // TODO: not working
     "docker":         "latest",
     "docker-compose": "latest",
 
@@ -176,29 +165,32 @@
     "virt-manager": "latest",
 
     // Printer and scanner
-    "simple-scan": "latest",
-    // Scanning (Gnome)
-    "cups":         "latest",
-    "hplip":        "latest",
-    "sane-airscan": "latest",
-    "avahi":        "latest", // Network scanning (printer and scanner)
+    "simple-scan": "latest", // Scanning (Gnome)
 
     // System
-    "ntp":                      "latest", // time
-    "nftables":                 "latest", // firewall
-    "iptables-nftables-compat": "latest", // iptables to nftables layer, required for Docker
-    "glxinfo":                  "latest",
-    "stdenv.cc.cc.lib":         "",
-    "libglvnd":                 "latest",
-    "mesa": {
+    "ntp":                          "latest", // time
+    "nftables":                     "latest", // firewall
+    "texlive.combined.scheme-full": "latest", // Containes pdflatexa and Tex packages required by xournalpp (full is the minimum req to run)
+    "gnome-tweaks":                 "latest",
+    "Vorta":                        "latest",
+    "gnome.adwaita-icon-theme":     "latest",
+    "hicolor-icon-theme":           "latest",
+    "vanilla-dmz":                  "latest",
+
+    // Drivers
+    "stdenv.cc.cc.lib": "",
+    "libglvnd":         "latest",
+    "mesa": { // Main GPU drivers
       "version": "24.1.4", // latest is too old
       "outputs": ["drivers"],
     },
-    "gnome-tweaks":             "latest",
-    "Vorta":                    "latest",
-    "gnome.adwaita-icon-theme": "latest",
-    "hicolor-icon-theme":       "latest",
-    "vanilla-dmz":              "latest",
+    "amdvlk":                   "latest", // AMD Vulkan drivers
+    "vulkan-utils":             "latest", // Verify with CMD: vulkaninfo
+    "vulkan-loader":            "latest",
+    "vulkan-validation-layers": "latest",
+    "vulkan-extension-layer":   "latest",
+    "rocmPackages.clr.icd":     "", // OpenCL drivers
+    "rymdport":                 "latest",
   },
   "env": {
     //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected, does not override the default one (hardcoded by NixOS)
@@ -210,3 +202,11 @@
     },
   },
 }
+
+/*
+
+Not using anymore:
+
+- corectrl // GPU and CPU guvernor
+
+*/

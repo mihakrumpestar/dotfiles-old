@@ -12,39 +12,44 @@ sudo systemctl enable --now gpu-driver-setup.service
 # glxinfo -B | grep "OpenGL version"
 
 # Aplications
-ln -sf $DEVBOX_PACKAGES_DIR/share/applications/* /home/$USER/.local/share/applications/
+ln -sf $DEVBOX_PACKAGES_DIR/share/applications/* $HOME/.local/share/applications/
 sudo ln -sf $DEVBOX_PACKAGES_DIR/bin/* /usr/local/bin/
 
 # Fonts
 mkdir -p ~/.local/share/fonts
-sudo ln -sf $DEVBOX_PACKAGES_DIR/share/fonts/* ~/.local/share/fonts
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/fonts/* $HOME/.local/share/fonts
 # fc-cache -fv
 
 # Icons
 mkdir -p ~/.local/share/icons
-ln -sf $DEVBOX_PACKAGES_DIR/share/icons/* /home/$USER/.local/share/icons
+ln -sf $DEVBOX_PACKAGES_DIR/share/icons/* $HOME/.local/share/icons
 
 # SystemD
 sudo ln -sf $DEVBOX_PACKAGES_DIR/etc/systemd/system/docker.* /etc/systemd/system # Each of required ones, we don't want to override system ones (like dbus)
 sudo systemctl daemon-reload
 
 # D-Bus
-sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system.d/org.corectrl.* /usr/share/dbus-1/system.d
-sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system-services/org.corectrl.* /usr/share/dbus-1/system-services
+#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system.d/org.corectrl.* /usr/share/dbus-1/system.d
+#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system-services/org.corectrl.* /usr/share/dbus-1/system-services
 sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/services/* /usr/share/dbus-1/services
 sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/service/* /usr/share/dbus-1/service
 sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/interfaces/org.flameshot.* /usr/share/dbus-1/interfaces
 
+# usr lib/libexec
+sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
+sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/docker /usr/lib
+sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/podman /usr/lib
+
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 
 ## System
-#sudo systemctl enable --now cups
+sudo systemctl enable --now cups
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now avahi-daemon
 #sudo systemctl enable --now ntpd # time sync
 sudo systemctl enable --now sshd
 #sudo systemctl enable --now libvirtd # QEMU
-#sudo systemctl enable --now nftables
+sudo systemctl enable --now nftables
 # sudo nft list tables
 # sudo nft list ruleset
 
@@ -70,5 +75,60 @@ systemctl --user enable --now rclone@nextcloud-personal
 #sudo ln -sf /usr/lib/ssh/gnome-ssh-askpass4 /usr/lib/ssh/x11-ssh-askpass
 
 # Dead mens switch
-#systemctl --user enable --now dead-mens-switch.timer
+systemctl --user enable --now dead-mens-switch.timer
 # systemctl --user list-timers --all
+
+# Function to clone a repo, initialize it, and create a desktop entry
+setup_app() {
+    local repo_url="$1"
+    local app_name="$2"
+    local init_command="$3"
+    local entry_command="$4"
+    local icon_name="$5"
+
+    # Define directories
+    local base_dir="\$HOME/Applications"
+    local repo_dir="$base_dir/$app_name"
+    local desktop_entry="\$HOME/.local/share/applications/$app_name.desktop"
+    local icon_path="$repo_dir/$icon_name"
+
+    # Replace actual $HOME with $HOME variable in entry_command
+    local full_entry_command=$(echo "$entry_command" | sed "s|$HOME|\$HOME|g")
+    # Replace $repo_dir placeholder with actual $repo_dir in entry_command
+    full_entry_command=$(echo "$full_entry_command" | sed "s|\$repo_dir|$repo_dir|g")
+
+    # Create base directory if it doesn't exist
+    mkdir -p "$HOME/Applications"
+
+    # Clone the repository if it doesn't exist
+    if [ ! -d "$HOME/Applications/$app_name" ]; then
+        echo "Cloning $app_name repository..."
+        git clone "$repo_url" "$HOME/Applications/$app_name"
+        
+        # Run the initialization command if provided
+        if [ -n "$init_command" ]; then
+            echo "Running initialization command for $app_name..."
+            (cd "$HOME/Applications/$app_name" && eval "$init_command")
+        fi
+    
+        # Create a desktop entry
+        echo "Creating desktop entry for $app_name..."
+        cat > "$HOME/.local/share/applications/$app_name.desktop" <<EOL
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=$app_name
+Exec=$full_entry_command
+Icon=$icon_path
+Terminal=false
+Categories=Utility;
+EOL
+
+        echo "Desktop entry created at $HOME/.local/share/applications/$app_name.desktop"
+    
+    else
+        echo "$app_name repository already exists."
+    fi
+}
+
+setup_app "https://github.com/trustcrypto/OnlyKey-App.git" "OnlyKey" "npm install" "npm run --prefix \"\$repo_dir\" start" "resources/onlykey_logo_128.png"

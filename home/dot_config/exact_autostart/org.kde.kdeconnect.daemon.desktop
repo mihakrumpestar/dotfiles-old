@@ -1,10 +1,9 @@
 [Desktop Entry]
 Type=Application
-Exec=kdeconnectd
+Name=KDE Connect
+Exec=/usr/lib/kdeconnectd
 X-KDE-StartupNotify=false
 X-KDE-autostart-phase=1
 X-GNOME-Autostart-enabled=true
 NoDisplay=true
 Icon=kdeconnect
-
-Name=KDE Connect

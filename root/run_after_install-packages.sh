@@ -6,7 +6,11 @@ set -euo pipefail
 echo -e "\n\e[1m Install system packages \e[0m\n"
 
 PACKAGES=(
-   # Package manager
+    cups
+    system-config-printer
+    hplip
+    sane-airscan
+    avahi    # Network scanning (printer and scanner)
 )
 
 # the quotes are needed to preserve params with spaces
