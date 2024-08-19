@@ -30,17 +30,10 @@ ln -sf $DEVBOX_PACKAGES_DIR/share/icons/* ~/.local/share/icons
 # D-Bus
 mkdir -p ~/.local/share/dbus-1
 sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system.d/org.corectrl.* /usr/share/dbus-1/system.d
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/system-services/org.corectrl.* /usr/share/dbus-1/system-services
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/services/* /usr/share/dbus-1/services
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/service/* /usr/share/dbus-1/service
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/interfaces/org.flameshot.* /usr/share/dbus-1/interfaces
-
-# VSCodium extensions
-sudo ln -sf $DEVBOX_PACKAGES_DIR/share/vscode/extensions/* ~/.vscode-oss/extensions
 
 # usr lib/libexec
 sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
+sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/x11-ssh-askpass /usr/lib
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 

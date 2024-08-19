@@ -218,7 +218,7 @@ ftext() {
 ### Shells ###
 
 eval "$(devbox global shellenv --init-hook)"
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 if command -v fastfetch >/dev/null 2>&1; then

@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Name=OnlyKey
-Exec=bash -c "sleep 5 && npm run --prefix \"$HOME/Applications/OnlyKey\" start"
+Exec=npm run --prefix $HOME/Applications/OnlyKey start
 Terminal=false
 Categories=Utility;
 

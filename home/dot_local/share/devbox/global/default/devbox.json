@@ -22,7 +22,7 @@
     "tree":                 "latest",
     "fzf":                  "latest", // Command-line fuzzy finder
     "kitty":                "latest", // Terminal emulator
-    "guake":                "latest", // Drop down terminal emulator # TODO: not working
+    "guake":                "latest", // Drop down terminal emulator
     "zellij":               "latest", // Modern Tmux (terminal multiplexer)
     "pciutils":             "latest", // Computer utility info
     "usbutils":             "latest", // USB utility info
@@ -69,7 +69,7 @@
     "kate":             "latest", // General GUI text editor
     "evince":           "latest", // Document viewer (PDF)
     "masterpdfeditor4": "latest", // PDF editor
-    "zoom":             "latest", // TODO: not working
+    "zoom-us":          "latest",
     // "nomachine-client": "latest", // TODO: nomachine server // TODO: wrong SHA
     "freetube":    "latest", // Youtube client
     "pika-backup": "latest", // Backup tool (automatic) TODO: replace
@@ -102,17 +102,12 @@
     "go":         "latest",
     "nodejs":     "latest", // npm
     "vscodium":   "latest", // Main code editor ("vscodium-fhs" package has its own FHS, where you would have to install all packages additionaly in it to be able to use them, as it won't take the system ones)
-    "vscode-extensions.golang.go": "latest",
-    "vscode-extensions.bradlc.vscode-tailwindcss": "latest",
-    "vscode-extensions.bungcip.better-toml": "latest",
-    "vscode-extensions.github.github-vscode-theme": "latest",
-    "vscode-extensions.vscode-icons-team.vscode-icons": "latest",
     "bruno":      "latest",
     "chezmoi":    "latest",
     "go-task":    "latest",
     "gitleaks":   "latest", // Check for leaks in git repos, scans all branches with all commit history
-    //terraform            // (non-free license)
-    "pyinfra": "latest", // The new Ansible
+    "terraform":  "latest",
+    "pyinfra":    "latest", // The new Ansible
 
     // Formatters
     "nodePackages.prettier": "latest",
@@ -159,6 +154,7 @@
     "onlykey-cli": "latest", // Onlykey app installed from source
     "openssh":     "latest", // ssh-agent
     "ksshaskpass": "latest", // Before: gnome-ssh-askpass4-git TODO: not working
+    "x11_ssh_askpass": "latest",
 
     // Containers
     "podman":         "latest",
