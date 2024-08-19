@@ -100,7 +100,7 @@
     "python3":    "latest", //python-pip
     "go":         "latest",
     "nodejs":     "latest", // npm
-    "vscodium":   "latest", // Main code editor
+    "vscodium":   "latest", // Main code editor ("vscodium-fhs" package has its own FHS, where you would have to install all packages additionaly in it to be able to use them, as it won't take the system ones)
     "bruno":      "latest",
     "chezmoi":    "latest",
     "go-task":    "latest",

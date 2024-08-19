@@ -133,9 +133,9 @@ alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
 # Shell
+eval "$(devbox global shellenv --init-hook)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
-eval "$(devbox global shellenv --init-hook)"
 
 ### ALIASES ###
 
