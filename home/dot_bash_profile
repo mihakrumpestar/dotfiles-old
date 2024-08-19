@@ -17,7 +17,7 @@ export XDG_DATA_DIRS="$HOME/.local/share/devbox/global/default/.devbox/nix/profi
 
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_ASKPASS="/usr/lib/x11-ssh-askpass" # TODO: make it work properly
+export SSH_ASKPASS="/usr/local/bin/ssh-askpass" # TODO: make it work properly
 export SSH_ASKPASS_REQUIRE=prefer
 
 # PATH

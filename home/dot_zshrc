@@ -1,16 +1,6 @@
 #
-# ~/.bashrc_personal
+# ~/.zshrc
 #
-
-##
-## Unmentained, now using zsh
-##
-
-# From ArcoLinux configs and https://github.com/christitustech/mybash
-
-# Here go the interactive shells
-
-PS1='[\u@\h \W]\$ '
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -20,50 +10,37 @@ PS1='[\u@\h \W]\$ '
 #######################################################
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ -f /etc/zshrc ]; then
+    . /etc/zshrc
 fi
 
-# Enable bash programmable completion features in interactive shells
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
-fi
+# Enable zsh completion
+autoload -Uz compinit && compinit
 
 #######################################################
 # EXPORTS
 #######################################################
 
 # Disable the bell
-if [[ $iatest -gt 0 ]]; then bind "set bell-style visible"; fi
+unsetopt BEEP
 
 # Expand the history size
-export HISTFILESIZE=10000
-export HISTSIZE=500
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 # Don't put duplicate lines in the history and do not add lines that start with a space
-export HISTCONTROL=erasedups:ignoredups:ignorespace
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 
-# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
-shopt -s checkwinsize
-
-# Causes bash to append to history instead of overwriting it so if you start a new terminal, you have old session history
-shopt -s histappend
-PROMPT_COMMAND='history -a'
+# Append to history
+setopt APPEND_HISTORY
 
 # Allow ctrl-S for history navigation (with ctrl-R)
-[[ $- == *i* ]] && stty -ixon
-
-# Ignore case on auto-completion
-# Note: bind used instead of sticking these in .inputrc
-if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
-
-# Show auto-completion list automatically, without double tab
-if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+stty -ixon
 
 # Set the default editor
-export EDITOR='codium --wait' # nano
+export EDITOR='codium --wait'
 export DIFFTOOL="codium --wait --diff $LOCAL $REMOTE"
 export VISUAL='codium'
 
@@ -100,13 +77,13 @@ alias wget="wget -c"
 alias bd='cd "$OLDPWD"'
 
 # Search command line history
-alias h="history | grep "
+alias h="history | grep"
 
 # Search running processes
-alias p="ps aux | grep "
+alias p="ps aux | grep"
 
 # Search files in the current folder
-alias f="find . | grep "
+alias f="find . | grep"
 
 # Show open ports
 alias openports='netstat -nape --inet'
@@ -161,31 +138,30 @@ alias kernels="ls /usr/lib/modules"
 # Am I on grub or systemd-boot
 alias boot="sudo bootctl status | grep Product"
 
-# # extract = EXtractor for all kinds of archives
-# # usage: extract <file>
-extract ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   tar xf $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+# extract = EXtractor for all kinds of archives
+# usage: extract <file>
+extract() {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1   ;;
+            *.tar.gz)    tar xzf $1   ;;
+            *.bz2)       bunzip2 $1   ;;
+            *.rar)       unrar x $1   ;;
+            *.gz)        gunzip $1    ;;
+            *.tar)       tar xf $1    ;;
+            *.tbz2)      tar xjf $1   ;;
+            *.tgz)       tar xzf $1   ;;
+            *.zip)       unzip $1     ;;
+            *.Z)         uncompress $1;;
+            *.7z)        7z x $1      ;;
+            *.deb)       ar x $1      ;;
+            *.tar.xz)    tar xf $1    ;;
+            *.tar.zst)   tar xf $1    ;;
+            *)           echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'\$1' is not a valid file"
+    fi
 }
 
 #btrfs aliases
@@ -193,33 +169,33 @@ alias btrfsfs="sudo btrfs filesystem df /"
 alias btrfsli="sudo btrfs su li / -t"
 
 git-ac() {
-	git add .
-	git commit -m "$1"
+    git add .
+    git commit -m "$1"
 }
 
 git-acp() {
-	git add .
-	git commit -m "$1"
-	git push
+    git add .
+    git commit -m "$1"
+    git push
 }
 
 # Searches for text in all files in the current folder
 ftext() {
-	# -i case-insensitive
-	# -I ignore binary files
-	# -H causes filename to be printed
-	# -r recursive search
-	# -n causes line number to be printed
-	# optional: -F treat search term as a literal, not a regular expression
-	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
-	grep -iIHrn --color=always "$1" . | less -r
+    # -i case-insensitive
+    # -I ignore binary files
+    # -H causes filename to be printed
+    # -r recursive search
+    # -n causes line number to be printed
+    # optional: -F treat search term as a literal, not a regular expression
+    # optional: -l only print filenames and not the matching lines ex. grep -irl "\$1" *
+    grep -iIHrn --color=always "$1" . | less -r
 }
 
 ### Shells ###
 
 eval "$(devbox global shellenv --init-hook)"
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 if command -v fastfetch >/dev/null 2>&1; then
     fastfetch

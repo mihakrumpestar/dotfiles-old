@@ -33,7 +33,7 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
 
 # usr lib/libexec
 sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
-sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/x11-ssh-askpass /usr/lib
+sudo ln -sf /usr/local/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 # sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
 

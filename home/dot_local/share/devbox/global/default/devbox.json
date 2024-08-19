@@ -14,6 +14,7 @@
     "starship":             "latest", // terminal UI
     "zoxide":               "latest", // Better cd
     "bash":                 "latest",
+    "zsh":                  "latest",
     "bash-completion":      "latest",
     "nix-bash-completions": "latest",
     "bat":                  "latest", // Better cat
@@ -154,7 +155,6 @@
     "onlykey-cli": "latest", // Onlykey app installed from source
     "openssh":     "latest", // ssh-agent
     "ksshaskpass": "latest", // Before: gnome-ssh-askpass4-git TODO: not working
-    "x11_ssh_askpass": "latest",
 
     // Containers
     "podman":         "latest",

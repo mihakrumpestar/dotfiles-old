@@ -11,7 +11,8 @@
     "*.env*": "ini",
     "*.arg": "ini",
     "devbox.json": "jsonc",
-    "*.desktop*": "ini"
+    "*.desktop*": "ini",
+    "*.service": "ini"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -276,5 +277,8 @@
     "editor.insertSpaces": true
   },
   "terminal.external.linuxExec": "kitty",
-  "window.zoomLevel": 0.4
+  "window.zoomLevel": 0.4,
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.defaultProfile.linux": "zsh"
 }
