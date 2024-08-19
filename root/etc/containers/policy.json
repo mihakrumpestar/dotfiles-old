@@ -1,0 +1,42 @@
+{
+    "default": [
+        {
+            "type": "reject"
+        }
+    ],
+    "transports": {
+        "docker": {
+            "docker.io": [
+                {
+                    "type": "reject"
+                }
+            ],
+            "docker.io/library": [
+                {
+                    "type": "insecureAcceptAnything"
+                }
+            ],
+            "registry.access.redhat.com": [
+                {
+                    "type": "signedBy",
+                    "keyType": "GPGKeys",
+                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                }
+            ],
+            "registry.redhat.io": [
+                {
+                    "type": "signedBy",
+                    "keyType": "GPGKeys",
+                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                }
+            ]
+        },
+        "docker-daemon": {
+            "": [
+                {
+                    "type": "insecureAcceptAnything"
+                }
+            ]
+        }
+    }
+}

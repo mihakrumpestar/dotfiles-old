@@ -76,6 +76,8 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
+### ALIASES ###
+
 # Alias's to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
@@ -131,13 +133,6 @@ alias mkgz='tar -cvzf'
 alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
-
-# Shell
-eval "$(devbox global shellenv --init-hook)"
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
-
-### ALIASES ###
 
 # Personal
 alias code=codium
@@ -219,6 +214,12 @@ ftext() {
 	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
 	grep -iIHrn --color=always "$1" . | less -r
 }
+
+### Shells ###
+
+eval "$(devbox global shellenv --init-hook)"
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 if command -v fastfetch >/dev/null 2>&1; then
     fastfetch

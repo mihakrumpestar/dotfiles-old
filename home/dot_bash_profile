@@ -7,18 +7,13 @@
 # Env
 # export LC_ALL="en_US.UTF-8"
 
-#Ibus settings if you need them
-#type ibus-setup in terminal to change settings and start the daemon
-#delete the hashtags of the next lines and restart
-#export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=dbus
-#export QT_IM_MODULE=ibus
-
 # [ -f "$HOME/.config/locale.conf" ] && . "$HOME/.config/locale.conf"
 
 # Devbox
 # $DEVBOX_PACKAGES_DIR is not available at this time
 export XDG_DATA_DIRS="$HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share:$XDG_DATA_DIRS"
+
+# export QT_XCB_GL_INTEGRATION=none
 
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
@@ -34,8 +29,8 @@ if [ -d "$HOME/.local/bin" ]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Go TODO: not using standard go package now
-#if [ -d "$HOME/go" ]; then
-#  export GOPATH=$HOME/go
-#  export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
-#fi
+# Go
+if [ -d "$HOME/go" ]; then
+  export GOPATH=$HOME/go
+  export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+fi
