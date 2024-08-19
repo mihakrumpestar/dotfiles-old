@@ -18,10 +18,11 @@
     "nix-bash-completions": "latest",
     "bat":                  "latest", // Better cat
     "sops":                 "latest",
+    "less":                 "latest",
     "tree":                 "latest",
     "fzf":                  "latest", // Command-line fuzzy finder
     "kitty":                "latest", // Terminal emulator
-    "guake":  "latest", // Drop down terminal emulator # TODO: not working
+    "guake":                "latest", // Drop down terminal emulator # TODO: not working
     "zellij":               "latest", // Modern Tmux (terminal multiplexer)
     "pciutils":             "latest", // Computer utility info
     "usbutils":             "latest", // USB utility info
@@ -91,6 +92,7 @@
     // Email
     "betterbird": "latest",
     "birdtray":   "latest",
+    "evolution":  "latest",
 
     // Programming
     "git":        "latest",
@@ -101,6 +103,11 @@
     "go":         "latest",
     "nodejs":     "latest", // npm
     "vscodium":   "latest", // Main code editor ("vscodium-fhs" package has its own FHS, where you would have to install all packages additionaly in it to be able to use them, as it won't take the system ones)
+    "vscode-extensions.golang.go": "latest",
+    "vscode-extensions.bradlc.vscode-tailwindcss": "latest",
+    "vscode-extensions.bungcip.better-toml": "latest",
+    "vscode-extensions.github.github-vscode-theme": "latest",
+    "vscode-extensions.vscode-icons-team.vscode-icons": "latest",
     "bruno":      "latest",
     "chezmoi":    "latest",
     "go-task":    "latest",
@@ -113,7 +120,7 @@
 
     // Linters
     "hadolint": "latest", // Used in VSCodium
-    "pylint":   "latest",   // Used in VSCodium
+    "pylint":   "latest", // Used in VSCodium
 
     // Tools
     "gsmartcontrol":               "latest",
@@ -126,7 +133,7 @@
     //"activitywatch", // Time monitoring (TODO: fails to build)
     "apacheHttpd": "latest", // for htpasswd
     //superpaper         // Wallpaper
-    "stacer": "latest", // System monitoring GUI
+    "stacer":       "latest", // System monitoring GUI
     "rclone":       "latest",
     "whois":        "latest", // Contains mkpasswd
     "filezilla":    "latest",
@@ -145,7 +152,7 @@
     "rymdport":     "latest", // Wormhole client
 
     // Desktop environment
-    "copyq": "latest", // clipboard manager
+    "copyq":          "latest", // clipboard manager
     "kdeconnect-kde": "latest",
 
     // Security
@@ -167,14 +174,14 @@
     "simple-scan": "latest", // Scanning (Gnome)
 
     // System
-    "ntp":                          "latest", // time
-    "nftables":                     "latest", // firewall
+    "ntp":      "latest", // time
+    "nftables": "latest", // firewall
     //"texlive.combined.scheme-full": "latest", // Add only when needed; Containes pdflatexa and Tex packages required by xournalpp (full is the minimum req to run)
-    "gnome-tweaks":                 "latest",
-    "Vorta":                        "latest",
-    "gnome.adwaita-icon-theme":     "latest",
-    "hicolor-icon-theme":           "latest",
-    "vanilla-dmz":                  "latest",
+    "gnome-tweaks":             "latest",
+    "Vorta":                    "latest",
+    "gnome.adwaita-icon-theme": "latest",
+    "hicolor-icon-theme":       "latest",
+    "vanilla-dmz":              "latest",
 
     // Drivers
     "stdenv.cc.cc.lib": "",

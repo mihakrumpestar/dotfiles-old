@@ -36,6 +36,9 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
 #sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/service/* /usr/share/dbus-1/service
 #sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/interfaces/org.flameshot.* /usr/share/dbus-1/interfaces
 
+# VSCodium extensions
+sudo ln -sf $DEVBOX_PACKAGES_DIR/share/vscode/extensions/* ~/.vscode-oss/extensions
+
 # usr lib/libexec
 sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
 

@@ -27,8 +27,9 @@ Extensions:
 
 Alternatives:
 
-- [Claws Mail](https://www.claws-mail.org/index.php): could not authenticate with my email provider
-- [Evolution](https://wiki.gnome.org/Apps/Evolution): can't build
+- [Geary](): nice basic email client, can't directly edit 'From' field only from identities, no LanguageTool support (but does have the system spellcheck), uses secret storage, no tray icon
+- [Claws Mail](https://www.claws-mail.org/index.php): old UI, could not authenticate with my email provider
+- [Evolution](https://wiki.gnome.org/Apps/Evolution): has system spellcheck, no LanguageTool
 - [Kontact](https://kontact.kde.org/): no multilanguage typing correction
 
 Extra resources:

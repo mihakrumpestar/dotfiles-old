@@ -1,8 +1,7 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
 Name=KDE Connect
-Exec=bash -c "/usr/lib/kdeconnectd && kdeconnect-cli -l && kdeconnect-indicator"
+Exec=bash -c "/usr/lib/kdeconnectd & sleep 5 && kdeconnect-indicator"
 X-KDE-StartupNotify=false
 X-KDE-autostart-phase=1
 X-GNOME-Autostart-enabled=true
