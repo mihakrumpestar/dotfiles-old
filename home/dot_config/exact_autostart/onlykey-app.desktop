@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OnlyKey-App
+Exec=npm run --prefix $HOME/Applications/OnlyKey-App start
+Icon=$HOME/Applications/OnlyKey-App/resources/onlykey_logo_128.png
+Terminal=false
+Categories=Utility;
+
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=2
+X-KDE-autostart-after=panel
+X-LXQt-Need-Tray=true
