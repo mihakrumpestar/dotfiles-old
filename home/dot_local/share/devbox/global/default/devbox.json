@@ -21,7 +21,7 @@
     "tree":                 "latest",
     "fzf":                  "latest", // Command-line fuzzy finder
     "kitty":                "latest", // Terminal emulator
-    "yakuake":              "latest", // Drop down terminal emulator # TODO: not working
+    "guake":  "latest", // Drop down terminal emulator # TODO: not working
     "zellij":               "latest", // Modern Tmux (terminal multiplexer)
     "pciutils":             "latest", // Computer utility info
     "usbutils":             "latest", // USB utility info
@@ -103,6 +103,7 @@
     "vscodium":   "latest", // Main code editor
     "bruno":      "latest",
     "chezmoi":    "latest",
+    "go-task":    "latest",
     "gitleaks":   "latest", // Check for leaks in git repos, scans all branches with all commit history
     //terraform            // (non-free license)
     "pyinfra": "latest", // The new Ansible
@@ -112,21 +113,20 @@
 
     // Linters
     "hadolint": "latest", // Used in VSCodium
-    //python-pylint   // Used in VSCodium
+    "pylint":   "latest",   // Used in VSCodium
 
     // Tools
-    "gsmartcontrol": "latest",
-    //"gnome-disk-utility@latest", // (dep errors)
+    "gsmartcontrol":               "latest",
+    "gnome-disk-utility":          "latest",
     "ventoy-full":                 "latest", // use "sudo ventoy-web" for GUI, alternative is popsicle
     "android-tools":               "latest",
     "universal-android-debloater": "latest", // CLI: uad-ng
     //distrobox          // Run any distribution on any Linux
     "audacity": "latest", // Sound
-    //"activitywatch@latest", // Time monitoring (TODO: fails to build)
+    //"activitywatch", // Time monitoring (TODO: fails to build)
     "apacheHttpd": "latest", // for htpasswd
     //superpaper         // Wallpaper
     "stacer": "latest", // System monitoring GUI
-    //appimagelauncher    // Integrate appimages as apps, works after reboot
     "rclone":       "latest",
     "whois":        "latest", // Contains mkpasswd
     "filezilla":    "latest",
@@ -142,6 +142,7 @@
     "kcalc":        "latest", // Calculator
     "flameshot":    "latest", // alt: satty       // Screenshot tool
     "rofi-wayland": "latest", // Rofi with Wayland support (TODO: fails to start)
+    "rymdport":     "latest", // Wormhole client
 
     // Desktop environment
     "copyq": "latest", // clipboard manager
@@ -156,13 +157,11 @@
     // Containers
     "podman":         "latest",
     "podman-compose": "latest",
-    "podman-desktop": "latest", // TODO: not working
-    "docker":         "latest",
-    "docker-compose": "latest",
+    "podman-desktop": "latest", // TODO: not working // We are not using docker as it does not work on non-NixOS distibutions as per https://nixos.wiki/wiki/Docker
 
     // QEMU
     //   qemu_full // TODO: won't build
-    "virt-manager": "latest",
+    //"virt-manager": "latest",
 
     // Printer and scanner
     "simple-scan": "latest", // Scanning (Gnome)
@@ -170,7 +169,7 @@
     // System
     "ntp":                          "latest", // time
     "nftables":                     "latest", // firewall
-    "texlive.combined.scheme-full": "latest", // Containes pdflatexa and Tex packages required by xournalpp (full is the minimum req to run)
+    //"texlive.combined.scheme-full": "latest", // Add only when needed; Containes pdflatexa and Tex packages required by xournalpp (full is the minimum req to run)
     "gnome-tweaks":                 "latest",
     "Vorta":                        "latest",
     "gnome.adwaita-icon-theme":     "latest",
@@ -190,7 +189,6 @@
     "vulkan-validation-layers": "latest",
     "vulkan-extension-layer":   "latest",
     "rocmPackages.clr.icd":     "", // OpenCL drivers
-    "rymdport":                 "latest",
   },
   "env": {
     //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected, does not override the default one (hardcoded by NixOS)

@@ -1,3 +1,7 @@
 merge:
-  command: merge-handler
-  args: ["{{ .Destination }}", "{{ .Source }}"]
+  command: codium # merge-handler
+  args: ["--wait", "--diff", "{{ .Destination }}", "{{ .Source }}"]
+
+diff:
+  command: "meld"
+  args: ["--diff", "{{ .Destination }}", "{{ .Target }}"]

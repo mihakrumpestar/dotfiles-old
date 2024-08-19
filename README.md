@@ -77,7 +77,7 @@ On new system:
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
 
 curl -fsSL https://get.jetify.com/devbox | bash
-sh <(curl -L https://nixos.org/nix/install) --daemon
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # Nix package manager
 sudo systemctl enable --now nix-daemon.service
@@ -87,9 +87,14 @@ sudo usermod -aG nix-users $USER
 
 sudo GOBIN=/usr/local/bin/ go install github.com/Ibotta/sopstool@latest
 
-task apply-without-secrets
+cp home/dot_local/share/devbox/global/default/devbox.json ~/.local/share/devbox/global/default/devbox.json
+devbox global install
 
-balooctl6 purge
+go-task apply-without-secrets
+
+balooctl6 purge # Clean KDE file indexer
+
+reboot # Kwallet will get disabled, so we can use KeepassXC as secret provider
 
 task apply
 ```

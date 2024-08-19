@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-08733b2c-2b2a-49b3-8c47-58b1a1487e65=none,none,Switch to activity "Default"
 switch-to-activity-1cdf96ab-7eb6-4daf-acc4-e0938ca3b466=none,none,Switch to activity "Default"
 switch-to-activity-1fe86127-d67b-4797-816f-87c2194fc798=none,none,Switch to activity "Default"
 switch-to-activity-702edd4c-953e-4343-b9b7-37b80f029431=none,none,Switch to activity "Default"
@@ -317,6 +318,9 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][com.github.hluk.copyq.desktop]
 _launch=Ctrl+Shift+X
 
+[services][guake.desktop]
+_launch=F12
+
 [services][org.flameshot.Flameshot.desktop]
 Capture=Print
 
@@ -347,4 +351,4 @@ _k_friendly_name=Wacom Tablet
 
 [yakuake]
 _k_friendly_name=Yakuake
-toggle-window-state=F12,F12,Open/Retract Yakuake
+toggle-window-state=none,F12,Open/Retract Yakuake

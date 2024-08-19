@@ -141,7 +141,7 @@ eval "$(devbox global shellenv --init-hook)"
 
 # Personal
 alias code=codium
-alias cat=bat
+alias task=go-task
 
 #######################################################
 # SPECIAL FUNCTIONS
