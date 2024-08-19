@@ -26,7 +26,7 @@ else
     echo "$app_name is already installed."
 fi
 
-cp .config/autostart/onlykey-app.desktop .local/share/applications
+cp ~/.config/autostart/onlykey-app.desktop ~/.local/share/applications
 
 app_name=ActivityWatch
 repo_url="https://github.com/ActivityWatch/activitywatch/releases"
