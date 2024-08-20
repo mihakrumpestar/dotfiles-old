@@ -1,6 +1,6 @@
 // rofi -dump-config
 
-@theme "/usr/share/rofi/themes/material.rasi"
+@theme "~/.local/share/rofi/themes/material.rasi"
 
 configuration {
     modes: "combi,window,drun,run,filebrowser,ssh";

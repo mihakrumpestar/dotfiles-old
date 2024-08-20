@@ -11,6 +11,16 @@ Distro-agnostic package managers (stats of 16.8.2024):
 
 Find packages [here](https://pkgs.org/).
 
+# Flakes
+
+```sh
+nix flake show /absolute/path/to/virtualhere-client
+nix build /absolute/path/to/virtualhere-client
+nix run /absolute/path/to/virtualhere-client
+```
+
+# Arch Linux
+
 Mirror fix:
 
 ```bash

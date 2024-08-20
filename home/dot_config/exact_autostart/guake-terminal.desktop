@@ -9,5 +9,5 @@ Categories=GNOME;GTK;System;Utility;TerminalEmulator;
 StartupNotify=true
 X-Desktop-File-Install-Version=0.22
 X-GNOME-Autostart-enabled=true
-Hidden=false
+Hidden=true
 NoDisplay=false

@@ -13,8 +13,6 @@
 # $DEVBOX_PACKAGES_DIR is not available at this time
 export XDG_DATA_DIRS="$HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share:$XDG_DATA_DIRS"
 
-# export QT_XCB_GL_INTEGRATION=none
-
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_ASKPASS="/usr/local/bin/ssh-askpass" # TODO: make it work properly

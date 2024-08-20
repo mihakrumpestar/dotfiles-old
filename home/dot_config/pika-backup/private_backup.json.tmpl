@@ -7,8 +7,8 @@
     "repo": {
       "type": "Local",
       "path": "private/backups/apps",
-      "mount_path": "/home/krumpy-miha/mnt/nextcloud-personal",
-      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/apps",
+      "mount_path": "{{ .chezmoi.homeDir }}/mnt/nextcloud-personal",
+      "uri": "file://{{ .chezmoi.homeDir }}/mnt/nextcloud-personal/private/backups/apps",
       "drive_name": null,
       "mount_name": "nextcloud-personal",
       "volume_uuid": null,
@@ -61,8 +61,8 @@
     "repo": {
       "type": "Local",
       "path": "private/backups/digital-identity",
-      "mount_path": "/home/krumpy-miha/mnt/nextcloud-personal",
-      "uri": "file:///home/krumpy-miha/mnt/nextcloud-personal/private/backups/digital-identity",
+      "mount_path": "{{ .chezmoi.homeDir }}/mnt/nextcloud-personal",
+      "uri": "file://{{ .chezmoi.homeDir }}/mnt/nextcloud-personal/private/backups/digital-identity",
       "drive_name": null,
       "mount_name": "nextcloud-personal",
       "volume_uuid": null,

@@ -1,13 +1,5 @@
 version: "3"
 
-env:
-  PRIMARY_USER:
-    sh: echo "$USER"
-  PRIMARY_GROUP:
-    sh: echo "$(id -gn)"
-  REPO_DIR:
-    sh: echo "$PWD"
-
 tasks:
   apply:
     env:

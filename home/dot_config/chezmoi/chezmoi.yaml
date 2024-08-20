@@ -1,5 +1,5 @@
 merge:
-  command: codium # merge-handler
+  command: codium
   args: ["--wait", "--diff", "{{ .Destination }}", "{{ .Source }}"]
 
 diff:

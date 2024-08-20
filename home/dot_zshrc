@@ -17,6 +17,16 @@ fi
 # Enable zsh completion
 autoload -Uz compinit && compinit
 
+# custom ZSH keybinds
+bindkey "^[[1;5C" forward-word               # Ctrl + Right
+bindkey "^[[1;5D" backward-word              # Ctrl + Left
+bindkey "^[[H" beginning-of-line             # Home
+bindkey "^[[F" end-of-line                   # End
+bindkey "^A" beginning-of-line               # Ctrl + A
+bindkey "^E" end-of-line                     # Ctrl + E
+bindkey "^[[1;3C" forward-word               # Alt + Right
+bindkey "^[[1;3D" backward-word              # Alt + Left
+
 #######################################################
 # EXPORTS
 #######################################################
@@ -116,8 +126,9 @@ alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
 # Personal
-alias code=codium
-alias task=go-task
+alias code="codium"
+alias devbox-clean="devbox run -- nix store gc --extra-experimental-features nix-command"
+alias devbox-global-clean="devbox global run -- nix store gc --extra-experimental-features nix-command"
 
 #######################################################
 # SPECIAL FUNCTIONS
@@ -164,7 +175,7 @@ extract() {
     fi
 }
 
-#btrfs aliases
+# btrfs aliases
 alias btrfsfs="sudo btrfs filesystem df /"
 alias btrfsli="sudo btrfs su li / -t"
 

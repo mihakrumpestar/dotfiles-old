@@ -61,6 +61,10 @@ Packages:
 
 TODO:
 
+- extensions
+- activitywatch
+- SSH_ASKPASS
+
 ```sh
 https://0pointer.net/blog/unlocking-luks2-volumes-with-tpm2-fido2-pkcs11-security-hardware-on-systemd-248.html
 https://wiki.mozilla.org/Security/Sandbox/SELinux
@@ -111,7 +115,8 @@ task merge
 Cheat sheet:
 
 ```bash
-chezmoi add -r --config chezmoi.toml
+chezmoi data # List template variables
+chezmoi execute-template '{{ .chezmoi.hostname }}' # Test them
 
 chezmoi add --source ./home [target_file]
 chezmoi add --source ./root  --destination / [target_file]

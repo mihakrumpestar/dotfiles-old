@@ -15,6 +15,7 @@
     "zoxide":               "latest", // Better cd
     "bash":                 "latest",
     "zsh":                  "latest",
+    "fish":                  "latest",
     "bash-completion":      "latest",
     "nix-bash-completions": "latest",
     "bat":                  "latest", // Better cat
@@ -145,6 +146,7 @@
     "flameshot":    "latest", // alt: satty       // Screenshot tool
     "rofi-wayland": "latest", // Rofi with Wayland support (TODO: fails to start)
     "rymdport":     "latest", // Wormhole client
+    "unzip":        "latest",
 
     // Desktop environment
     "copyq":          "latest", // clipboard manager
@@ -191,6 +193,9 @@
     "vulkan-validation-layers": "latest",
     "vulkan-extension-layer":   "latest",
     "rocmPackages.clr.icd":     "", // OpenCL drivers
+
+    "path:./virtualhere-client": "",
+    "path:./activitywatch": "",
   },
   "env": {
     //"LD_LIBRARY_PATH": "$DEVBOX_PACKAGES_DIR/lib" // If this is set GlibC dep in devbox itself is wrongly detected, does not override the default one (hardcoded by NixOS)

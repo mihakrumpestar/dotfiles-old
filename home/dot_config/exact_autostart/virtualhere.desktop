@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=VirtualHere GUI Client
 GenericName=USB sharing
-Exec=sudo vhuit64
+Exec=sudo virtualhere-client --start-minimized
 # Icon=icon-name
 StartupNotify=true
 Terminal=false

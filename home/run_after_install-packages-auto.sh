@@ -14,6 +14,9 @@ mkdir -p ~/.local/share/applications
 ln -sf $DEVBOX_PACKAGES_DIR/share/applications/* ~/.local/share/applications/
 sudo ln -sf $DEVBOX_PACKAGES_DIR/bin/* /usr/local/bin/
 
+sudo ln -sf /usr/local/bin/go-task /usr/local/bin/task
+ln -sf $DEVBOX_PACKAGES_DIR/share/rofi ~/.local/share
+
 # Fonts
 mkdir -p ~/.local/share/fonts
 sudo ln -sf $DEVBOX_PACKAGES_DIR/share/fonts/* ~/.local/share/fonts
@@ -55,3 +58,6 @@ systemctl --user enable --now rclone@nextcloud-personal || echo "Rclone failed"
 # Dead mens switch
 systemctl --user enable --now dead-mens-switch.timer
 # systemctl --user list-timers --all
+
+# ActivityWatch
+systemctl --user enable --now activitywatch

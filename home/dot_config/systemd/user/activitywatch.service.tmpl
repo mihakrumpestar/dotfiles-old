@@ -1,0 +1,12 @@
+[Unit]
+Description=ActivityWatch Qt GUI
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=aw-qt
+Restart=on-failure
+RestartSec=20s
+
+[Install]
+WantedBy=graphical-session.target
