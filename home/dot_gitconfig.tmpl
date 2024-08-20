@@ -1,0 +1,28 @@
+[core]
+  editor = codium --wait
+[diff]
+  tool = codium
+[difftool "codium"]
+  cmd = codium --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = codium
+[mergetool "codium"]
+  cmd = codium --wait $MERGED
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+
+[init]
+	defaultBranch = main
+
+{{ keepassxcAttribute "git-config" "gitconfig" }}

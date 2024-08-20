@@ -38,18 +38,12 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
 sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
 sudo ln -sf /usr/local/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
-# sudo npm i -g prettier-plugin-sh prettier-plugin-toml prettier-plugin-go-template
-
-# Docker
-sudo groupadd -f docker
-sudo usermod -aG docker $USER
-#sudo systemctl enable --now docker # TODO: not working
-
 ## User
 systemctl --user enable --now ssh-agent # SSH agent
 
 # Make sure user services are started on boot
-loginctl enable-linger $USER
+sudo loginctl enable-linger $USER
+# loginctl list-users
 
 # Mount remote storage
 systemctl --user enable --now rclone@nextcloud-personal || echo "Rclone failed"
@@ -61,3 +55,10 @@ systemctl --user enable --now dead-mens-switch.timer
 
 # ActivityWatch
 systemctl --user enable --now activitywatch
+
+# Betterbird KeepassXC extension, docs: https://github.com/kkapsner/keepassxc-mail
+mkdir -p ~/.mozilla/native-messaging-hosts
+cat ~/.librewolf/native-messaging-hosts/org.keepassxc.keepassxc_browser.json \
+ | sed s/keepassxc-browser@keepassxc.org/keepassxc-mail@kkapsner.de/ \
+ | sed s/org.keepassxc.keepassxc_browser/de.kkapsner.keepassxc_mail/ \
+ > ~/.mozilla/native-messaging-hosts/de.kkapsner.keepassxc_mail.json

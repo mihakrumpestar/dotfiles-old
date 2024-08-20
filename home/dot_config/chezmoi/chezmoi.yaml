@@ -2,6 +2,14 @@ merge:
   command: codium
   args: ["--wait", "--diff", "{{ .Destination }}", "{{ .Source }}"]
 
-diff:
-  command: "meld"
-  args: ["--diff", "{{ .Destination }}", "{{ .Target }}"]
+#diff:
+#  command: "meld"
+#  args: ["--diff", "{{ .Destination }}", "{{ .Target }}"]
+
+keepassxc:
+  database: "~/Desktop/digital-identity/KeePass.kdbx"
+  args: ["--no-password", "--yubikey", "1"]
+#  mode: "open"
+  prompt: false
+
+# keepassxc-cli open --no-password --yubikey 1 <path>

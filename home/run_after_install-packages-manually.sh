@@ -6,7 +6,7 @@ set -euo pipefail
 applications_dir="$HOME/Applications"
 mkdir -p "$applications_dir"
 
-app_name=OnlyKey-App
+app_name=OnlyKey-App    # Could not get it to build in a flake
 repo_url="https://github.com/trustcrypto/OnlyKey-App.git"
 
 if [ ! -d "$applications_dir/$app_name" ]; then
@@ -26,3 +26,8 @@ else
 fi
 
 cp ~/.config/autostart/onlykey-app.desktop ~/.local/share/applications
+
+# Sopstool
+if [ ! -d "/usr/local/bin/sopstool" ]; then
+    sudo GOBIN=/usr/local/bin/ go install github.com/Ibotta/sopstool@latest
+fi

@@ -14,4 +14,4 @@ Use One Wallet=true
 # Disables kwallet/kdewallet
 
 [org.freedesktop.secrets]
-apiEnabled=true
+apiEnabled=false

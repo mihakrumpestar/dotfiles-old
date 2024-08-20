@@ -1,9 +1,0 @@
-{
-    "allowed_extensions": [
-        "keepassxc-mail@kkapsner.de"
-    ],
-    "description": "KeePassXC integration with native messaging support",
-    "name": "de.kkapsner.keepassxc_mail",
-    "path": "/nix/store/7gv3x5vkmwbg7wrjwa4nhvxcphm6gyp2-keepassxc-2.7.9/bin/keepassxc-proxy",
-    "type": "stdio"
-}

@@ -43,5 +43,7 @@ sudo systemctl enable --now nftables
 sudo timedatectl set-ntp on
 # timedatectl
 
-# TODO: automate udev rules
-sudo udevadm control --reload-rules && sudo udevadm trigger
+# Docker
+sudo groupadd -f docker
+sudo usermod -aG docker $USER
+#sudo systemctl enable --now docker # TODO: not working

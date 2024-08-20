@@ -15,7 +15,7 @@
     "zoxide":               "latest", // Better cd
     "bash":                 "latest",
     "zsh":                  "latest",
-    "fish":                  "latest",
+    "fish":                 "latest",
     "bash-completion":      "latest",
     "nix-bash-completions": "latest",
     "bat":                  "latest", // Better cat

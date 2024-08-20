@@ -7,7 +7,7 @@
 # Env
 # export LC_ALL="en_US.UTF-8"
 
-# [ -f "$HOME/.config/locale.conf" ] && . "$HOME/.config/locale.conf"
+[ -f "$HOME/.config/locale.conf" ] && . "$HOME/.config/locale.conf"
 
 # Devbox
 # $DEVBOX_PACKAGES_DIR is not available at this time

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Enable safe execution flags
+set -euo pipefail
+
+echo {{ (keepassxc "Github FRI SSH").UserName }} > identities/github_fri.pub
+echo {{ (keepassxc "Github Personal SSH").UserName }} > identities/github_personal.pub
+echo {{ (keepassxc "PVE SSH").UserName }} > identities/pve.pub
+echo {{ (keepassxc "VMs SSH").UserName }} > identities/vms.pub

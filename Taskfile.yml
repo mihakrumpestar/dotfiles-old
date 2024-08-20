@@ -2,24 +2,13 @@ version: "3"
 
 tasks:
   apply:
-    env:
-      SOPS_AGE_KEY:
-        sh: secret-tool lookup sops-age-project dotfiles
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
-      - sopstool entrypoint -- /bin/sh -c '
-        sudo -E chezmoi apply --source ./root --destination / &&
-        chezmoi apply --source ./home --destination "$HOME"' # Scripts should be run after /root directory is applied
+      - sudo -E chezmoi apply --source ./root --destination /
+      - chezmoi apply --source ./home --destination "$HOME" # Scripts should be run after /root directory is applied
 
       # - chezmoi state delete-bucket --bucket=entryState
       # - chezmoi state delete-bucket --bucket=scriptState
-
-  apply-without-secrets:
-    cmds:
-      - mkdir -p ~/.config/chezmoi
-      - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
-      - chezmoi apply --source ./home --destination "$HOME"
-      - sudo -E chezmoi apply --source ./root --destination /
 
   merge:
     env:
@@ -27,18 +16,8 @@ tasks:
         sh: secret-tool lookup sops-age-project dotfiles
     cmds:
       # Regarding root merge-all, we are doing 2 way merge, so it does not update the target file, for that we have to issue "task apply"
-      - sopstool entrypoint -- /bin/sh -c '
-        sudo -E chezmoi merge-all --source ./root --destination / &&
-        chezmoi merge-all --source "./home"'
-
-  sops:
-    env:
-      SOPS_AGE_KEY:
-        sh: secret-tool lookup sops-age-project dotfiles
-    desc: task sops -- [file]
-    cmds:
-      - sops {{.CLI_ARGS}}
-    interactive: true
+      - sudo -E chezmoi merge-all --source ./root --destination /
+      - chezmoi merge-all --source "./home"
 
   git-setup:
     cmds:
