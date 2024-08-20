@@ -2,6 +2,8 @@ version: "3"
 
 tasks:
   apply:
+    env:
+      ENCRYPTED: false
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
       - sudo -E chezmoi apply --source ./root --destination /

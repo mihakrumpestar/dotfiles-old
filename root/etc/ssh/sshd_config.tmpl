@@ -1,1 +1,3 @@
+{{ if not (env "ENCRYPTED") -}}
 {{ keepassxcAttribute "sshd-config" "sshd_config" }}
+{{ end -}}

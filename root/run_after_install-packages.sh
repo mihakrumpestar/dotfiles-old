@@ -29,7 +29,7 @@ else
     echo "All required locales are already generated."
 fi
 
-#sudo systemctl enable --now gpu-driver-setup.service
+sudo systemctl enable --now gpu-driver-setup.service
 
 ## System
 sudo systemctl enable --now cups
@@ -48,4 +48,4 @@ sudo timedatectl set-ntp on
 # Docker
 sudo groupadd -f docker
 sudo usermod -aG docker $USER
-sudo systemctl enable --now docker # nix-env version of Docker never works on non-nixOS distros
+sudo systemctl enable --now docker # nix-env version of Docker will never work on non-nixOS distros

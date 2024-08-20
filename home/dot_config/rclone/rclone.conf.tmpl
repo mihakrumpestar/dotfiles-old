@@ -1,1 +1,3 @@
+{{ if not (env "ENCRYPTED") -}}
 {{ keepassxcAttribute "rclone-config" "rclone.conf" }}
+{{ end -}}

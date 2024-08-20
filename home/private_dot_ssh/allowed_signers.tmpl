@@ -1,1 +1,3 @@
+{{ if not (env "ENCRYPTED") -}}
 {{ keepassxcAttribute "ssh-config" "allowed_signers" }}
+{{ end -}}
