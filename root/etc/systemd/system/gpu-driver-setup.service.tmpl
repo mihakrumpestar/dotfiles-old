@@ -4,11 +4,10 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'rm -rf /run/opengl-driver/lib/*' # Delete if we restart it
-ExecStart=/bin/bash -c 'mkdir -p /run/opengl-driver/lib/'
-ExecStart=/bin/bash -c 'ln -sf /home/{{ env "PRIMARY_USER" }}/.local/share/devbox/global/default/.devbox/nix/profile/default/lib/* /run/opengl-driver/lib'
-ExecStart=/bin/bash -c 'mkdir -p /run/opengl-driver/share/vulkan/'
-ExecStart=/bin/bash -c 'ln -sf /home/{{ env "PRIMARY_USER" }}/.local/share/devbox/global/default/.devbox/nix/profile/default/share/vulkan/* /run/opengl-driver/share/vulkan'
+ExecStart=/bin/bash -c "mkdir -p /run/opengl-driver/lib/"
+ExecStart=/bin/bash -c "ln -sf {{ .chezmoi.homeDir }}/.local/share/devbox/global/default/.devbox/nix/profile/default/lib/* /run/opengl-driver/lib"
+ExecStart=/bin/bash -c "mkdir -p /run/opengl-driver/share/vulkan/"
+ExecStart=/bin/bash -c "ln -sf {{ .chezmoi.homeDir }}/.local/share/devbox/global/default/.devbox/nix/profile/default/share/vulkan/* /run/opengl-driver/share/vulkan"
 RemainAfterExit=yes
 
 [Install]

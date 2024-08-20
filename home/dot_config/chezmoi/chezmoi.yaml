@@ -2,9 +2,10 @@ merge:
   command: codium
   args: ["--wait", "--diff", "{{ .Destination }}", "{{ .Source }}"]
 
-#diff:
-#  command: "meld"
-#  args: ["--diff", "{{ .Destination }}", "{{ .Target }}"]
+diff:
+  command: "meld"
+  args: ["--diff", "{{ .Destination }}", "{{ .Target }}"]
+  exclude: ["scripts"]
 
 keepassxc:
   database: "~/Desktop/digital-identity/KeePass.kdbx"
