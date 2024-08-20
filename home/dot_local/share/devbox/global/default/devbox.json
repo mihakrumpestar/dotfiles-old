@@ -70,7 +70,7 @@
     "xournalpp":        "latest", // Draving software
     "kate":             "latest", // General GUI text editor
     "evince":           "latest", // Document viewer (PDF)
-    "masterpdfeditor4": "latest", // PDF editor
+    //"masterpdfeditor4": "latest", // PDF editor
     "zoom-us":          "latest",
     // "nomachine-client": "latest", // TODO: nomachine server // TODO: wrong SHA
     "freetube":    "latest", // Youtube client

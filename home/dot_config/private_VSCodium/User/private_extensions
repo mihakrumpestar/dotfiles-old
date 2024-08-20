@@ -6,7 +6,7 @@ davidanson.vscode-markdownlint
 davidlday.languagetool-linter
 dbaeumer.vscode-eslint
 donjayamanne.githistory
-dzylikecode.vscode-drawio-plugin-markdown
+#dzylikecode.vscode-drawio-plugin-markdown
 eamodio.gitlens
 ecmel.vscode-html-css
 edwinhuish.better-comments-next
@@ -20,7 +20,7 @@ hashicorp.hcl
 hashicorp.terraform
 hediet.vscode-drawio
 jeanp413.open-remote-ssh
-jinliming2.vscode-go-template
+#jinliming2.vscode-go-template
 jnoortheen.nix-ide
 jock.svg
 matthewpi.caddyfile-support
