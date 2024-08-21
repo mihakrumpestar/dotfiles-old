@@ -13,10 +13,3 @@ ssh-add -L
 # show signature (must be in a git repo)
 git show --show-signature
 ```
-
-Sync/copy ssh:
-
-```sh
-rsync -av ~/.gitconfig main-server:/home/[user]
-rsync -av --exclude='known_hosts*' --exclude="agents" --exclude='authorized_keys' ~/.ssh/ main-server:/home/[user]
-```

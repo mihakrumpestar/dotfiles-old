@@ -36,10 +36,8 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/share/dbus-1/* ~/.local/share/dbus-1
 
 # usr lib/libexec
 sudo ln -sf $DEVBOX_PACKAGES_DIR/libexec/kdeconnectd /usr/lib
-sudo ln -sf /usr/local/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 ## User
-systemctl --user enable --now ssh-agent # SSH agent
 
 # Make sure user services are started on boot
 sudo loginctl enable-linger $USER

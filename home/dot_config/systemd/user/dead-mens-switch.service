@@ -2,6 +2,7 @@
 Description=Dead mens switch Upload Service
 After=network-online.target
 Wants=network-online.target
+Requires=dead-mens-switch.timer
 
 [Service]
 Type=simple

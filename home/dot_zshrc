@@ -14,6 +14,11 @@ if [ -f /etc/zshrc ]; then
     . /etc/zshrc
 fi
 
+# Source .profile definitions
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
+
 # Enable zsh completion
 autoload -Uz compinit && compinit
 
