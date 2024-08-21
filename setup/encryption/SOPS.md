@@ -22,6 +22,6 @@ sops -e -i .env
 sops [file]
 
 # Pass virtual non-encrypted file to other prosesses ('{}' is the file location placeholder)
-sops exec-file --no-fifo .env 'sudo docker-compose -f docker-compose.yml --env-file {} up -d --force-recreate'
+sops exec-file --no-fifo .env 'docker-compose -f docker-compose.yml --env-file {} up -d --force-recreate'
 # or using exec-env
 ```

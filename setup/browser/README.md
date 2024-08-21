@@ -1,20 +1,22 @@
 # Browser
 
-Librewolf:
+## Librewolf
 
-```bash
-# Debug profiles
+Debug profiles:
+
+```sh
 librewolf -P
-
-# TODO:
-# https://wiki.kairaven.de/open/app/firefox2
-# https://github.com/Aris-t2/CustomCSSforFx
-
-# KeepassXC integration: 
-# In KeepassXC app, go to Browser Integration, Advanced and manually fill in the Config Location: ~/.librewolf/native-messaging-hosts
 ```
 
-Alternatives:
+TODO:
+
+- <https://wiki.kairaven.de/open/app/firefox2>
+- <https://github.com/Aris-t2/CustomCSSforFx>
+
+KeepassXC integration:
+In KeepassXC app, go to Browser Integration, Advanced and manually fill in the Config Location: ~/.librewolf/native-messaging-hosts
+
+## Alternatives
 
 - Brave
 - [Thorium](https://github.com/Alex313031/Thorium)

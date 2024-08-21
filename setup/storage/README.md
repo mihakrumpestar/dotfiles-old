@@ -2,7 +2,7 @@
 
 Rclone:
 
-```bash
+```sh
 rclone obscure
 
 # Test

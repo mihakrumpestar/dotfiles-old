@@ -5,7 +5,9 @@
   "vsicons.dontShowNewVersionMessage": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "remote.SSH.defaultExtensions": ["ms-azuretools.vscode-docker"],
+  "remote.SSH.defaultExtensions": [
+    "ms-azuretools.vscode-docker"
+  ],
   "files.associations": {
     "*.enc*": "ini",
     "*.env*": "ini",
@@ -20,7 +22,9 @@
   "languageToolLinter.languageTool.language": "en-US",
   "languageToolLinter.lintOnOpen": true,
   "languageToolLinter.serviceType": "public",
-  "languageToolLinter.plainText.languageIds": ["markdown"],
+  "languageToolLinter.plainText.languageIds": [
+    "markdown"
+  ],
   "workbench.panel.defaultLocation": "right",
   "pylint.args": [
     "--disable=unexpected-keyword-arg",
@@ -30,7 +34,10 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "cSpell.enableFiletypes": ["!jsonc", "!yaml"],
+  "cSpell.enableFiletypes": [
+    "!jsonc",
+    "!yaml"
+  ],
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -75,5 +82,6 @@
   "window.zoomLevel": 0.4,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.mouseWheelZoom": true,
-  "terminal.integrated.defaultProfile.linux": "zsh"
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "json.format.enable": false
 }

@@ -1,4 +1,4 @@
-Shortcuts:
+# Shortcuts
 
 ```text
 # # Starting and Stopping Applications

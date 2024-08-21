@@ -4,8 +4,8 @@ Devbox (nix-env)
 
 Packages:
 
-- https://search.nixos.org/packages
-- https://www.nixhub.io/
+- <https://search.nixos.org/packages>
+- <https://www.nixhub.io/>
 
 ## Flakes
 

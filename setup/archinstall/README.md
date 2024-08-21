@@ -11,7 +11,11 @@ wipefs -a /dev/[disk]
 
 # Or if you need to shread
 
-shred -vfzn 0 /dev/[disk]
+shred -vfzn 0 /dev/<disk>
+
+# or just clean tree structure
+
+blkdiscard /dev/<disk>
 ```
 
 Networking:
