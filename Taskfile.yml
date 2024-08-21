@@ -3,11 +3,11 @@ version: "3"
 tasks:
   apply:
     env:
-      ENCRYPTED: false
+      ENCRYPTED: true
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
-      - sudo -E chezmoi apply --source ./root --destination /
-      - chezmoi apply --source ./home --destination "$HOME" # Scripts should be run after /root directory is applied
+      - sudo -E /usr/local/bin/chezmoi apply --source ./root --destination /
+      - /usr/local/bin/chezmoi apply --source ./home --destination "$HOME" # Scripts should be run after /root directory is applied
 
       # - chezmoi state delete-bucket --bucket=entryState
       # - chezmoi state delete-bucket --bucket=scriptState

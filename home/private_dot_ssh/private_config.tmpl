@@ -1,3 +1,3 @@
-{{ if not (env "ENCRYPTED") -}}
+{{ if (env "ENCRYPTED") | fromJson -}}
 {{ keepassxcAttribute "ssh-config" "config" }}
 {{ end -}}

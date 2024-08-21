@@ -11,7 +11,7 @@ onlykey-cli idletimeout 120 # 120 minutes
 onlykey-cli wipemode 2 # Full wipe
 
 onlykey-cli keytypespeed 9 # default is 7
-onlykey-cli hmackeymode 0 # Button press required
+onlykey-cli hmackeymode 0 # Enable or disable button press for HMAC challenge-response 0 = Button Press Required (default); 1 = Button Press Not Required.
 ```
 
 Firmware:

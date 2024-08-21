@@ -25,6 +25,6 @@
 [init]
 	defaultBranch = main
 
-{{ if not (env "ENCRYPTED") -}}
+{{ if (env "ENCRYPTED") | fromJson -}}
 {{ keepassxcAttribute "git-config" "gitconfig" }}
 {{ end -}}
