@@ -16,13 +16,11 @@
     "bash":                 "latest",
     "zsh":                  "latest",
     "fish":                 "latest",
-    "bash-completion":      "latest",
-    "nix-bash-completions": "latest",
     "bat":                  "latest", // Better cat
     "sops":                 "latest",
     "less":                 "latest",
     "tree":                 "latest",
-    "fzf":                  "latest", // Command-line fuzzy finder
+    "fzf":                  "latest", // Command-line fuzzy finder/search
     "kitty":                "latest", // Terminal emulator
     "guake":                "latest", // Drop down terminal emulator
     "zellij":               "latest", // Modern Tmux (terminal multiplexer)
@@ -32,6 +30,7 @@
     "udiskie":              "latest", // A user-level daemon for auto-mounting
     "glxinfo":              "latest", // Check GPU drivers
     "jq":                   "latest",
+    "thefuck":              "latest",
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
@@ -128,7 +127,6 @@
     "audacity": "latest", // Sound
     //"activitywatch", // Time monitoring (TODO: fails to build)
     "apacheHttpd": "latest", // for htpasswd
-    //superpaper         // Wallpaper
     "stacer":       "latest", // System monitoring GUI
     "rclone":       "latest",
     "whois":        "latest", // Contains mkpasswd
@@ -147,6 +145,7 @@
     "rofi-wayland": "latest", // Rofi with Wayland support (TODO: fails to start)
     "rymdport":     "latest", // Wormhole client
     "unzip":        "latest",
+    "variety":      "latest", // Wallpaper manager, alternative is superpaper
 
     // Desktop environment
     "copyq":          "latest", // clipboard manager
@@ -174,11 +173,6 @@
     "ntp":      "latest", // time
     "nftables": "latest", // firewall
     //"texlive.combined.scheme-full": "latest", // Add only when needed; Containes pdflatexa and Tex packages required by xournalpp (full is the minimum req to run)
-    "gnome-tweaks":             "latest",
-    "Vorta":                    "latest",
-    "gnome.adwaita-icon-theme": "latest",
-    "hicolor-icon-theme":       "latest",
-    "vanilla-dmz":              "latest",
 
     // Drivers
     "stdenv.cc.cc.lib": "",
@@ -193,7 +187,8 @@
     "vulkan-validation-layers": "latest",
     "vulkan-extension-layer":   "latest",
     "rocmPackages.clr.icd":     "", // OpenCL drivers
-
+    
+    // Flakes
     "path:./virtualhere-client": "",
     "path:./activitywatch": "",
   },

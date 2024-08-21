@@ -26,6 +26,12 @@ sudo ln -sf $DEVBOX_PACKAGES_DIR/share/fonts/* ~/.local/share/fonts
 mkdir -p ~/.local/share/icons
 ln -sf $DEVBOX_PACKAGES_DIR/share/icons/* ~/.local/share/icons
 
+# ZSH
+mkdir -p ~/.local/share/zinit
+ln -sf $DEVBOX_PACKAGES_DIR/share/zinit/* ~/.local/share/zinit
+mkdir -p ~/.local/share/zsh
+ln -sf $DEVBOX_PACKAGES_DIR/share/zsh/* ~/.local/share/zsh
+
 # SystemD
 #sudo ln -sf $DEVBOX_PACKAGES_DIR/etc/systemd/system/docker.* /etc/systemd/system # Each of required ones, we don't want to override system ones (like dbus)
 #sudo systemctl daemon-reload
@@ -44,7 +50,7 @@ sudo loginctl enable-linger $USER
 # loginctl list-users
 
 # Mount remote storage
-systemctl --user enable --now rclone@nextcloud-personal || echo "Rclone failed"
+systemctl --user enable --now rclone@nextcloud-personal || echo "Rclone failed!"
 # rclone listremotes
 
 # Dead mens switch
@@ -53,10 +59,3 @@ systemctl --user enable --now dead-mens-switch.timer
 
 # ActivityWatch
 systemctl --user enable --now activitywatch
-
-# Betterbird KeepassXC extension, docs: https://github.com/kkapsner/keepassxc-mail
-mkdir -p ~/.mozilla/native-messaging-hosts
-cat ~/.librewolf/native-messaging-hosts/org.keepassxc.keepassxc_browser.json \
- | sed s/keepassxc-browser@keepassxc.org/keepassxc-mail@kkapsner.de/ \
- | sed s/org.keepassxc.keepassxc_browser/de.kkapsner.keepassxc_mail/ \
- > ~/.mozilla/native-messaging-hosts/de.kkapsner.keepassxc_mail.json

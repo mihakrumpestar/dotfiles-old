@@ -14,13 +14,10 @@ if [ -f /etc/zshrc ]; then
     . /etc/zshrc
 fi
 
-# Source .profile definitions
-if [ -f ~/.profile ]; then
-    . ~/.profile
+# Source .aliases definitions
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
-
-# Enable zsh completion
-autoload -Uz compinit && compinit
 
 # custom ZSH keybinds
 bindkey "^[[1;5C" forward-word               # Ctrl + Right
@@ -36,176 +33,82 @@ bindkey "^[[1;3D" backward-word              # Alt + Left
 # EXPORTS
 #######################################################
 
-# Disable the bell
-unsetopt BEEP
-
-# Expand the history size
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
-# Don't put duplicate lines in the history and do not add lines that start with a space
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-
-# Append to history
-setopt APPEND_HISTORY
-
-# Allow ctrl-S for history navigation (with ctrl-R)
-stty -ixon
-
 # Set the default editor
 export EDITOR='codium --wait'
 export DIFFTOOL="codium --wait --diff $LOCAL $REMOTE"
 export VISUAL='codium'
 
-# To have colors for ls and all grep commands such as grep, egrep and zgrep
-export CLICOLOR=1
-export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
+### ZSH plugins ###
 
-# Color for manpages in less makes manpages a little easier to read
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
+export ZSH="$HOME/.oh-my-zsh"
 
-### ALIASES ###
+if [ ! -d "$ZSH" ]; then
+    echo "Oh My Zsh is not installed. Installing now..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    echo "Oh My Zsh installed. Please restart your terminal or run 'source ~/.zshrc'."
+fi
 
-# Alias's to modified commands
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='trash -v'
-alias mkdir='mkdir -p'
-alias ps='ps auxf'
-alias ping='ping -c 10'
-alias less='less -R'
-alias cls='clear'
-alias grep='grep --color=auto'
-alias df='df -h'
-alias free="free -mt"
-alias wget="wget -c"
+if [ -d "$ZSH" ]; then
+    zstyle ':omz:update' mode auto # update automatically without asking
+    zstyle ':omz:update' frequency 7
 
-# cd into the old directory
-alias bd='cd "$OLDPWD"'
+    export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+    export ENABLE_CORRECTION="true"
+    export COMPLETION_WAITING_DOTS=true
+    export HIST_STAMPS="dd.mm.yyyy"
 
-# Search command line history
-alias h="history | grep"
+    plugins=(
+        git
+        alias-finder
+        aliases
+        colored-man-pages
+        colorize
+        compleat
+        cp
+        docker
+        docker-compose
+        fzf
+        git-commit
+        gitfast
+        golang
+        history
+        nomad
+        opentofu
+        podman
+        ssh-agent
+        ssh
+        systemd
+        terraform
+        thefuck
+        tldr
+        vscode
+        zsh-interactive-cd
+        zsh-navigation-tools
+    )
 
-# Search running processes
-alias p="ps aux | grep"
+    source $ZSH/oh-my-zsh.sh
+fi
 
-# Search files in the current folder
-alias f="find . | grep"
+export ZIM_HOME=~/.zim
+export ZIM_CONFIG_FILE=~/.zimrc
 
-# Show open ports
-alias openports='netstat -nape --inet'
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
 
-# Alias's for safe and forced reboots
-alias reboot-safe='sudo shutdown -r now'
-alias reboot-force='sudo shutdown -r -n now'
+# Install missing modules and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
 
-# Alias's to show disk space and space used in a folder
-alias diskspace="du -S | sort -n -r |more"
-alias folders='du -h --max-depth=1'
-alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-alias tree='tree -CAhF --dirsfirst'
-alias treed='tree -CAFd'
-alias mountedinfo='df -hT'
+# Initialize modules.
+if [ -d "${ZIM_HOME}/init.zsh" ]; then
+    source ${ZIM_HOME}/init.zsh
+fi
 
-# Hardware info
-alias hw="hwinfo --short"
-alias cpu="cpuid -i | grep uarch | head -n 1"
-alias audio="pactl info | grep 'Server Name'"
-alias probe="sudo -E hw-probe -all -upload"
-alias sysfailed="systemctl list-units --failed"
-
-# Alias's for archives
-alias mktar='tar -cvf'
-alias mkbz2='tar -cvjf'
-alias mkgz='tar -cvzf'
-alias untar='tar -xvf'
-alias unbz2='tar -xvjf'
-alias ungz='tar -xvzf'
-
-# Personal
-alias code="codium"
-alias devbox-clean="devbox run -- nix store gc --extra-experimental-features nix-command"
-alias devbox-global-clean="devbox global run -- nix store gc --extra-experimental-features nix-command"
-
-#######################################################
-# SPECIAL FUNCTIONS
-#######################################################
-
-# Keyboard
-alias keyboard-si="sudo localectl set-x11-keymap si"
-alias keyboard-us="sudo localectl set-x11-keymap us"
-
-# Give the list of all installed desktops - xsessions desktops
-alias xd="ls /usr/share/xsessions"
-alias xdw="ls /usr/share/wayland-sessions"
-
-# Give a list of the kernels installed
-alias kernel="ls /usr/lib/modules"
-alias kernels="ls /usr/lib/modules"
-
-# Am I on grub or systemd-boot
-alias boot="sudo bootctl status | grep Product"
-
-# extract = EXtractor for all kinds of archives
-# usage: extract <file>
-extract() {
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2)   tar xjf $1   ;;
-            *.tar.gz)    tar xzf $1   ;;
-            *.bz2)       bunzip2 $1   ;;
-            *.rar)       unrar x $1   ;;
-            *.gz)        gunzip $1    ;;
-            *.tar)       tar xf $1    ;;
-            *.tbz2)      tar xjf $1   ;;
-            *.tgz)       tar xzf $1   ;;
-            *.zip)       unzip $1     ;;
-            *.Z)         uncompress $1;;
-            *.7z)        7z x $1      ;;
-            *.deb)       ar x $1      ;;
-            *.tar.xz)    tar xf $1    ;;
-            *.tar.zst)   tar xf $1    ;;
-            *)           echo "'$1' cannot be extracted via ex()" ;;
-        esac
-    else
-        echo "'\$1' is not a valid file"
-    fi
-}
-
-# btrfs aliases
-alias btrfsfs="sudo btrfs filesystem df /"
-alias btrfsli="sudo btrfs su li / -t"
-
-git-ac() {
-    git add .
-    git commit -m "$1"
-}
-
-git-acp() {
-    git add .
-    git commit -m "$1"
-    git push
-}
-
-# Searches for text in all files in the current folder
-ftext() {
-    # -i case-insensitive
-    # -I ignore binary files
-    # -H causes filename to be printed
-    # -r recursive search
-    # -n causes line number to be printed
-    # optional: -F treat search term as a literal, not a regular expression
-    # optional: -l only print filenames and not the matching lines ex. grep -irl "\$1" *
-    grep -iIHrn --color=always "$1" . | less -r
-}
+bindkey '^ ' autosuggest-accept
 
 ### Shells ###
 

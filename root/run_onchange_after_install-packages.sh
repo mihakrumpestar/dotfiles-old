@@ -18,17 +18,7 @@ PACKAGES=(
 # the quotes are needed to preserve params with spaces
 sudo pacman -S --noconfirm --needed --noprogressbar --quiet "${PACKAGES[@]}" 2>&1 | awk '!/Sync Dependency/ && !/Sync Explicit/ && !/-- skipping/'
 
-required=$(sed -n '/#/d; /UTF-8/s/\.UTF-8.*//p' /etc/locale.gen)
-current=$(locale -a | sed 's/\.utf8//')
-missing=$(comm -23 <(echo "$required" | sort) <(echo "$current" | sort))
-
-if [ -n "$missing" ]; then
-    echo "Regenerating locales..."
-    sudo locale-gen
-else
-    echo "All required locales are already generated."
-fi
-
+# GPU drivers for devbox apps
 sudo systemctl enable --now gpu-driver-setup.service
 
 ## System

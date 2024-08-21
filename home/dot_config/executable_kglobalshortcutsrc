@@ -336,7 +336,7 @@ FullScreenScreenShot=Print
 _launch=Ctrl+Shift+Print
 
 [services][rofi.desktop]
-_launch=Alt+Space\tCtrl+Space\tMeta+Space
+_launch=Alt+Space\tMeta+Space
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen
