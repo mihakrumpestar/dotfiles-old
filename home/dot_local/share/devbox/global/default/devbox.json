@@ -96,6 +96,7 @@
 
     // Programming
     "git":        "latest",
+    "git-filter-repo": "latest",
     "lazygit":    "latest", // Git terminal UI
     "pre-commit": "latest", // Pre-commit hooks for Git
     "gnumake":    "latest", // make
@@ -109,6 +110,7 @@
     "gitleaks":   "latest", // Check for leaks in git repos, scans all branches with all commit history
     "terraform":  "latest",
     "pyinfra":    "latest", // The new Ansible
+    "gh":         "latest",
 
     // Formatters
     "nodePackages.prettier": "latest",
@@ -161,6 +163,8 @@
     "podman":         "latest",
     "podman-compose": "latest",
     "podman-desktop": "latest", // TODO: not working // We are not using docker as it does not work on non-NixOS distibutions as per https://nixos.wiki/wiki/Docker
+    "nomad":          "latest",
+    "nomad-driver-podman": "latest",
 
     // QEMU
     //   qemu_full // TODO: won't build
