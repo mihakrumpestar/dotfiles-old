@@ -1,7 +1,35 @@
 zmodule git-info
 zmodule duration-info
 zmodule asciiship
+#
+#zmodule git
+#zmodule alias-finder
+#zmodule aliases
+#zmodule colored-man-pages
+#zmodule colorize
+#zmodule cp
+#zmodule docker
+#zmodule docker-compose
+#zmodule fzf
+#zmodule git-commit
+#zmodule gitfast
+#zmodule golang
+#zmodule history
+#zmodule nomad
+#zmodule opentofu
+#zmodule podman
+#zmodule ssh-agent
+#zmodule ssh
+#zmodule systemd
+#
+
+zmodule laggardkernel/zsh-thefuck
+zmodule ael-code/zsh-colored-man-pages
+zmodule mrjohannchang/zsh-interactive-cd
+zmodule z-shell/zsh-navigation-tools
+
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
