@@ -5,6 +5,8 @@ env:
 
 tasks:
   apply:
+    deps:
+      - git-setup
     cmds:
       - touch ~/.config/chezmoi/chezmoistate.boltdb # Prevent creating chezmoistate with sudo
       - sudo -E /usr/local/bin/chezmoi apply --source ./root --destination /
@@ -14,12 +16,17 @@ tasks:
       # - chezmoi state delete-bucket --bucket=scriptState
 
   merge:
+    deps:
+      - git-setup
     cmds:
       # Regarding root merge-all, we are doing 2 way merge, so it does not update the target file, for that we have to issue "task apply"
       - sudo -E chezmoi merge-all --source ./root --destination /
       - chezmoi merge-all --source "./home"
 
   git-setup:
+    status:
+      - test -f .git/hooks/pre-commit
     cmds:
       - pre-commit autoupdate
       - pre-commit install
+    silent: true
