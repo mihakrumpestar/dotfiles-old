@@ -31,6 +31,7 @@
     "glxinfo":              "latest", // Check GPU drivers
     "jq":                   "latest",
     "thefuck":              "latest",
+    "python312Packages.weasyprint": "latest",
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
@@ -81,7 +82,7 @@
 
     // Browsers
     "brave":     "latest",
-    "librewolf": "latest",
+    "librewolf": "129.0-1",
     //thorium-browser-bin
 
     // File Management
@@ -91,7 +92,7 @@
     "nextcloud-client": "latest",
 
     // Email
-    "betterbird": "latest",
+    "betterbird": "115.6.0",
     "birdtray":   "latest",
 
     // Programming
@@ -111,6 +112,8 @@
     "terraform":  "latest",
     "pyinfra":    "latest", // The new Ansible
     "gh":         "latest",
+    "nilaway":    "latest",
+    "infisical":  "latest",
 
     // Formatters
     "nodePackages.prettier": "latest",
