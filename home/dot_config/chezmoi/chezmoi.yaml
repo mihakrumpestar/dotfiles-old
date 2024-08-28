@@ -9,7 +9,7 @@ diff:
 
 keepassxc:
   database: "~/Documents/digital-identity/KeePass.kdbx"
-  args: ["--no-password", "--yubikey", "1"]
-  #mode: "open"
-  prompt: false
+  openOrgs: ["--no-password", "--yubikey", "1"]
+  mode: "open"
+  #prompt: false
 # keepassxc-cli open --no-password --yubikey 1 <path>

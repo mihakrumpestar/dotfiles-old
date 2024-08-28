@@ -32,6 +32,7 @@
     "jq":                   "latest",
     "thefuck":              "latest",
     "python312Packages.weasyprint": "latest",
+    "poppler_utils": "latest", // Contains pdftotext, etc.
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
@@ -101,7 +102,8 @@
     "lazygit":    "latest", // Git terminal UI
     "pre-commit": "latest", // Pre-commit hooks for Git
     "gnumake":    "latest", // make
-    "python3":    "latest", //python-pip
+    "python3":    "latest",
+    "python312Packages.pip": "latest",
     "go":         "latest",
     "nodejs":     "latest", // npm
     "vscodium":   "latest", // Main code editor ("vscodium-fhs" package has its own FHS, where you would have to install all packages additionaly in it to be able to use them, as it won't take the system ones)
