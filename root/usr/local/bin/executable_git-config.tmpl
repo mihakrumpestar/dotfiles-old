@@ -1,3 +1,20 @@
+#!/bin/bash
+
 {{ if (env "ENCRYPTED") | fromJson -}}
-{{ keepassxcAttribute "git-config" "executable_git-config" }}
+
+if [ "$1" = "personal" ]; then
+    # github_personal
+    git config --local user.email "{{ keepassxcAttribute "Github Personal" "commit email" }}"
+    git config --local user.name "{{ keepassxcAttribute "Github Personal" "username" }}"
+    git config --local user.signingkey "{{ keepassxcAttribute "Github Personal SSH" "UserName" }}"
+elif [ "$1" = "fri" ]; then
+    # github_fri
+    git config --local user.email "{{ keepassxcAttribute "Github FRI" "commit email" }}"
+    git config --local user.name "{{ keepassxcAttribute "Github FRI" "username" }}"
+    git config --local user.signingkey "{{ keepassxcAttribute "Github FRI SSH" "UserName" }}"
+else
+    echo "\"$1\" is not a valid name for first parameter."
+    exit 1
+fi
+
 {{ end -}}

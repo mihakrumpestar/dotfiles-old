@@ -32,7 +32,9 @@
     "jq":                   "latest",
     "thefuck":              "latest",
     "python312Packages.weasyprint": "latest",
-    "poppler_utils": "latest", // Contains pdftotext, etc.
+    "poppler_utils":        "latest", // Contains pdftotext, etc.
+    "drill":                "latest",
+    "dig":                  "latest",
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
