@@ -89,3 +89,7 @@ eval "$(zoxide init zsh)"
 if command -v fastfetch >/dev/null 2>&1; then
     fastfetch
 fi
+
+if command -v onefetch &> /dev/null && [ -d .git ]; then
+  onefetch
+fi

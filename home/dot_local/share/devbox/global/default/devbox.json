@@ -35,6 +35,7 @@
     "poppler_utils":        "latest", // Contains pdftotext, etc.
     "drill":                "latest",
     "dig":                  "latest",
+    "cloc":                 "latest",
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
