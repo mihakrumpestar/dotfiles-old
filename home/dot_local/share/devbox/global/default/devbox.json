@@ -124,8 +124,9 @@
     "nodePackages.prettier": "latest",
 
     // Linters
-    "hadolint": "latest", // Used in VSCodium
-    "pylint":   "latest", // Used in VSCodium
+    "hadolint":     "latest", // Used in VSCodium
+    "pylint":       "latest", // Used in VSCodium
+    "nixpkgs-fmt":  "latest", // Used in VSCodium
 
     // Tools
     "gsmartcontrol":               "latest",
