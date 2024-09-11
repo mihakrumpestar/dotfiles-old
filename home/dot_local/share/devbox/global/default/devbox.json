@@ -36,6 +36,8 @@
     "drill":                "latest",
     "dig":                  "latest",
     "cloc":                 "latest",
+    "man":                  "latest",
+    "rsync":                "latest",
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship
@@ -119,6 +121,9 @@
     "gh":         "latest",
     "nilaway":    "latest",
     "infisical":  "latest",
+    "nix":        "latest",
+    "nixos-rebuild": "latest",
+    "age":        "latest",
 
     // Formatters
     "nodePackages.prettier": "latest",
@@ -176,8 +181,10 @@
     "nomad-driver-podman": "latest",
 
     // QEMU
-    //   qemu_full // TODO: won't build
-    //"virt-manager": "latest",
+    "qemu":         "latest",
+    "virt-manager": "latest",
+    "quickemu":     "latest",
+    //"quickgui":     "latest",
 
     // Printer and scanner
     "simple-scan": "latest", // Scanning (Gnome)
