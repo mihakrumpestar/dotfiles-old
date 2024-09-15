@@ -38,6 +38,7 @@
     "cloc":                 "latest",
     "man":                  "latest",
     "rsync":                "latest",
+    "yazi":                 "latest", // Terminal file manager 
 
     // Fonts
     "meslo-lgs-nf":                      "latest", // font for starship

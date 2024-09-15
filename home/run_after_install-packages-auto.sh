@@ -12,7 +12,7 @@ devbox global install
 # Aplications
 mkdir -p ~/.local/share/applications
 ln -sf $DEVBOX_PACKAGES_DIR/share/applications/* ~/.local/share/applications/
-#sudo ln -sf $DEVBOX_PACKAGES_DIR/bin/* /usr/local/bin/
+sudo ln -sf $DEVBOX_PACKAGES_DIR/bin/* /usr/local/bin/
 
 sudo ln -sf /usr/local/bin/go-task /usr/local/bin/task
 ln -sf $DEVBOX_PACKAGES_DIR/share/rofi ~/.local/share
