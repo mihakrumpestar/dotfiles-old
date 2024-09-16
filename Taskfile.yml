@@ -22,6 +22,7 @@ tasks:
     cmds:
       # Regarding root merge-all, we are doing 2 way merge, so it does not update the target file, for that we have to issue "task apply"
       - sudo -E chezmoi merge-all --source ./root --destination /
+      - sleep 1
       - chezmoi merge-all --source "./home"
 
   git-setup:

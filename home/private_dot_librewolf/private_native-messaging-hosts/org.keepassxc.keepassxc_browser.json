@@ -4,6 +4,6 @@
     ],
     "description": "KeePassXC integration with native messaging support",
     "name": "org.keepassxc.keepassxc_browser",
-    "path": "/nix/store/vs2b9fkni4g9xfs722945vkqskvs6ayy-keepassxc-2.7.9/bin/keepassxc-proxy",
+    "path": "/nix/store/sfd276h1di2np9xj54rp9q9vzhfwjq48-keepassxc-2.7.9/bin/keepassxc-proxy",
     "type": "stdio"
 }

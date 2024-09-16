@@ -199,7 +199,7 @@
     "stdenv.cc.cc.lib": "",
     "libglvnd":         "latest",
     "mesa": { // Main GPU drivers
-      "version": "24.1.5", // latest is too old
+      "version": "latest", // latest is too old
       "outputs": ["drivers"],
     },
     "amdvlk":                   "latest", // AMD Vulkan drivers
