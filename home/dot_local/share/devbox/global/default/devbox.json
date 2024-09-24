@@ -125,6 +125,7 @@
     "nix":        "latest",
     "nixos-rebuild": "latest",
     "age":        "latest",
+    "caddy":      "latest", // Formatter/linter for VSCode Caddy extension
 
     // Formatters
     "nodePackages.prettier": "latest",

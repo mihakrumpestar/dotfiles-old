@@ -83,5 +83,6 @@
   "terminal.integrated.enableImages": true,
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "json.format.enable": false
+  "json.format.enable": false,
+  "editor.tabSize": 2
 }
