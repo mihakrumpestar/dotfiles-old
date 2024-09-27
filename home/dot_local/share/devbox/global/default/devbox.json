@@ -164,6 +164,7 @@
     "rymdport":     "latest", // Wormhole client
     "unzip":        "latest",
     "variety":      "latest", // Wallpaper manager, alternative is superpaper
+    "cpu-x":        "latest", // CPU-Z alternative
 
     // Desktop environment
     "copyq":          "latest", // clipboard manager
