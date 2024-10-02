@@ -27,7 +27,7 @@ get_value() {
 # Set variables
 SOURCE_DIR_RAW=$(get_value "source_dir")
 SOURCE_DIR=$(eval echo "$SOURCE_DIR_RAW")
-ARCHIVE_NAME="dead_mens_switch_$(date +'%Y-%m-%d_%H:%M').zip"
+ARCHIVE_NAME="dead_mens_switch_$(date +'%Y-%m-%d_%H:%M').7Ez"
 TMP_ARCHIVE_PATH="/tmp/$ARCHIVE_NAME"
 ZIP_PASSWORD=$(get_value "zip_password")
 FTP_HOST=$(get_value "ftp_host")
@@ -40,8 +40,8 @@ if [[ ! -d "$SOURCE_DIR" ]]; then
     exit 1
 fi
 
-# Create password-protected zip file in /tmp
-zip -r -P "$ZIP_PASSWORD" "$TMP_ARCHIVE_PATH" "$SOURCE_DIR"
+# Create password-protected 7-zip file in /tmp
+7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on -mhe=on -p"$ZIP_PASSWORD" -mmt=on -mtc=on -mtm=on -mta=on "$TMP_ARCHIVE_PATH" "$SOURCE_DIR"
 
 # Upload using curl
 curl -T "$TMP_ARCHIVE_PATH" "ftp://$FTP_HOST" --user "$FTP_USER:$FTP_PASS"
