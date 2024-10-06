@@ -27,7 +27,7 @@ get_value() {
 # Set variables
 SOURCE_DIR_RAW=$(get_value "source_dir")
 SOURCE_DIR=$(eval echo "$SOURCE_DIR_RAW")
-ARCHIVE_NAME="dead_mens_switch_$(date +'%Y-%m-%d_%H:%M').7Ez"
+ARCHIVE_NAME="dead_mens_switch_$(date +'%Y-%m-%d_%H:%M').7z"
 TMP_ARCHIVE_PATH="/tmp/$ARCHIVE_NAME"
 ZIP_PASSWORD=$(get_value "zip_password")
 FTP_HOST=$(get_value "ftp_host")
