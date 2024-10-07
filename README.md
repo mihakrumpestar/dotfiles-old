@@ -1,5 +1,7 @@
 # Dotfiles
 
+NOTE: Do not use this, as it is highly experimental! It uses Devbox global with manualy linked GPU (mesa) drivers that break if Arch mesa drivers are different. Fully moving to NixOS.
+
 TODO:
 
 ```sh
